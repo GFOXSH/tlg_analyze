@@ -1,0 +1,4483 @@
+NGS2 RUN1 TARGET DISASSEMBLY
+
+========================================
+sub_1AC510 0x1AC510 - 0x1ADB61
+0x1AC510  push    rbp
+0x1AC511  mov     rbp, rsp
+0x1AC514  push    r15
+0x1AC516  push    r14
+0x1AC518  push    r13
+0x1AC51A  push    r12
+0x1AC51C  push    rbx
+0x1AC51D  sub     rsp, 0D98h
+0x1AC524  mov     r14, cs:qword_1700698
+0x1AC52B  mov     r15, rdx
+0x1AC52E  mov     rbx, rsi
+0x1AC531  mov     [rbp+var_DA0], rdi
+0x1AC538  test    r15, r15
+0x1AC53B  mov     rax, [r14]
+0x1AC53E  mov     [rbp+var_30], rax
+0x1AC542  jz      short loc_1AC54B
+0x1AC544  mov     qword ptr [r15], 0
+0x1AC54B  mov     rax, 3030303030303030h
+0x1AC555  xor     r8d, r8d
+0x1AC558  mov     [rbp+var_688], rax
+0x1AC55F  mov     [rbp+var_690], rax
+0x1AC566  mov     [rbp+var_698], rax
+0x1AC56D  mov     [rbp+var_6A0], rax
+0x1AC574  mov     [rbp+var_6A8], rax
+0x1AC57B  mov     [rbp+var_6B0], rax
+0x1AC582  mov     [rbp+var_6B8], rax
+0x1AC589  mov     [rbp+var_6C0], rax
+0x1AC590  mov     [rbp+var_6C8], rax
+0x1AC597  mov     [rbp+var_6D0], rax
+0x1AC59E  mov     [rbp+var_6D8], rax
+0x1AC5A5  mov     [rbp+var_6E0], rax
+0x1AC5AC  mov     [rbp+var_6E8], rax
+0x1AC5B3  mov     [rbp+var_6F0], rax
+0x1AC5BA  mov     [rbp+var_6F8], rax
+0x1AC5C1  mov     [rbp+var_700], rax
+0x1AC5C8  mov     eax, [rbx]
+0x1AC5CA  test    rax, rax
+0x1AC5CD  jz      short loc_1AC609
+0x1AC5CF  mov     rcx, [rbx+8]
+0x1AC5D3  xor     edx, edx
+0x1AC5D5  xor     r8d, r8d
+0x1AC5D8  nop     dword ptr [rax+rax+00000000h]
+0x1AC5E0  mov     esi, [rcx+rdx*4]
+0x1AC5E3  mov     byte ptr [rbp+rsi+var_700], 31h ; '1'
+0x1AC5EB  mov     esi, [rcx+rdx*4]
+0x1AC5EE  cmp     r8d, esi
+0x1AC5F1  cmovb   r8d, esi
+0x1AC5F5  inc     rdx
+0x1AC5F8  cmp     rdx, rax
+0x1AC5FB  jb      short loc_1AC5E0
+0x1AC5FD  movzx   eax, byte ptr [rbp+var_700]
+0x1AC604  cmp     eax, 30h ; '0'
+0x1AC607  jnz     short loc_1AC610
+0x1AC609  mov     byte ptr [rbp+var_700], 31h ; '1'
+0x1AC610  mov     rax, cs:qword_57F1C20
+0x1AC617  inc     r8d
+0x1AC61A  lea     rdx, aNumgrainsDNumb; "numGrains=%d numBusses=%d bussIdMap=%s"
+0x1AC621  lea     rdi, [rbp+var_B00]
+0x1AC628  lea     r9, [rbp+var_700]
+0x1AC62F  mov     esi, 400h
+0x1AC634  xor     r12d, r12d
+0x1AC637  mov     byte ptr [rbp+r8+var_700], 0
+0x1AC640  mov     ecx, [rax+4]
+0x1AC643  xor     eax, eax
+0x1AC645  call    sub_1B32F0
+0x1AC64A  mov     eax, [rbx+10h]
+0x1AC64D  mov     rdi, [rbp+var_DA0]
+0x1AC654  mov     edx, 1
+0x1AC659  imul    rsi, rax, 250h
+0x1AC660  call    sub_1B3BD0
+0x1AC665  cmp     dword ptr [rbx+10h], 0
+0x1AC669  mov     r13, rax
+0x1AC66C  jz      loc_1ADABB
+0x1AC672  mov     [rbp+var_DB0], r15
+0x1AC679  jmp     loc_1AC830
+0x1AC67E  lea     rax, [rbp+var_D90]
+0x1AC685  mov     esi, 8
+0x1AC68A  mov     rdi, rax
+0x1AC68D  call    sub_1B1C70
+0x1AC692  lea     r15, [rbp+var_678]
+0x1AC699  mov     edx, 4D8h
+0x1AC69E  lea     rsi, off_14DCAC8
+0x1AC6A5  mov     dword ptr [rbp+var_D90], 8
+0x1AC6AF  mov     rdi, r15
+0x1AC6B2  call    memcpy
+0x1AC6B7  lea     rax, [rbp+var_D90]
+0x1AC6BE  mov     edi, 4002h; _QWORD
+0x1AC6C3  mov     rsi, r15; _QWORD
+0x1AC6C6  lea     rdx, [rbp+var_1A0]; _QWORD
+0x1AC6CD  mov     [rbp+var_5F0], 1
+0x1AC6D7  mov     [rbp+var_5F4], 1
+0x1AC6E1  mov     [rbp+var_5DC], 0
+0x1AC6EB  mov     [rbp+var_5D4], 0
+0x1AC6F5  mov     [rbp+var_5E0], 20h ; ' '
+0x1AC6FF  mov     [rbp+var_5E8], rax
+0x1AC706  mov     [rbp+var_228], 0
+0x1AC710  call    sceNgs2RackQueryBufferSize
+0x1AC715  test    eax, eax
+0x1AC717  js      loc_1ADB35
+0x1AC71D  mov     rsi, [rbp+var_198]
+0x1AC724  mov     rdi, [rbp+var_DA0]
+0x1AC72B  mov     edx, 1
+0x1AC730  call    sub_1B3BD0
+0x1AC735  mov     [rbp+var_1A0], rax
+0x1AC73C  test    rax, rax
+0x1AC73F  jz      loc_1AD873
+0x1AC745  mov     esi, 4002h; _QWORD
+0x1AC74A  mov     rdi, r14; _QWORD
+0x1AC74D  lea     rdx, [rbp+var_678]; _QWORD
+0x1AC754  lea     rcx, [rbp+var_1A0]; _QWORD
+0x1AC75B  lea     r8, [rbp+var_D78]; _QWORD
+0x1AC762  call    sceNgs2RackCreate
+0x1AC767  test    eax, eax
+0x1AC769  js      loc_1ADB35
+0x1AC76F  mov     rdi, [rbp+var_D78]; _QWORD
+0x1AC776  xor     esi, esi; _QWORD
+0x1AC778  lea     rdx, [rbp+var_D70]; _QWORD
+0x1AC77F  call    sceNgs2RackGetVoiceHandle
+0x1AC784  mov     rdi, [rbp+var_D70]; _QWORD
+0x1AC78B  vmovups xmm0, cs:xmmword_14DAD80
+0x1AC793  lea     rsi, [rbp+var_D68]; _QWORD
+0x1AC79A  mov     word ptr [rbp+var_D68], 18h
+0x1AC7A3  mov     word ptr [rbp+var_D68+2], 0
+0x1AC7AC  vmovups xmmword ptr [rbp+var_D68+4], xmm0
+0x1AC7B4  mov     [rbp+var_D54], 0
+0x1AC7BE  call    sceNgs2VoiceControl
+0x1AC7C3  mov     rax, [rbp+var_D78]
+0x1AC7CA  lea     rdi, aPitch_0; "PITCH"
+0x1AC7D1  mov     [rbp+var_D50], rax
+0x1AC7D8  call    sub_1B1580
+0x1AC7DD  mov     esi, 50h ; 'P'
+0x1AC7E2  lea     rdi, [rbp+var_D40]
+0x1AC7E9  mov     [rbp+var_D44], eax
+0x1AC7EF  call    sub_1B1C70
+0x1AC7F4  lea     rax, [rbp+var_D38]
+0x1AC7FB  mov     esi, 0Ch
+0x1AC800  lea     rdi, [rbp+var_B1C]
+0x1AC807  mov     [rbp+var_D40], 8
+0x1AC811  mov     [rbp+var_CF8], rax
+0x1AC818  call    sub_1B1C70
+0x1AC81D  mov     [rbp+var_B1C], 8
+0x1AC827  jmp     loc_1AD873
+0x1AC82C  align 10h
+0x1AC830  mov     rax, cs:qword_57F1C20
+0x1AC837  mov     r12d, r12d
+0x1AC83A  lea     rsi, aThru; "THRU"
+0x1AC841  lea     rcx, [r12+r12*2]
+0x1AC845  mov     [rbp+var_D98], rcx
+0x1AC84C  mov     r14, [rax+60h]
+0x1AC850  mov     rax, [rbx+18h]
+0x1AC854  mov     r15, [rax+rcx*8+8]
+0x1AC859  mov     rdi, r15
+0x1AC85C  call    sub_1B1E90
+0x1AC861  test    eax, eax
+0x1AC863  jz      loc_1ACAC0
+0x1AC869  mov     rdi, r15
+0x1AC86C  lea     rsi, aEq_0; "EQ"
+0x1AC873  call    sub_1B1E90
+0x1AC878  test    eax, eax
+0x1AC87A  jz      loc_1ACC20
+0x1AC880  mov     rdi, r15
+0x1AC883  lea     rsi, aComp; "COMP"
+0x1AC88A  call    sub_1B1E90
+0x1AC88F  test    eax, eax
+0x1AC891  jz      loc_1ACDA8
+0x1AC897  mov     rdi, r15
+0x1AC89A  lea     rsi, aReverb; "REVERB"
+0x1AC8A1  call    sub_1B1E90
+0x1AC8A6  test    eax, eax
+0x1AC8A8  jz      loc_1ACF13
+0x1AC8AE  mov     rdi, r15
+0x1AC8B1  lea     rsi, aDisto; "DISTO"
+0x1AC8B8  call    sub_1B1E90
+0x1AC8BD  test    eax, eax
+0x1AC8BF  jz      loc_1AD081
+0x1AC8C5  mov     rdi, r15
+0x1AC8C8  lea     rsi, aUmix; "UMIX"
+0x1AC8CF  call    sub_1B1E90
+0x1AC8D4  test    eax, eax
+0x1AC8D6  jz      loc_1AD1EC
+0x1AC8DC  mov     rdi, r15
+0x1AC8DF  lea     rsi, aChorus; "CHORUS"
+0x1AC8E6  call    sub_1B1E90
+0x1AC8EB  test    eax, eax
+0x1AC8ED  jz      loc_1AD394
+0x1AC8F3  mov     rdi, r15
+0x1AC8F6  lea     rsi, aDelay_0; "DELAY"
+0x1AC8FD  call    sub_1B1E90
+0x1AC902  test    eax, eax
+0x1AC904  jz      loc_1AD534
+0x1AC90A  mov     rdi, r15
+0x1AC90D  lea     rsi, off_14DB98D
+0x1AC914  call    sub_1B1E90
+0x1AC919  test    eax, eax
+0x1AC91B  jz      loc_1AD708
+0x1AC921  mov     rdi, r15
+0x1AC924  lea     rsi, aPitch_0; "PITCH"
+0x1AC92B  call    sub_1B1E90
+0x1AC930  test    eax, eax
+0x1AC932  jz      loc_1AC67E
+0x1AC938  mov     rdi, r15
+0x1AC93B  lea     rsi, aPanner; "PANNER"
+0x1AC942  call    sub_1B1E90
+0x1AC947  test    eax, eax
+0x1AC949  jnz     loc_1AD873
+0x1AC94F  vmovups ymm0, cs:ymmword_14DC960+18h
+0x1AC957  vmovups ymm2, cs:ymmword_14DC960
+0x1AC95F  vmovups ymm1, cs:ymmword_14DC940
+0x1AC967  mov     edi, 2000h; _QWORD
+0x1AC96C  lea     rsi, [rbp+var_D0]; _QWORD
+0x1AC973  lea     rdx, [rbp+var_1A0]; _QWORD
+0x1AC97A  vmovups ymmword ptr [rbp+anonymous_0+18h], ymm0
+0x1AC97F  vmovups ymmword ptr [rbp-70h], ymm2
+0x1AC984  vmovups [rbp+var_90], ymm1
+0x1AC98C  vmovups ymm2, cs:ymmword_14DC920
+0x1AC994  vmovups ymm1, cs:ymmword_14DC900
+0x1AC99C  vmovups [rbp+var_B0], ymm2
+0x1AC9A4  vmovups ymmword ptr [rbp+var_D0], ymm1
+0x1AC9AC  call    sceNgs2RackQueryBufferSize
+0x1AC9B1  test    eax, eax
+0x1AC9B3  js      loc_1ADB35
+0x1AC9B9  mov     rsi, [rbp+var_198]
+0x1AC9C0  mov     rdi, [rbp+var_DA0]
+0x1AC9C7  mov     edx, 1
+0x1AC9CC  call    sub_1B3BD0
+0x1AC9D1  mov     [rbp+var_1A0], rax
+0x1AC9D8  test    rax, rax
+0x1AC9DB  jz      loc_1AD873
+0x1AC9E1  mov     esi, 2000h; _QWORD
+0x1AC9E6  mov     rdi, r14; _QWORD
+0x1AC9E9  lea     rdx, [rbp+var_D0]; _QWORD
+0x1AC9F0  lea     rcx, [rbp+var_1A0]; _QWORD
+0x1AC9F7  lea     r8, [rbp+var_D78]; _QWORD
+0x1AC9FE  call    sceNgs2RackCreate
+0x1ACA03  test    eax, eax
+0x1ACA05  js      loc_1ADB35
+0x1ACA0B  mov     rdi, [rbp+var_D78]; _QWORD
+0x1ACA12  xor     esi, esi; _QWORD
+0x1ACA14  lea     rdx, [rbp+var_D70]; _QWORD
+0x1ACA1B  call    sceNgs2RackGetVoiceHandle
+0x1ACA20  mov     rdi, [rbp+var_D70]; _QWORD
+0x1ACA27  lea     rsi, [rbp+var_678]; _QWORD
+0x1ACA2E  mov     rax, 820000000h
+0x1ACA38  mov     word ptr [rbp+var_678], 10h
+0x1ACA41  mov     word ptr [rbp+var_678+2], 0
+0x1ACA4A  mov     [rbp+var_678+4], rax
+0x1ACA51  mov     dword ptr [rbp-66Ch], 0
+0x1ACA5B  call    sceNgs2VoiceControl
+0x1ACA60  mov     rax, [rbp+var_D78]
+0x1ACA67  lea     rdi, aPanner; "PANNER"
+0x1ACA6E  mov     [rbp+var_D50], rax
+0x1ACA75  call    sub_1B1580
+0x1ACA7A  mov     esi, 50h ; 'P'
+0x1ACA7F  lea     rdi, [rbp+var_D40]
+0x1ACA86  mov     [rbp+var_D44], eax
+0x1ACA8C  call    sub_1B1C70
+0x1ACA91  lea     rax, [rbp+var_D38]
+0x1ACA98  mov     esi, 0Ch
+0x1ACA9D  lea     rdi, [rbp+var_B10]
+0x1ACAA4  mov     [rbp+var_D40], 8
+0x1ACAAE  mov     [rbp+var_CF8], rax
+0x1ACAB5  jmp     loc_1AD86E
+0x1ACABA  align 20h
+0x1ACAC0  vmovups ymm0, cs:ymmword_14DC960+18h
+0x1ACAC8  vmovups ymm2, cs:ymmword_14DC960
+0x1ACAD0  vmovups ymm1, cs:ymmword_14DC940
+0x1ACAD8  mov     edi, 2000h; _QWORD
+0x1ACADD  lea     rsi, [rbp+var_D0]; _QWORD
+0x1ACAE4  lea     rdx, [rbp+var_1A0]; _QWORD
+0x1ACAEB  vmovups ymmword ptr [rbp+anonymous_0+18h], ymm0
+0x1ACAF0  vmovups ymmword ptr [rbp-70h], ymm2
+0x1ACAF5  vmovups [rbp+var_90], ymm1
+0x1ACAFD  vmovups ymm2, cs:ymmword_14DC920
+0x1ACB05  vmovups ymm1, cs:ymmword_14DC900
+0x1ACB0D  vmovups [rbp+var_B0], ymm2
+0x1ACB15  vmovups ymmword ptr [rbp+var_D0], ymm1
+0x1ACB1D  call    sceNgs2RackQueryBufferSize
+0x1ACB22  test    eax, eax
+0x1ACB24  js      loc_1ADB35
+0x1ACB2A  mov     rsi, [rbp+var_198]
+0x1ACB31  mov     rdi, [rbp+var_DA0]
+0x1ACB38  mov     edx, 1
+0x1ACB3D  call    sub_1B3BD0
+0x1ACB42  mov     [rbp+var_1A0], rax
+0x1ACB49  test    rax, rax
+0x1ACB4C  jz      loc_1AD873
+0x1ACB52  mov     esi, 2000h; _QWORD
+0x1ACB57  mov     rdi, r14; _QWORD
+0x1ACB5A  lea     rdx, [rbp+var_D0]; _QWORD
+0x1ACB61  lea     rcx, [rbp+var_1A0]; _QWORD
+0x1ACB68  lea     r8, [rbp+var_D78]; _QWORD
+0x1ACB6F  call    sceNgs2RackCreate
+0x1ACB74  test    eax, eax
+0x1ACB76  js      loc_1ADB35
+0x1ACB7C  mov     rdi, [rbp+var_D78]; _QWORD
+0x1ACB83  xor     esi, esi; _QWORD
+0x1ACB85  lea     rdx, [rbp+var_D70]; _QWORD
+0x1ACB8C  call    sceNgs2RackGetVoiceHandle
+0x1ACB91  mov     rdi, [rbp+var_D70]; _QWORD
+0x1ACB98  lea     rsi, [rbp+var_678]; _QWORD
+0x1ACB9F  mov     rax, 820000000h
+0x1ACBA9  mov     word ptr [rbp+var_678], 10h
+0x1ACBB2  mov     word ptr [rbp+var_678+2], 0
+0x1ACBBB  mov     [rbp+var_678+4], rax
+0x1ACBC2  mov     dword ptr [rbp-66Ch], 0
+0x1ACBCC  call    sceNgs2VoiceControl
+0x1ACBD1  mov     rax, [rbp+var_D78]
+0x1ACBD8  lea     rdi, aThru; "THRU"
+0x1ACBDF  mov     [rbp+var_D50], rax
+0x1ACBE6  call    sub_1B1580
+0x1ACBEB  mov     esi, 50h ; 'P'
+0x1ACBF0  lea     rdi, [rbp+var_D40]
+0x1ACBF7  mov     [rbp+var_D44], eax
+0x1ACBFD  call    sub_1B1C70
+0x1ACC02  lea     rax, [rbp+var_D38]
+0x1ACC09  mov     [rbp+var_D40], 8
+0x1ACC13  mov     [rbp+var_CF8], rax
+0x1ACC1A  jmp     loc_1AD873
+0x1ACC1F  align 20h
+0x1ACC20  vmovups ymm0, cs:ymmword_14DC960+18h
+0x1ACC28  vmovups ymm2, cs:ymmword_14DC960
+0x1ACC30  vmovups ymm1, cs:ymmword_14DC940
+0x1ACC38  mov     edi, 2000h; _QWORD
+0x1ACC3D  lea     rsi, [rbp+var_D0]; _QWORD
+0x1ACC44  lea     rdx, [rbp+var_1A0]; _QWORD
+0x1ACC4B  vmovups ymmword ptr [rbp+anonymous_0+18h], ymm0
+0x1ACC50  vmovups ymmword ptr [rbp-70h], ymm2
+0x1ACC55  vmovups [rbp+var_90], ymm1
+0x1ACC5D  vmovups ymm2, cs:ymmword_14DC920
+0x1ACC65  vmovups ymm1, cs:ymmword_14DC900
+0x1ACC6D  vmovups [rbp+var_B0], ymm2
+0x1ACC75  vmovups ymmword ptr [rbp+var_D0], ymm1
+0x1ACC7D  call    sceNgs2RackQueryBufferSize
+0x1ACC82  test    eax, eax
+0x1ACC84  js      loc_1ADB35
+0x1ACC8A  mov     rsi, [rbp+var_198]
+0x1ACC91  mov     rdi, [rbp+var_DA0]
+0x1ACC98  mov     edx, 1
+0x1ACC9D  call    sub_1B3BD0
+0x1ACCA2  mov     [rbp+var_1A0], rax
+0x1ACCA9  test    rax, rax
+0x1ACCAC  jz      loc_1AD873
+0x1ACCB2  mov     esi, 2000h; _QWORD
+0x1ACCB7  mov     rdi, r14; _QWORD
+0x1ACCBA  lea     rdx, [rbp+var_D0]; _QWORD
+0x1ACCC1  lea     rcx, [rbp+var_1A0]; _QWORD
+0x1ACCC8  lea     r8, [rbp+var_D78]; _QWORD
+0x1ACCCF  call    sceNgs2RackCreate
+0x1ACCD4  test    eax, eax
+0x1ACCD6  js      loc_1ADB35
+0x1ACCDC  mov     rdi, [rbp+var_D78]; _QWORD
+0x1ACCE3  xor     esi, esi; _QWORD
+0x1ACCE5  lea     rdx, [rbp+var_D70]; _QWORD
+0x1ACCEC  call    sceNgs2RackGetVoiceHandle
+0x1ACCF1  mov     rdi, [rbp+var_D70]; _QWORD
+0x1ACCF8  lea     rsi, [rbp+var_678]; _QWORD
+0x1ACCFF  mov     rax, 820000000h
+0x1ACD09  mov     word ptr [rbp+var_678], 10h
+0x1ACD12  mov     word ptr [rbp+var_678+2], 0
+0x1ACD1B  mov     [rbp+var_678+4], rax
+0x1ACD22  mov     dword ptr [rbp-66Ch], 0
+0x1ACD2C  call    sceNgs2VoiceControl
+0x1ACD31  mov     rax, [rbp+var_D78]
+0x1ACD38  lea     rdi, aEq_0; "EQ"
+0x1ACD3F  mov     [rbp+var_D50], rax
+0x1ACD46  call    sub_1B1580
+0x1ACD4B  mov     esi, 50h ; 'P'
+0x1ACD50  lea     rdi, [rbp+var_D40]
+0x1ACD57  mov     [rbp+var_D44], eax
+0x1ACD5D  call    sub_1B1C70
+0x1ACD62  lea     rax, [rbp+var_D38]
+0x1ACD69  mov     esi, 98h
+0x1ACD6E  lea     rdi, [rbp+var_CF0]
+0x1ACD75  mov     [rbp+var_D40], 8
+0x1ACD7F  mov     [rbp+var_CF8], rax
+0x1ACD86  call    sub_1B1C70
+0x1ACD8B  lea     rax, [rbp+var_CEC]
+0x1ACD92  mov     [rbp+var_CF0], 8
+0x1ACD9C  mov     [rbp+var_C68], rax
+0x1ACDA3  jmp     loc_1AD873
+0x1ACDA8  vmovups ymm0, cs:ymmword_14DC960+18h
+0x1ACDB0  vmovups ymm2, cs:ymmword_14DC960
+0x1ACDB8  vmovups ymm1, cs:ymmword_14DC940
+0x1ACDC0  mov     edi, 2000h; _QWORD
+0x1ACDC5  lea     rsi, [rbp+var_D0]; _QWORD
+0x1ACDCC  lea     rdx, [rbp+var_1A0]; _QWORD
+0x1ACDD3  vmovups ymmword ptr [rbp+anonymous_0+18h], ymm0
+0x1ACDD8  vmovups ymmword ptr [rbp-70h], ymm2
+0x1ACDDD  vmovups [rbp+var_90], ymm1
+0x1ACDE5  vmovups ymm2, cs:ymmword_14DC920
+0x1ACDED  vmovups ymm1, cs:ymmword_14DC900
+0x1ACDF5  vmovups [rbp+var_B0], ymm2
+0x1ACDFD  vmovups ymmword ptr [rbp+var_D0], ymm1
+0x1ACE05  call    sceNgs2RackQueryBufferSize
+0x1ACE0A  test    eax, eax
+0x1ACE0C  js      loc_1ADB35
+0x1ACE12  mov     rsi, [rbp+var_198]
+0x1ACE19  mov     rdi, [rbp+var_DA0]
+0x1ACE20  mov     edx, 1
+0x1ACE25  call    sub_1B3BD0
+0x1ACE2A  mov     [rbp+var_1A0], rax
+0x1ACE31  test    rax, rax
+0x1ACE34  jz      loc_1AD873
+0x1ACE3A  mov     esi, 2000h; _QWORD
+0x1ACE3F  mov     rdi, r14; _QWORD
+0x1ACE42  lea     rdx, [rbp+var_D0]; _QWORD
+0x1ACE49  lea     rcx, [rbp+var_1A0]; _QWORD
+0x1ACE50  lea     r8, [rbp+var_D78]; _QWORD
+0x1ACE57  call    sceNgs2RackCreate
+0x1ACE5C  test    eax, eax
+0x1ACE5E  js      loc_1ADB35
+0x1ACE64  mov     rdi, [rbp+var_D78]; _QWORD
+0x1ACE6B  xor     esi, esi; _QWORD
+0x1ACE6D  lea     rdx, [rbp+var_D70]; _QWORD
+0x1ACE74  call    sceNgs2RackGetVoiceHandle
+0x1ACE79  mov     rdi, [rbp+var_D70]; _QWORD
+0x1ACE80  lea     rsi, [rbp+var_678]; _QWORD
+0x1ACE87  mov     rax, 820000000h
+0x1ACE91  mov     word ptr [rbp+var_678], 10h
+0x1ACE9A  mov     word ptr [rbp+var_678+2], 0
+0x1ACEA3  mov     [rbp+var_678+4], rax
+0x1ACEAA  mov     dword ptr [rbp-66Ch], 0
+0x1ACEB4  call    sceNgs2VoiceControl
+0x1ACEB9  mov     rax, [rbp+var_D78]
+0x1ACEC0  lea     rdi, aComp; "COMP"
+0x1ACEC7  mov     [rbp+var_D50], rax
+0x1ACECE  call    sub_1B1580
+0x1ACED3  mov     esi, 50h ; 'P'
+0x1ACED8  lea     rdi, [rbp+var_D40]
+0x1ACEDF  mov     [rbp+var_D44], eax
+0x1ACEE5  call    sub_1B1C70
+0x1ACEEA  lea     rax, [rbp+var_D38]
+0x1ACEF1  mov     [rbp+var_D40], 8
+0x1ACEFB  mov     esi, 18h
+0x1ACF00  lea     rdi, [rbp+var_C58]
+0x1ACF07  mov     [rbp+var_CF8], rax
+0x1ACF0E  jmp     loc_1AD86E
+0x1ACF13  mov     rax, cs:qword_14DCAC0
+0x1ACF1A  vmovups ymm0, cs:ymmword_14DCAA0
+0x1ACF22  vmovups ymm1, cs:ymmword_14DCA80
+0x1ACF2A  vmovups ymm2, cs:ymmword_14DCA60
+0x1ACF32  mov     edi, 2001h; _QWORD
+0x1ACF37  lea     rsi, [rbp+var_160]; _QWORD
+0x1ACF3E  lea     rdx, [rbp+var_1A0]; _QWORD
+0x1ACF45  mov     [rbp+var_E0], rax
+0x1ACF4C  vmovups [rbp+var_100], ymm0
+0x1ACF54  vmovups [rbp+var_120], ymm1
+0x1ACF5C  vmovups ymm1, cs:ymmword_14DCA40
+0x1ACF64  vmovups [rbp+var_140], ymm2
+0x1ACF6C  vmovups ymmword ptr [rbp+var_160], ymm1
+0x1ACF74  call    sceNgs2RackQueryBufferSize
+0x1ACF79  test    eax, eax
+0x1ACF7B  js      loc_1ADB35
+0x1ACF81  mov     rsi, [rbp+var_198]
+0x1ACF88  mov     rdi, [rbp+var_DA0]
+0x1ACF8F  mov     edx, 1
+0x1ACF94  call    sub_1B3BD0
+0x1ACF99  mov     [rbp+var_1A0], rax
+0x1ACFA0  test    rax, rax
+0x1ACFA3  jz      loc_1AD873
+0x1ACFA9  mov     esi, 2001h; _QWORD
+0x1ACFAE  mov     rdi, r14; _QWORD
+0x1ACFB1  lea     rdx, [rbp+var_160]; _QWORD
+0x1ACFB8  lea     rcx, [rbp+var_1A0]; _QWORD
+0x1ACFBF  lea     r8, [rbp+var_D78]; _QWORD
+0x1ACFC6  call    sceNgs2RackCreate
+0x1ACFCB  test    eax, eax
+0x1ACFCD  js      loc_1ADB35
+0x1ACFD3  mov     rdi, [rbp+var_D78]; _QWORD
+0x1ACFDA  xor     esi, esi; _QWORD
+0x1ACFDC  lea     rdx, [rbp+var_D70]; _QWORD
+0x1ACFE3  call    sceNgs2RackGetVoiceHandle
+0x1ACFE8  mov     rdi, [rbp+var_D70]; _QWORD
+0x1ACFEF  vmovups xmm0, cs:xmmword_14DAD90
+0x1ACFF7  lea     rsi, [rbp+var_678]; _QWORD
+0x1ACFFE  mov     word ptr [rbp+var_678], 18h
+0x1AD007  mov     word ptr [rbp+var_678+2], 0
+0x1AD010  vmovups xmmword ptr [rbp+var_678+4], xmm0
+0x1AD018  mov     [rbp+var_664], 0
+0x1AD022  call    sceNgs2VoiceControl
+0x1AD027  mov     rax, [rbp+var_D78]
+0x1AD02E  lea     rdi, aReverb; "REVERB"
+0x1AD035  mov     [rbp+var_D50], rax
+0x1AD03C  call    sub_1B1580
+0x1AD041  mov     esi, 50h ; 'P'
+0x1AD046  lea     rdi, [rbp+var_D40]
+0x1AD04D  mov     [rbp+var_D44], eax
+0x1AD053  call    sub_1B1C70
+0x1AD058  lea     rax, [rbp+var_D38]
+0x1AD05F  mov     [rbp+var_D40], 8
+0x1AD069  mov     esi, 38h ; '8'
+0x1AD06E  lea     rdi, [rbp+var_C40]
+0x1AD075  mov     [rbp+var_CF8], rax
+0x1AD07C  jmp     loc_1AD86E
+0x1AD081  vmovups ymm0, cs:ymmword_14DC960+18h
+0x1AD089  vmovups ymm2, cs:ymmword_14DC960
+0x1AD091  vmovups ymm1, cs:ymmword_14DC940
+0x1AD099  mov     edi, 2000h; _QWORD
+0x1AD09E  lea     rsi, [rbp+var_D0]; _QWORD
+0x1AD0A5  lea     rdx, [rbp+var_1A0]; _QWORD
+0x1AD0AC  vmovups ymmword ptr [rbp+anonymous_0+18h], ymm0
+0x1AD0B1  vmovups ymmword ptr [rbp-70h], ymm2
+0x1AD0B6  vmovups [rbp+var_90], ymm1
+0x1AD0BE  vmovups ymm2, cs:ymmword_14DC920
+0x1AD0C6  vmovups ymm1, cs:ymmword_14DC900
+0x1AD0CE  vmovups [rbp+var_B0], ymm2
+0x1AD0D6  vmovups ymmword ptr [rbp+var_D0], ymm1
+0x1AD0DE  call    sceNgs2RackQueryBufferSize
+0x1AD0E3  test    eax, eax
+0x1AD0E5  js      loc_1ADB35
+0x1AD0EB  mov     rsi, [rbp+var_198]
+0x1AD0F2  mov     rdi, [rbp+var_DA0]
+0x1AD0F9  mov     edx, 1
+0x1AD0FE  call    sub_1B3BD0
+0x1AD103  mov     [rbp+var_1A0], rax
+0x1AD10A  test    rax, rax
+0x1AD10D  jz      loc_1AD873
+0x1AD113  mov     esi, 2000h; _QWORD
+0x1AD118  mov     rdi, r14; _QWORD
+0x1AD11B  lea     rdx, [rbp+var_D0]; _QWORD
+0x1AD122  lea     rcx, [rbp+var_1A0]; _QWORD
+0x1AD129  lea     r8, [rbp+var_D78]; _QWORD
+0x1AD130  call    sceNgs2RackCreate
+0x1AD135  test    eax, eax
+0x1AD137  js      loc_1ADB35
+0x1AD13D  mov     rdi, [rbp+var_D78]; _QWORD
+0x1AD144  xor     esi, esi; _QWORD
+0x1AD146  lea     rdx, [rbp+var_D70]; _QWORD
+0x1AD14D  call    sceNgs2RackGetVoiceHandle
+0x1AD152  mov     rdi, [rbp+var_D70]; _QWORD
+0x1AD159  lea     rsi, [rbp+var_678]; _QWORD
+0x1AD160  mov     rax, 820000000h
+0x1AD16A  mov     word ptr [rbp+var_678], 10h
+0x1AD173  mov     word ptr [rbp+var_678+2], 0
+0x1AD17C  mov     [rbp+var_678+4], rax
+0x1AD183  mov     dword ptr [rbp-66Ch], 0
+0x1AD18D  call    sceNgs2VoiceControl
+0x1AD192  mov     rax, [rbp+var_D78]
+0x1AD199  lea     rdi, aDisto; "DISTO"
+0x1AD1A0  mov     [rbp+var_D50], rax
+0x1AD1A7  call    sub_1B1580
+0x1AD1AC  mov     esi, 50h ; 'P'
+0x1AD1B1  lea     rdi, [rbp+var_D40]
+0x1AD1B8  mov     [rbp+var_D44], eax
+0x1AD1BE  call    sub_1B1C70
+0x1AD1C3  lea     rax, [rbp+var_D38]
+0x1AD1CA  mov     [rbp+var_D40], 8
+0x1AD1D4  mov     esi, 8
+0x1AD1D9  lea     rdi, [rbp+var_C08]
+0x1AD1E0  mov     [rbp+var_CF8], rax
+0x1AD1E7  jmp     loc_1AD86E
+0x1AD1EC  vmovups ymm0, cs:ymmword_14DC960+18h
+0x1AD1F4  vmovups ymm2, cs:ymmword_14DC960
+0x1AD1FC  vmovups ymm1, cs:ymmword_14DC940
+0x1AD204  mov     edi, 2000h; _QWORD
+0x1AD209  lea     rsi, [rbp+var_D0]; _QWORD
+0x1AD210  lea     rdx, [rbp+var_1A0]; _QWORD
+0x1AD217  vmovups ymmword ptr [rbp+anonymous_0+18h], ymm0
+0x1AD21C  vmovups ymmword ptr [rbp-70h], ymm2
+0x1AD221  vmovups [rbp+var_90], ymm1
+0x1AD229  vmovups ymm2, cs:ymmword_14DC920
+0x1AD231  vmovups ymm1, cs:ymmword_14DC900
+0x1AD239  vmovups [rbp+var_B0], ymm2
+0x1AD241  vmovups ymmword ptr [rbp+var_D0], ymm1
+0x1AD249  call    sceNgs2RackQueryBufferSize
+0x1AD24E  test    eax, eax
+0x1AD250  js      loc_1ADB35
+0x1AD256  mov     rsi, [rbp+var_198]
+0x1AD25D  mov     rdi, [rbp+var_DA0]
+0x1AD264  mov     edx, 1
+0x1AD269  call    sub_1B3BD0
+0x1AD26E  mov     [rbp+var_1A0], rax
+0x1AD275  test    rax, rax
+0x1AD278  jz      loc_1AD357
+0x1AD27E  mov     esi, 2000h; _QWORD
+0x1AD283  mov     rdi, r14; _QWORD
+0x1AD286  lea     rdx, [rbp+var_D0]; _QWORD
+0x1AD28D  lea     rcx, [rbp+var_1A0]; _QWORD
+0x1AD294  lea     r8, [rbp+var_D78]; _QWORD
+0x1AD29B  call    sceNgs2RackCreate
+0x1AD2A0  test    eax, eax
+0x1AD2A2  js      loc_1ADB35
+0x1AD2A8  mov     rdi, [rbp+var_D78]; _QWORD
+0x1AD2AF  xor     esi, esi; _QWORD
+0x1AD2B1  lea     rdx, [rbp+var_D70]; _QWORD
+0x1AD2B8  call    sceNgs2RackGetVoiceHandle
+0x1AD2BD  mov     rdi, [rbp+var_D70]; _QWORD
+0x1AD2C4  lea     rsi, [rbp+var_678]; _QWORD
+0x1AD2CB  mov     rax, 820000000h
+0x1AD2D5  mov     word ptr [rbp+var_678], 10h
+0x1AD2DE  mov     word ptr [rbp+var_678+2], 0
+0x1AD2E7  mov     [rbp+var_678+4], rax
+0x1AD2EE  mov     dword ptr [rbp-66Ch], 0
+0x1AD2F8  call    sceNgs2VoiceControl
+0x1AD2FD  mov     rax, [rbp+var_D78]
+0x1AD304  lea     rdi, aUmix; "UMIX"
+0x1AD30B  mov     [rbp+var_D50], rax
+0x1AD312  call    sub_1B1580
+0x1AD317  mov     esi, 50h ; 'P'
+0x1AD31C  lea     rdi, [rbp+var_D40]
+0x1AD323  mov     [rbp+var_D44], eax
+0x1AD329  call    sub_1B1C70
+0x1AD32E  lea     rax, [rbp+var_D38]
+0x1AD335  mov     esi, 58h ; 'X'
+0x1AD33A  lea     rdi, [rbp+var_C00]
+0x1AD341  mov     [rbp+var_D40], 8
+0x1AD34B  mov     [rbp+var_CF8], rax
+0x1AD352  call    sub_1B1C70
+0x1AD357  call    sub_1E6B20
+0x1AD35C  mov     rdi, [rbp+var_DA0]
+0x1AD363  movsxd  rsi, eax
+0x1AD366  mov     edx, 1
+0x1AD36B  call    sub_1B3BD0
+0x1AD370  mov     [rbp+var_BB0], rax
+0x1AD377  test    rax, rax
+0x1AD37A  jz      loc_1AD873
+0x1AD380  lea     rdi, [rbp+var_C00]
+0x1AD387  mov     rsi, rax
+0x1AD38A  call    sub_1E6B30
+0x1AD38F  jmp     loc_1AD873
+0x1AD394  mov     esi, 0Ch
+0x1AD399  lea     rdi, [rbp+var_D90]
+0x1AD3A0  call    sub_1B1C70
+0x1AD3A5  lea     r15, [rbp+var_678]
+0x1AD3AC  mov     rax, 40000000Ch
+0x1AD3B6  mov     edx, 4D8h
+0x1AD3BB  lea     rsi, off_14DCAC8
+0x1AD3C2  mov     rdi, r15
+0x1AD3C5  mov     [rbp+var_D90], rax
+0x1AD3CC  call    memcpy
+0x1AD3D1  mov     edi, 4002h; _QWORD
+0x1AD3D6  mov     rsi, r15; _QWORD
+0x1AD3D9  lea     rdx, [rbp+var_1A0]; _QWORD
+0x1AD3E0  mov     [rbp+var_5F0], 1
+0x1AD3EA  mov     [rbp+var_5F4], 1
+0x1AD3F4  mov     [rbp+var_5DC], 0
+0x1AD3FE  mov     [rbp+var_5D4], 0
+0x1AD408  mov     [rbp+var_5E0], 1Ch
+0x1AD412  mov     [rbp+var_5E8], 0
+0x1AD41D  mov     [rbp+var_228], 0
+0x1AD427  call    sceNgs2RackQueryBufferSize
+0x1AD42C  test    eax, eax
+0x1AD42E  js      loc_1ADB35
+0x1AD434  mov     rsi, [rbp+var_198]
+0x1AD43B  mov     rdi, [rbp+var_DA0]
+0x1AD442  mov     edx, 1
+0x1AD447  call    sub_1B3BD0
+0x1AD44C  mov     [rbp+var_1A0], rax
+0x1AD453  test    rax, rax
+0x1AD456  jz      loc_1AD873
+0x1AD45C  mov     esi, 4002h; _QWORD
+0x1AD461  mov     rdi, r14; _QWORD
+0x1AD464  lea     rdx, [rbp+var_678]; _QWORD
+0x1AD46B  lea     rcx, [rbp+var_1A0]; _QWORD
+0x1AD472  lea     r8, [rbp+var_D78]; _QWORD
+0x1AD479  call    sceNgs2RackCreate
+0x1AD47E  test    eax, eax
+0x1AD480  js      loc_1ADB35
+0x1AD486  mov     rdi, [rbp+var_D78]; _QWORD
+0x1AD48D  xor     esi, esi; _QWORD
+0x1AD48F  lea     rdx, [rbp+var_D70]; _QWORD
+0x1AD496  call    sceNgs2RackGetVoiceHandle
+0x1AD49B  mov     rdi, [rbp+var_D70]; _QWORD
+0x1AD4A2  vmovups xmm0, cs:xmmword_14DAD80
+0x1AD4AA  lea     rsi, [rbp+var_D68]; _QWORD
+0x1AD4B1  mov     word ptr [rbp+var_D68], 18h
+0x1AD4BA  mov     word ptr [rbp+var_D68+2], 0
+0x1AD4C3  vmovups xmmword ptr [rbp+var_D68+4], xmm0
+0x1AD4CB  mov     [rbp+var_D54], 0
+0x1AD4D5  call    sceNgs2VoiceControl
+0x1AD4DA  mov     rax, [rbp+var_D78]
+0x1AD4E1  lea     rdi, aChorus; "CHORUS"
+0x1AD4E8  mov     [rbp+var_D50], rax
+0x1AD4EF  call    sub_1B1580
+0x1AD4F4  mov     esi, 50h ; 'P'
+0x1AD4F9  lea     rdi, [rbp+var_D40]
+0x1AD500  mov     [rbp+var_D44], eax
+0x1AD506  call    sub_1B1C70
+0x1AD50B  lea     rax, [rbp+var_D38]
+0x1AD512  mov     [rbp+var_D40], 8
+0x1AD51C  mov     esi, 20h ; ' '
+0x1AD521  lea     rdi, [rbp+var_BA8]
+0x1AD528  mov     [rbp+var_CF8], rax
+0x1AD52F  jmp     loc_1AD86E
+0x1AD534  lea     rax, [rbp+var_D90]
+0x1AD53B  mov     esi, 14h
+0x1AD540  mov     rdi, rax
+0x1AD543  call    sub_1B1C70
+0x1AD548  lea     r15, [rbp+var_678]
+0x1AD54F  mov     rax, 100000014h
+0x1AD559  mov     rcx, 447A000000000008h
+0x1AD563  mov     edx, 4D8h
+0x1AD568  lea     rsi, off_14DCAC8
+0x1AD56F  mov     rdi, r15
+0x1AD572  mov     [rbp+var_D90], rax
+0x1AD579  mov     [rbp+var_D88], rcx
+0x1AD580  call    memcpy
+0x1AD585  lea     rax, [rbp+var_D90]
+0x1AD58C  mov     edi, 4002h; _QWORD
+0x1AD591  mov     rsi, r15; _QWORD
+0x1AD594  lea     rdx, [rbp+var_1A0]; _QWORD
+0x1AD59B  mov     [rbp+var_5F0], 1
+0x1AD5A5  mov     [rbp+var_5F4], 1
+0x1AD5AF  mov     [rbp+var_5DC], 0
+0x1AD5B9  mov     [rbp+var_5D4], 0
+0x1AD5C3  mov     [rbp+var_5E0], 1Dh
+0x1AD5CD  mov     [rbp+var_5E8], rax
+0x1AD5D4  mov     [rbp+var_228], 0
+0x1AD5DE  call    sceNgs2RackQueryBufferSize
+0x1AD5E3  test    eax, eax
+0x1AD5E5  js      loc_1ADB35
+0x1AD5EB  mov     rsi, [rbp+var_198]
+0x1AD5F2  mov     rdi, [rbp+var_DA0]
+0x1AD5F9  mov     edx, 1
+0x1AD5FE  call    sub_1B3BD0
+0x1AD603  mov     [rbp+var_1A0], rax
+0x1AD60A  test    rax, rax
+0x1AD60D  jz      loc_1AD873
+0x1AD613  mov     esi, 4002h; _QWORD
+0x1AD618  mov     rdi, r14; _QWORD
+0x1AD61B  lea     rdx, [rbp+var_678]; _QWORD
+0x1AD622  lea     rcx, [rbp+var_1A0]; _QWORD
+0x1AD629  lea     r8, [rbp+var_D78]; _QWORD
+0x1AD630  call    sceNgs2RackCreate
+0x1AD635  test    eax, eax
+0x1AD637  js      loc_1ADB35
+0x1AD63D  mov     rdi, [rbp+var_D78]; _QWORD
+0x1AD644  xor     esi, esi; _QWORD
+0x1AD646  lea     rdx, [rbp+var_D70]; _QWORD
+0x1AD64D  call    sceNgs2RackGetVoiceHandle
+0x1AD652  mov     rdi, [rbp+var_D70]; _QWORD
+0x1AD659  vmovups xmm0, cs:xmmword_14DAD80
+0x1AD661  lea     rsi, [rbp+var_D68]; _QWORD
+0x1AD668  mov     word ptr [rbp+var_D68], 18h
+0x1AD671  mov     word ptr [rbp+var_D68+2], 0
+0x1AD67A  vmovups xmmword ptr [rbp+var_D68+4], xmm0
+0x1AD682  mov     [rbp+var_D54], 0
+0x1AD68C  call    sceNgs2VoiceControl
+0x1AD691  mov     rax, [rbp+var_D78]
+0x1AD698  lea     rdi, aDelay_0; "DELAY"
+0x1AD69F  mov     [rbp+var_D50], rax
+0x1AD6A6  call    sub_1B1580
+0x1AD6AB  mov     esi, 50h ; 'P'
+0x1AD6B0  lea     rdi, [rbp+var_D40]
+0x1AD6B7  mov     [rbp+var_D44], eax
+0x1AD6BD  call    sub_1B1C70
+0x1AD6C2  lea     rax, [rbp+var_D38]
+0x1AD6C9  mov     esi, 68h ; 'h'
+0x1AD6CE  lea     rdi, [rbp+var_B88]
+0x1AD6D5  mov     [rbp+var_D40], 8
+0x1AD6DF  mov     [rbp+var_CF8], rax
+0x1AD6E6  call    sub_1B1C70
+0x1AD6EB  lea     rax, [rbp+var_B7C]
+0x1AD6F2  mov     [rbp+var_B84], 8
+0x1AD6FC  mov     [rbp+var_B38], rax
+0x1AD703  jmp     loc_1AD873
+0x1AD708  vmovups ymm0, cs:ymmword_14DC960+18h
+0x1AD710  vmovups ymm2, cs:ymmword_14DC960
+0x1AD718  vmovups ymm1, cs:ymmword_14DC940
+0x1AD720  mov     edi, 2000h; _QWORD
+0x1AD725  lea     rsi, [rbp+var_D0]; _QWORD
+0x1AD72C  lea     rdx, [rbp+var_1A0]; _QWORD
+0x1AD733  vmovups ymmword ptr [rbp+anonymous_0+18h], ymm0
+0x1AD738  vmovups ymmword ptr [rbp-70h], ymm2
+0x1AD73D  vmovups [rbp+var_90], ymm1
+0x1AD745  vmovups ymm2, cs:ymmword_14DC920
+0x1AD74D  vmovups ymm1, cs:ymmword_14DC900
+0x1AD755  vmovups [rbp+var_B0], ymm2
+0x1AD75D  vmovups ymmword ptr [rbp+var_D0], ymm1
+0x1AD765  call    sceNgs2RackQueryBufferSize
+0x1AD76A  test    eax, eax
+0x1AD76C  js      loc_1ADB35
+0x1AD772  mov     rsi, [rbp+var_198]
+0x1AD779  mov     rdi, [rbp+var_DA0]
+0x1AD780  mov     edx, 1
+0x1AD785  call    sub_1B3BD0
+0x1AD78A  mov     [rbp+var_1A0], rax
+0x1AD791  test    rax, rax
+0x1AD794  jz      loc_1AD873
+0x1AD79A  mov     esi, 2000h; _QWORD
+0x1AD79F  mov     rdi, r14; _QWORD
+0x1AD7A2  lea     rdx, [rbp+var_D0]; _QWORD
+0x1AD7A9  lea     rcx, [rbp+var_1A0]; _QWORD
+0x1AD7B0  lea     r8, [rbp+var_D78]; _QWORD
+0x1AD7B7  call    sceNgs2RackCreate
+0x1AD7BC  test    eax, eax
+0x1AD7BE  js      loc_1ADB35
+0x1AD7C4  mov     rdi, [rbp+var_D78]; _QWORD
+0x1AD7CB  xor     esi, esi; _QWORD
+0x1AD7CD  lea     rdx, [rbp+var_D70]; _QWORD
+0x1AD7D4  call    sceNgs2RackGetVoiceHandle
+0x1AD7D9  mov     rdi, [rbp+var_D70]; _QWORD
+0x1AD7E0  lea     rsi, [rbp+var_678]; _QWORD
+0x1AD7E7  mov     rax, 820000000h
+0x1AD7F1  mov     word ptr [rbp+var_678], 10h
+0x1AD7FA  mov     word ptr [rbp+var_678+2], 0
+0x1AD803  mov     [rbp+var_678+4], rax
+0x1AD80A  mov     dword ptr [rbp-66Ch], 0
+0x1AD814  call    sceNgs2VoiceControl
+0x1AD819  mov     rax, [rbp+var_D78]
+0x1AD820  lea     rdi, off_14DB98D
+0x1AD827  mov     [rbp+var_D50], rax
+0x1AD82E  call    sub_1B1580
+0x1AD833  mov     esi, 50h ; 'P'
+0x1AD838  lea     rdi, [rbp+var_D40]
+0x1AD83F  mov     [rbp+var_D44], eax
+0x1AD845  call    sub_1B1C70
+0x1AD84A  lea     rax, [rbp+var_D38]
+0x1AD851  mov     [rbp+var_D40], 8
+0x1AD85B  mov     esi, 4
+0x1AD860  lea     rdi, [rbp+var_B20]
+0x1AD867  mov     [rbp+var_CF8], rax
+0x1AD86E  call    sub_1B1C70
+0x1AD873  test    r13, r13
+0x1AD876  jz      loc_1ADA96
+0x1AD87C  mov     r15, rbx
+0x1AD87F  imul    rbx, r12, 250h
+0x1AD886  mov     edx, 250h
+0x1AD88B  lea     rsi, [rbp+var_D50]
+0x1AD892  mov     [rbp+var_DA8], r12
+0x1AD899  lea     r14, [r13+rbx+0]
+0x1AD89E  mov     rdi, r14
+0x1AD8A1  call    sub_1B17C0
+0x1AD8A6  lea     rax, [r13+rbx+18h]
+0x1AD8AB  lea     rdx, [r13+rbx+64h]
+0x1AD8B0  lea     rcx, [r13+rbx+1D4h]
+0x1AD8B8  mov     r12, r13
+0x1AD8BB  lea     rsi, aDisto; "DISTO"
+0x1AD8C2  mov     [r13+rbx+58h], rax
+0x1AD8C7  mov     [r13+rbx+0E8h], rdx
+0x1AD8CF  mov     [r13+rbx+218h], rcx
+0x1AD8D7  mov     rcx, [rbp+var_D98]
+0x1AD8DE  mov     r13, r15
+0x1AD8E1  mov     rax, [r15+18h]
+0x1AD8E5  mov     r15, [rax+rcx*8+8]
+0x1AD8EA  mov     rdi, r15
+0x1AD8ED  call    sub_1B1E90
+0x1AD8F2  test    eax, eax
+0x1AD8F4  jz      loc_1AD990
+0x1AD8FA  mov     rdi, r15
+0x1AD8FD  lea     rsi, aUmix; "UMIX"
+0x1AD904  call    sub_1B1E90
+0x1AD909  test    eax, eax
+0x1AD90B  jz      loc_1AD9D8
+0x1AD911  mov     rdi, r15
+0x1AD914  lea     rsi, off_14DB98D
+0x1AD91B  call    sub_1B1E90
+0x1AD920  test    eax, eax
+0x1AD922  jz      loc_1ADA1D
+0x1AD928  mov     rdi, r15
+0x1AD92B  lea     rsi, aPanner; "PANNER"
+0x1AD932  call    sub_1B1E90
+0x1AD937  test    eax, eax
+0x1AD939  jnz     loc_1ADA89
+0x1AD93F  mov     rdi, [r14]; _QWORD
+0x1AD942  xor     esi, esi; _QWORD
+0x1AD944  lea     rdx, [rbp+var_D0]; _QWORD
+0x1AD94B  call    sceNgs2RackGetVoiceHandle
+0x1AD950  mov     rdi, [rbp+var_D0]
+0x1AD957  lea     rax, [r12+rbx+240h]
+0x1AD95F  lea     rcx, sub_1B1780
+0x1AD966  mov     word ptr [rbp+var_678], 28h ; '('
+0x1AD96F  mov     word ptr [rbp+var_678+2], 0
+0x1AD978  mov     dword ptr [rbp+var_678+4], 20000004h
+0x1AD982  jmp     loc_1ADA60
+0x1AD987  align 10h
+0x1AD990  mov     rdi, [r14]; _QWORD
+0x1AD993  xor     esi, esi; _QWORD
+0x1AD995  lea     rdx, [rbp+var_D0]; _QWORD
+0x1AD99C  call    sceNgs2RackGetVoiceHandle
+0x1AD9A1  mov     rdi, [rbp+var_D0]
+0x1AD9A8  mov     word ptr [rbp+var_678], 28h ; '('
+0x1AD9B1  mov     word ptr [rbp+var_678+2], 0
+0x1AD9BA  lea     rax, [r12+rbx+148h]
+0x1AD9C2  mov     dword ptr [rbp+var_678+4], 20000004h
+0x1AD9CC  lea     rcx, sub_1B16C0
+0x1AD9D3  jmp     loc_1ADA60
+0x1AD9D8  mov     rdi, [r14]; _QWORD
+0x1AD9DB  xor     esi, esi; _QWORD
+0x1AD9DD  lea     rdx, [rbp+var_D0]; _QWORD
+0x1AD9E4  call    sceNgs2RackGetVoiceHandle
+0x1AD9E9  mov     rdi, [rbp+var_D0]
+0x1AD9F0  mov     word ptr [rbp+var_678], 28h ; '('
+0x1AD9F9  mov     word ptr [rbp+var_678+2], 0
+0x1ADA02  lea     rax, [r12+rbx+150h]
+0x1ADA0A  mov     dword ptr [rbp+var_678+4], 20000004h
+0x1ADA14  lea     rcx, sub_1B1700
+0x1ADA1B  jmp     short loc_1ADA60
+0x1ADA1D  mov     rdi, [r14]; _QWORD
+0x1ADA20  xor     esi, esi; _QWORD
+0x1ADA22  lea     rdx, [rbp+var_D0]; _QWORD
+0x1ADA29  call    sceNgs2RackGetVoiceHandle
+0x1ADA2E  mov     rdi, [rbp+var_D0]; _QWORD
+0x1ADA35  mov     word ptr [rbp+var_678], 28h ; '('
+0x1ADA3E  mov     word ptr [rbp+var_678+2], 0
+0x1ADA47  lea     rax, [r12+rbx+230h]
+0x1ADA4F  mov     dword ptr [rbp+var_678+4], 20000004h
+0x1ADA59  lea     rcx, sub_1B1740
+0x1ADA60  mov     [rbp-670h], rcx
+0x1ADA67  mov     [rbp-668h], rax
+0x1ADA6E  lea     rsi, [rbp+var_678]; _QWORD
+0x1ADA75  lea     rax, [rbp+var_660]
+0x1ADA7C  vxorps  xmm0, xmm0, xmm0
+0x1ADA80  vmovups xmmword ptr [rax], xmm0
+0x1ADA84  call    sceNgs2VoiceControl
+0x1ADA89  mov     rbx, r13
+0x1ADA8C  mov     r13, r12
+0x1ADA8F  mov     r12, [rbp+var_DA8]
+0x1ADA96  mov     eax, [rbx+10h]
+0x1ADA99  inc     r12d
+0x1ADA9C  cmp     r12d, eax
+0x1ADA9F  jb      loc_1AC830
+0x1ADAA5  mov     r14, cs:qword_1700698
+0x1ADAAC  mov     r15, [rbp+var_DB0]
+0x1ADAB3  shl     rax, 3
+0x1ADAB7  lea     r12, [rax+rax*4]
+0x1ADABB  mov     rdi, [rbp+var_DA0]
+0x1ADAC2  mov     rsi, r12
+0x1ADAC5  mov     edx, 1
+0x1ADACA  mov     r12, r13
+0x1ADACD  mov     r13, rbx
+0x1ADAD0  call    sub_1B3BD0
+0x1ADAD5  mov     rbx, rax
+0x1ADAD8  test    rbx, rbx
+0x1ADADB  jz      short loc_1ADAF1
+0x1ADADD  mov     eax, [r13+10h]
+0x1ADAE1  mov     rdi, rbx
+0x1ADAE4  shl     rax, 3
+0x1ADAE8  lea     rsi, [rax+rax*4]
+0x1ADAEC  call    sub_1B1C70
+0x1ADAF1  mov     rdi, [rbp+var_DA0]
+0x1ADAF8  mov     esi, 30h ; '0'
+0x1ADAFD  mov     edx, 1
+0x1ADB02  call    sub_1B3BD0
+0x1ADB07  mov     rcx, rax
+0x1ADB0A  test    rcx, rcx
+0x1ADB0D  jz      short loc_1ADB29
+0x1ADB0F  mov     [rcx], r12
+0x1ADB12  vxorps  xmm0, xmm0, xmm0
+0x1ADB16  mov     eax, [r13+10h]
+0x1ADB1A  mov     [rcx+8], eax
+0x1ADB1D  mov     [rcx+10h], rbx
+0x1ADB21  mov     [rcx+18h], eax
+0x1ADB24  vmovups xmmword ptr [rcx+1Ch], xmm0
+0x1ADB29  xor     eax, eax
+0x1ADB2B  test    r15, r15
+0x1ADB2E  jz      short loc_1ADB41
+0x1ADB30  mov     [r15], rcx
+0x1ADB33  jmp     short loc_1ADB41
+0x1ADB35  mov     r14, cs:qword_1700698
+0x1ADB3C  mov     eax, 0FFFFFFFFh
+0x1ADB41  mov     rcx, [r14]
+0x1ADB44  cmp     rcx, [rbp+var_30]
+0x1ADB48  jnz     short loc_1ADB5C
+0x1ADB4A  add     rsp, 0D98h
+0x1ADB51  pop     rbx
+0x1ADB52  pop     r12
+0x1ADB54  pop     r13
+0x1ADB56  pop     r14
+0x1ADB58  pop     r15
+0x1ADB5A  pop     rbp
+0x1ADB5B  retn
+0x1ADB5C  call    __stack_chk_fail
+
+========================================
+sub_1A9690 0x1A9690 - 0x1AB573
+0x1A9690  push    rbp
+0x1A9691  mov     rbp, rsp
+0x1A9694  push    r15
+0x1A9696  push    r14
+0x1A9698  push    r13
+0x1A969A  push    r12
+0x1A969C  push    rbx
+0x1A969D  sub     rsp, 228h
+0x1A96A4  mov     rax, cs:qword_1700698
+0x1A96AB  mov     r14, rdx
+0x1A96AE  mov     r13, rdi
+0x1A96B1  mov     edi, 0FFFFFFFFh
+0x1A96B6  mov     [rbp+var_198], r14
+0x1A96BD  mov     rax, [rax]
+0x1A96C0  mov     [rbp+var_30], rax
+0x1A96C4  movzx   edx, byte ptr [r13+101h]
+0x1A96CC  test    edx, edx
+0x1A96CE  jz      loc_1AB546; jumptable 00000000001A96F5 case 6
+0x1A96D4  mov     eax, esi
+0x1A96D6  mov     dword ptr [rbp+var_180], esi
+0x1A96DC  cmp     esi, 1Ah; switch 27 cases
+0x1A96DF  ja      loc_1AA9D6; jumptable 00000000001A96F5 default case
+0x1A96E5  lea     rcx, off_14DAE90
+0x1A96EC  xor     edi, edi
+0x1A96EE  movsxd  rax, dword ptr [rcx+rax*4]
+0x1A96F2  add     rax, rcx
+0x1A96F5  jmp     rax; switch jump
+0x1A96F7  movsxd  rdi, dword ptr [r14]; jumptable 00000000001A96F5 cases 7-14
+0x1A96FA  add     dword ptr [rbp+var_180], 0FFFFFFF9h
+0x1A9701  cmp     rdi, 0Bh
+0x1A9705  jnb     loc_1A98D1
+0x1A970B  lea     rax, qword_14DCFA0
+0x1A9712  mov     ebx, [rax+rdi*4]
+0x1A9715  mov     rax, r14
+0x1A9718  lea     r14, [rax+4]
+0x1A971C  mov     r15, rax
+0x1A971F  jmp     loc_1A9907
+0x1A9724  mov     rax, [r13+80h]; jumptable 00000000001A96F5 cases 17-24
+0x1A972B  xor     edi, edi
+0x1A972D  mov     dword ptr [rbp+var_1A0], 0
+0x1A9737  test    rax, rax
+0x1A973A  jz      short loc_1A974F
+0x1A973C  cmp     dword ptr [rax+0A0h], 0FFFFFFFFh
+0x1A9743  setnz   al
+0x1A9746  movzx   eax, al
+0x1A9749  mov     dword ptr [rbp+var_1A0], eax
+0x1A974F  mov     al, [r13+124h]
+0x1A9756  test    al, al
+0x1A9758  jz      loc_1AB546; jumptable 00000000001A96F5 case 6
+0x1A975E  mov     ecx, dword ptr [rbp+var_180]
+0x1A9764  xor     r15d, r15d
+0x1A9767  add     ecx, 0FFFFFFEFh
+0x1A976A  mov     dword ptr [rbp+var_180], ecx
+0x1A9770  mov     ecx, ecx
+0x1A9772  mov     [rbp+var_1A8], rcx
+0x1A9779  nop     dword ptr [rax+00000000h]
+0x1A9780  mov     ecx, r15d
+0x1A9783  movzx   ecx, byte ptr [r13+rcx+114h]
+0x1A978C  mov     rbx, [r13+rcx*8+80h]
+0x1A9794  test    rbx, rbx
+0x1A9797  jz      loc_1A98BB
+0x1A979D  vmovss  xmm0, dword ptr [r14+4]
+0x1A97A3  mov     r14d, [r14]
+0x1A97A6  mov     r12, r13
+0x1A97A9  vmulss  xmm0, xmm0, dword ptr [rbx+70h]
+0x1A97AE  lea     eax, [r14-1]
+0x1A97B2  cmp     eax, 7Eh ; '~'
+0x1A97B5  vmovss  dword ptr [rbp+var_190], xmm0
+0x1A97BD  ja      loc_1A986C
+0x1A97C3  mov     rax, [rbp+var_1A8]
+0x1A97CA  movzx   edx, byte ptr [r12+rax+140h]
+0x1A97D3  cmp     edx, r14d
+0x1A97D6  jz      loc_1A986C
+0x1A97DC  test    dl, dl
+0x1A97DE  jz      short loc_1A97EE
+0x1A97E0  mov     esi, dword ptr [rbp+var_180]
+0x1A97E6  mov     rdi, r12
+0x1A97E9  call    sub_1A8D60
+0x1A97EE  mov     rax, cs:qword_57F1C20
+0x1A97F5  imul    r13, r14, 98h
+0x1A97FC  lea     rdi, [rax+r13+0A8h]
+0x1A9804  call    sub_1B11E0
+0x1A9809  mov     rax, cs:qword_57F1C20
+0x1A9810  lea     rdx, [rax+r13+0F0h]
+0x1A9818  nop     dword ptr [rax+rax+00000000h]
+0x1A9820  mov     eax, [rdx]
+0x1A9822  mov     dword ptr [rbp+var_50], eax
+0x1A9825  mov     eax, dword ptr [rbp+var_50]
+0x1A9828  inc     eax
+0x1A982A  mov     dword ptr [rbp+var_168], eax
+0x1A9830  mov     ecx, dword ptr [rbp+var_50]
+0x1A9833  mov     esi, dword ptr [rbp+var_168]
+0x1A9839  mov     eax, ecx
+0x1A983B  lock cmpxchg [rdx], esi
+0x1A983F  cmovz   eax, ecx
+0x1A9842  cmp     eax, dword ptr [rbp+var_50]
+0x1A9845  jnz     short loc_1A9820
+0x1A9847  mov     rax, cs:qword_57F1C20
+0x1A984E  xor     esi, esi
+0x1A9850  lea     rdi, [rax+r13+0A8h]
+0x1A9858  call    sub_1B1470
+0x1A985D  mov     rax, [rbp+var_1A8]
+0x1A9864  mov     [r12+rax+140h], r14b
+0x1A986C  mov     rax, cs:qword_57F1C20
+0x1A9873  movzx   esi, word ptr [rbx+8]; _QWORD
+0x1A9877  lea     rdx, [rbp+var_150]; _QWORD
+0x1A987E  mov     rdi, [rax+78h]; _QWORD
+0x1A9882  call    sceNgs2RackGetVoiceHandle
+0x1A9887  mov     r14, [rbp+var_198]
+0x1A988E  mov     rdi, [rbp+var_150]; _QWORD
+0x1A9895  mov     esi, dword ptr [rbp+var_180]
+0x1A989B  vmovss  xmm0, dword ptr [rbp+var_190]
+0x1A98A3  mov     ecx, dword ptr [rbp+var_1A0]
+0x1A98A9  mov     edx, [r14]
+0x1A98AC  call    sub_1AB920
+0x1A98B1  mov     r13, r12
+0x1A98B4  mov     al, [r13+124h]
+0x1A98BB  inc     r15d
+0x1A98BE  xor     edi, edi
+0x1A98C0  movzx   ecx, al
+0x1A98C3  cmp     r15d, ecx
+0x1A98C6  jb      loc_1A9780
+0x1A98CC  jmp     loc_1AB546; jumptable 00000000001A96F5 case 6
+0x1A98D1  lea     eax, [rdi-10h]
+0x1A98D4  cmp     eax, 70h ; 'p'
+0x1A98D7  jnb     loc_1A9AF5
+0x1A98DD  mov     rax, r14
+0x1A98E0  lea     rdx, [rbp+var_50]
+0x1A98E4  mov     esi, [rax+4]
+0x1A98E7  vmovss  xmm0, dword ptr [rax+8]
+0x1A98EC  vmovss  xmm1, dword ptr [rax+0Ch]
+0x1A98F1  vmovss  xmm2, dword ptr [rax+10h]
+0x1A98F6  lea     r14, [rax+4]
+0x1A98FA  mov     r15, rax
+0x1A98FD  call    sub_1E2450
+0x1A9902  mov     ebx, 20h ; ' '
+0x1A9907  movsxd  rax, dword ptr [r14]
+0x1A990A  mov     r14, r15
+0x1A990D  cmp     rax, 9
+0x1A9911  ja      loc_1A9AF5
+0x1A9917  cmp     byte ptr [r13+124h], 0
+0x1A991F  jz      loc_1A9AF5
+0x1A9925  vmovss  xmm0, cs:dword_14DAE20
+0x1A992D  vmovss  xmm1, cs:dword_14DAE28
+0x1A9935  lea     rcx, qword_14DCFD0
+0x1A993C  xor     r15d, r15d
+0x1A993F  mov     r12d, [rcx+rax*4]
+0x1A9943  mov     eax, [r14+8]
+0x1A9947  vsubss  xmm0, xmm0, dword ptr [r14+0Ch]
+0x1A994D  mov     dword ptr [rbp+var_190], eax
+0x1A9953  mov     eax, [r14+10h]
+0x1A9957  vmaxss  xmm0, xmm0, cs:dword_14DAE24
+0x1A995F  mov     dword ptr [rbp+var_1A0], eax
+0x1A9965  vdivss  xmm0, xmm1, xmm0
+0x1A9969  vmovss  dword ptr [rbp+var_1A8], xmm0
+0x1A9971  nop     word ptr [rax+rax+00000000h]
+0x1A9980  mov     eax, r15d
+0x1A9983  movzx   eax, byte ptr [r13+rax+114h]
+0x1A998C  mov     rax, [r13+rax*8+80h]
+0x1A9994  test    rax, rax
+0x1A9997  jz      loc_1A9AE1
+0x1A999D  mov     rcx, cs:qword_57F1C20
+0x1A99A4  movzx   esi, word ptr [rax+8]; _QWORD
+0x1A99A8  lea     rdx, [rbp+var_168]; _QWORD
+0x1A99AF  mov     rdi, [rcx+78h]; _QWORD
+0x1A99B3  call    sceNgs2RackGetVoiceHandle
+0x1A99B8  mov     rdi, [rbp+var_168]; _QWORD
+0x1A99BF  cmp     ebx, 20h ; ' '
+0x1A99C2  jnz     loc_1A9A50
+0x1A99C8  mov     edx, dword ptr [rbp+var_180]
+0x1A99CE  mov     rax, [rbp+var_50]
+0x1A99D2  mov     rcx, [rbp+var_50+8]
+0x1A99D6  mov     word ptr [rbp+var_150], 30h ; '0'
+0x1A99DF  mov     word ptr [rbp+var_150+2], 0
+0x1A99E8  mov     dword ptr [rbp+var_150+4], 1000000Ah
+0x1A99F2  mov     dword ptr [rbp+var_148], edx
+0x1A99F8  mov     edx, dword ptr [rbp+var_40]
+0x1A99FB  mov     dword ptr [rbp+var_148+4], r12d
+0x1A9A02  mov     dword ptr [rbp+var_148+8], 20h ; ' '
+0x1A9A0C  mov     dword ptr [rbp+var_148+0Ch], 0
+0x1A9A16  mov     dword ptr [rbp+var_138], eax
+0x1A9A1C  shr     rax, 20h
+0x1A9A20  mov     dword ptr [rbp+var_138+4], eax
+0x1A9A26  mov     dword ptr [rbp+var_138+8], ecx
+0x1A9A2C  shr     rcx, 20h
+0x1A9A30  mov     dword ptr [rbp+var_138+0Ch], ecx
+0x1A9A36  mov     [rbp+var_128], edx
+0x1A9A3C  jmp     loc_1A9ACB
+0x1A9A41  align 10h
+0x1A9A50  mov     eax, dword ptr [rbp+var_180]
+0x1A9A56  mov     edx, dword ptr [rbp+var_190]
+0x1A9A5C  vmovss  xmm0, dword ptr [rbp+var_1A8]
+0x1A9A64  mov     ecx, dword ptr [rbp+var_1A0]
+0x1A9A6A  mov     word ptr [rbp+var_150], 30h ; '0'
+0x1A9A73  mov     word ptr [rbp+var_150+2], 0
+0x1A9A7C  mov     dword ptr [rbp+var_150+4], 1000000Ah
+0x1A9A86  mov     dword ptr [rbp+var_148], eax
+0x1A9A8C  mov     dword ptr [rbp+var_148+4], r12d
+0x1A9A93  mov     dword ptr [rbp+var_148+8], ebx
+0x1A9A99  mov     dword ptr [rbp+var_148+0Ch], 0
+0x1A9AA3  mov     dword ptr [rbp+var_138], edx
+0x1A9AA9  vmovss  dword ptr [rbp+var_138+4], xmm0
+0x1A9AB1  mov     dword ptr [rbp+var_138+8], ecx
+0x1A9AB7  mov     dword ptr [rbp+var_138+0Ch], 0
+0x1A9AC1  mov     [rbp+var_128], 0
+0x1A9ACB  lea     rsi, [rbp+var_150]; _QWORD
+0x1A9AD2  mov     [rbp+var_124], 0
+0x1A9ADC  call    sceNgs2VoiceControl
+0x1A9AE1  movzx   eax, byte ptr [r13+124h]
+0x1A9AE9  inc     r15d
+0x1A9AEC  cmp     r15d, eax
+0x1A9AEF  jb      loc_1A9980
+0x1A9AF5  mov     al, [r13+124h]
+0x1A9AFC  mov     r12, r14
+0x1A9AFF  mov     edi, 0
+0x1A9B04  test    al, al
+0x1A9B06  jz      loc_1AB546; jumptable 00000000001A96F5 case 6
+0x1A9B0C  lea     r15, byte_1705C10
+0x1A9B13  xor     ebx, ebx
+0x1A9B15  nop     word ptr [rax+rax+00000000h]
+0x1A9B20  mov     ecx, ebx
+0x1A9B22  movzx   ecx, byte ptr [r13+rcx+114h]
+0x1A9B2B  mov     r14, [r13+rcx*8+80h]
+0x1A9B33  test    r14, r14
+0x1A9B36  jz      loc_1A9BF0
+0x1A9B3C  test    byte ptr [r15+2], 4
+0x1A9B41  jnz     short loc_1A9B53
+0x1A9B43  lea     rcx, unk_57F1E04
+0x1A9B4A  cmp     dword ptr [rcx], 0
+0x1A9B4D  jz      loc_1A9BF0
+0x1A9B53  mov     rdi, [r13+128h]
+0x1A9B5A  call    sub_1B6370
+0x1A9B5F  mov     edi, [r12]
+0x1A9B63  mov     ecx, [r12+4]
+0x1A9B68  vxorps  xmm2, xmm2, xmm2
+0x1A9B6C  vcvtss2sd xmm0, xmm2, dword ptr [r12+8]
+0x1A9B73  vcvtss2sd xmm1, xmm2, dword ptr [r12+0Ch]
+0x1A9B7A  vcvtss2sd xmm2, xmm2, dword ptr [r12+10h]
+0x1A9B81  mov     r8, [r13+130h]
+0x1A9B88  movzx   edx, word ptr [r14+8]
+0x1A9B8D  movzx   esi, byte ptr [r13+101h]
+0x1A9B95  lea     r9, aXPDVoiceFilter; "$%x,$%p,%d:VOICE_FILTER %d/%d,%d,%d,%d,"...
+0x1A9B9C  mov     [rsp+250h+var_218], ecx
+0x1A9BA0  mov     [rsp+250h+var_220], edi
+0x1A9BA4  mov     edi, dword ptr [rbp+var_180]
+0x1A9BAA  mov     ecx, 0
+0x1A9BAF  mov     [rsp+250h+var_228], edi
+0x1A9BB3  mov     [rsp+250h+var_230], esi
+0x1A9BB7  mov     [rsp+250h+var_240], edx
+0x1A9BBB  mov     [rsp+250h+var_248], r8
+0x1A9BC0  mov     [rsp+250h+var_250], eax
+0x1A9BC3  mov     edi, 0
+0x1A9BC8  mov     esi, offset qword_40000
+0x1A9BCD  mov     edx, 0
+0x1A9BD2  mov     r8d, 0
+0x1A9BD8  mov     al, 3
+0x1A9BDA  mov     [rsp+250h+var_238], 0
+0x1A9BE2  call    sub_1D60B0
+0x1A9BE7  mov     al, [r13+124h]
+0x1A9BEE  xor     edi, edi
+0x1A9BF0  inc     ebx
+0x1A9BF2  movzx   ecx, al
+0x1A9BF5  cmp     ebx, ecx
+0x1A9BF7  jb      loc_1A9B20
+0x1A9BFD  jmp     loc_1AB546; jumptable 00000000001A96F5 case 6
+0x1A9C02  mov     eax, [r14]; jumptable 00000000001A96F5 case 0
+0x1A9C05  cmp     eax, 2
+0x1A9C08  jnb     loc_1AAEB5
+0x1A9C0E  xor     eax, eax
+0x1A9C10  xor     r12d, r12d
+0x1A9C13  xor     ebx, ebx
+0x1A9C15  mov     [rbp+var_1B4], 0
+0x1A9C1F  mov     [rbp+var_1B0], rax
+0x1A9C26  xor     eax, eax
+0x1A9C28  mov     [rbp+var_1C0], rax
+0x1A9C2F  nop
+0x1A9C30  mov     dword ptr [rbp+var_180], esi
+0x1A9C36  mov     rdi, r14
+0x1A9C39  mov     esi, ebx
+0x1A9C3B  lea     rcx, [rbp+var_168]
+0x1A9C42  call    sub_1ED690
+0x1A9C47  mov     [r13+r12+114h], bl
+0x1A9C4F  mov     r9d, dword ptr [rbp+var_168+4]
+0x1A9C56  mov     [r13+r12+104h], r9b
+0x1A9C5E  mov     rax, [r14+0E8h]
+0x1A9C65  test    rax, rax
+0x1A9C68  jz      short loc_1A9C83
+0x1A9C6A  movzx   ecx, byte ptr [rax+r12*8+5]
+0x1A9C70  movzx   eax, byte ptr [rax+r12*8+6]
+0x1A9C76  mov     [rbp+var_1B4], ecx
+0x1A9C7C  mov     [rbp+var_1C0], rax
+0x1A9C83  mov     r8d, [r14+4]
+0x1A9C87  xor     esi, esi
+0x1A9C89  mov     r10d, 0BB80h
+0x1A9C8F  cmp     r8, 21h; switch 34 cases
+0x1A9C93  ja      short loc_1A9CBE; jumptable 00000000001A9CB1 default case
+0x1A9C95  lea     rcx, off_14DAEFC
+0x1A9C9C  mov     eax, 1Ch
+0x1A9CA1  mov     r15d, 1Bh
+0x1A9CA7  mov     rdx, rcx
+0x1A9CAA  movsxd  rcx, dword ptr [rdx+r8*4]
+0x1A9CAE  add     rcx, rdx
+0x1A9CB1  jmp     rcx; switch jump
+0x1A9CB3  mov     r15d, 11h; jumptable 00000000001A9CB1 case 0
+0x1A9CB9  jmp     loc_1A9E10; jumptable 00000000001A9CB1 case 21
+0x1A9CBE  lea     eax, [r8-28h]; jumptable 00000000001A9CB1 default case
+0x1A9CC2  cmp     eax, 0Dh; switch 14 cases
+0x1A9CC5  ja      short loc_1A9CE1; jumptable 00000000001A9CD5 default case
+0x1A9CC7  lea     rcx, off_14DAF84
+0x1A9CCE  movsxd  rax, dword ptr [rcx+rax*4]
+0x1A9CD2  add     rax, rcx
+0x1A9CD5  jmp     rax; switch jump
+0x1A9CD7  mov     eax, 87h; jumptable 00000000001A9CD5 case 0
+0x1A9CDC  jmp     loc_1A9DC2; jumptable 00000000001A9CB1 cases 32,33
+0x1A9CE1  cmp     r8d, 42h ; 'B'; jumptable 00000000001A9CD5 default case
+0x1A9CE5  jnz     short loc_1A9CF7; jumptable 00000000001A9CB1 cases 2,3,6,7,10,11,14,15,18,19,22-31
+0x1A9CE7  mov     eax, 40h ; '@'
+0x1A9CEC  mov     r8d, 42h ; 'B'
+0x1A9CF2  jmp     loc_1A9DC2; jumptable 00000000001A9CB1 cases 32,33
+0x1A9CF7  mov     edi, 0FFFFFFF8h; jumptable 00000000001A9CB1 cases 2,3,6,7,10,11,14,15,18,19,22-31
+0x1A9CFC  mov     edx, 0ABDh
+0x1A9D01  xor     eax, eax
+0x1A9D03  lea     rcx, aUnsupportedWav; "Unsupported waveform type (%d)\n"
+0x1A9D0A  call    sub_1A7F10
+0x1A9D0F  mov     r8d, [r14+4]
+0x1A9D13  mov     r9d, dword ptr [rbp+var_168+4]
+0x1A9D1A  mov     r10d, 0BB80h
+0x1A9D20  xor     esi, esi
+0x1A9D22  mov     eax, 80h
+0x1A9D27  jmp     loc_1A9DC2; jumptable 00000000001A9CB1 cases 32,33
+0x1A9D2C  mov     r15d, 10h; jumptable 00000000001A9CB1 case 1
+0x1A9D32  jmp     loc_1A9E10; jumptable 00000000001A9CB1 case 21
+0x1A9D37  mov     r15d, 12h; jumptable 00000000001A9CB1 case 4
+0x1A9D3D  jmp     loc_1A9E10; jumptable 00000000001A9CB1 case 21
+0x1A9D42  mov     r15d, 13h; jumptable 00000000001A9CB1 case 5
+0x1A9D48  jmp     loc_1A9E10; jumptable 00000000001A9CB1 case 21
+0x1A9D4D  mov     r15d, 14h; jumptable 00000000001A9CB1 case 8
+0x1A9D53  jmp     loc_1A9E10; jumptable 00000000001A9CB1 case 21
+0x1A9D58  mov     r15d, 15h; jumptable 00000000001A9CB1 case 9
+0x1A9D5E  jmp     loc_1A9E10; jumptable 00000000001A9CB1 case 21
+0x1A9D63  mov     r15d, 16h; jumptable 00000000001A9CB1 case 12
+0x1A9D69  jmp     loc_1A9E10; jumptable 00000000001A9CB1 case 21
+0x1A9D6E  mov     r15d, 17h; jumptable 00000000001A9CB1 case 13
+0x1A9D74  jmp     loc_1A9E10; jumptable 00000000001A9CB1 case 21
+0x1A9D79  mov     r15d, 18h; jumptable 00000000001A9CB1 case 16
+0x1A9D7F  jmp     loc_1A9E10; jumptable 00000000001A9CB1 case 21
+0x1A9D84  mov     r15d, 19h; jumptable 00000000001A9CB1 case 17
+0x1A9D8A  jmp     loc_1A9E10; jumptable 00000000001A9CB1 case 21
+0x1A9D8F  mov     r15d, 1Ah; jumptable 00000000001A9CB1 case 20
+0x1A9D95  jmp     loc_1A9E10; jumptable 00000000001A9CB1 case 21
+0x1A9D9A  mov     eax, 81h; jumptable 00000000001A9CD5 case 8
+0x1A9D9F  jmp     short loc_1A9DC2; jumptable 00000000001A9CB1 cases 32,33
+0x1A9DA1  mov     eax, 82h; jumptable 00000000001A9CD5 case 9
+0x1A9DA6  jmp     short loc_1A9DC2; jumptable 00000000001A9CB1 cases 32,33
+0x1A9DA8  mov     eax, 83h; jumptable 00000000001A9CD5 case 10
+0x1A9DAD  jmp     short loc_1A9DC2; jumptable 00000000001A9CB1 cases 32,33
+0x1A9DAF  mov     eax, 84h; jumptable 00000000001A9CD5 case 11
+0x1A9DB4  jmp     short loc_1A9DC2; jumptable 00000000001A9CB1 cases 32,33
+0x1A9DB6  mov     eax, 85h; jumptable 00000000001A9CD5 case 12
+0x1A9DBB  jmp     short loc_1A9DC2; jumptable 00000000001A9CB1 cases 32,33
+0x1A9DBD  mov     eax, 86h; jumptable 00000000001A9CD5 case 13
+0x1A9DC2  lea     ecx, [r8-30h]; jumptable 00000000001A9CB1 cases 32,33
+0x1A9DC6  cmp     ecx, 6
+0x1A9DC9  jnb     short loc_1A9DE8
+0x1A9DCB  mov     rcx, [r14+0D8h]
+0x1A9DD2  xor     r10d, r10d
+0x1A9DD5  test    rcx, rcx
+0x1A9DD8  jz      short loc_1A9DDD
+0x1A9DDA  mov     r10d, [rcx]
+0x1A9DDD  mov     esi, dword ptr [rbp+var_180]
+0x1A9DE3  mov     r15d, eax
+0x1A9DE6  jmp     short loc_1A9E10; jumptable 00000000001A9CB1 case 21
+0x1A9DE8  cmp     r8d, 42h ; 'B'
+0x1A9DEC  jz      short loc_1A9E04
+0x1A9DEE  cmp     r8d, 28h ; '('
+0x1A9DF2  jnz     short loc_1A9E0A
+0x1A9DF4  mov     rcx, [r14+0D8h]
+0x1A9DFB  test    rcx, rcx
+0x1A9DFE  jz      short loc_1A9E0A
+0x1A9E00  mov     esi, [rcx]
+0x1A9E02  jmp     short loc_1A9E0A
+0x1A9E04  mov     esi, dword ptr [rbp+var_158+4]
+0x1A9E0A  mov     r15d, eax
+0x1A9E0D  nop     dword ptr [rax]
+0x1A9E10  mov     eax, ebx; jumptable 00000000001A9CB1 case 21
+0x1A9E12  inc     r12
+0x1A9E15  mov     rcx, [r13+rax*8+80h]
+0x1A9E1D  test    rcx, rcx
+0x1A9E20  jz      loc_1A9EEA
+0x1A9E26  mov     rax, r12
+0x1A9E29  mov     dword ptr [rbp+var_180], esi
+0x1A9E2F  mov     qword ptr [rbp+var_190], r13
+0x1A9E36  mov     [rbp+var_198], r14
+0x1A9E3D  mov     r13d, [rbp+var_15C]
+0x1A9E44  mov     r14d, dword ptr [rbp+var_158]
+0x1A9E4B  movzx   esi, word ptr [rcx+8]; _QWORD
+0x1A9E4F  lea     rdx, [rbp+var_170]; _QWORD
+0x1A9E56  mov     dword ptr [rbp+var_1A8], ebx
+0x1A9E5C  mov     ebx, r10d
+0x1A9E5F  mov     r12d, r9d
+0x1A9E62  mov     [rbp+var_1C8], rcx
+0x1A9E69  mov     [rbp+var_1A0], rax
+0x1A9E70  mov     rax, cs:qword_57F1C20
+0x1A9E77  mov     rdi, [rax+78h]; _QWORD
+0x1A9E7B  call    sceNgs2RackGetVoiceHandle
+0x1A9E80  mov     rax, cs:qword_57F1C20
+0x1A9E87  mov     rdi, [rbp+var_170]; _QWORD
+0x1A9E8E  cmp     dword ptr [rax+8], 0
+0x1A9E92  jz      short loc_1A9EF6
+0x1A9E94  mov     eax, dword ptr [rbp+var_180]
+0x1A9E9A  mov     word ptr [rbp+var_150], 28h ; '('
+0x1A9EA3  mov     word ptr [rbp+var_150+2], 0
+0x1A9EAC  mov     dword ptr [rbp+var_150+4], 10000000h
+0x1A9EB6  mov     dword ptr [rbp+var_148], r15d
+0x1A9EBD  mov     dword ptr [rbp+var_148+4], r12d
+0x1A9EC4  mov     dword ptr [rbp+var_148+8], ebx
+0x1A9ECA  mov     dword ptr [rbp+var_148+0Ch], eax
+0x1A9ED0  mov     dword ptr [rbp+var_138], r13d
+0x1A9ED7  mov     dword ptr [rbp+var_138+4], r14d
+0x1A9EDE  mov     dword ptr [rbp+var_138+8], 1
+0x1A9EE8  jmp     short loc_1A9F4A
+0x1A9EEA  mov     [rbp+var_1C8], rcx
+0x1A9EF1  jmp     loc_1AA01C
+0x1A9EF6  mov     eax, dword ptr [rbp+var_180]
+0x1A9EFC  mov     word ptr [rbp+var_150], 28h ; '('
+0x1A9F05  mov     word ptr [rbp+var_150+2], 0
+0x1A9F0E  mov     dword ptr [rbp+var_150+4], 10000000h
+0x1A9F18  mov     dword ptr [rbp+var_148], r15d
+0x1A9F1F  mov     dword ptr [rbp+var_148+4], r12d
+0x1A9F26  mov     dword ptr [rbp+var_148+8], ebx
+0x1A9F2C  mov     dword ptr [rbp+var_148+0Ch], eax
+0x1A9F32  mov     dword ptr [rbp+var_138], r13d
+0x1A9F39  mov     dword ptr [rbp+var_138+4], r14d
+0x1A9F40  mov     dword ptr [rbp+var_138+8], 0
+0x1A9F4A  lea     rsi, [rbp+var_150]; _QWORD
+0x1A9F51  mov     dword ptr [rbp+var_138+0Ch], 0
+0x1A9F5B  call    sceNgs2VoiceControl
+0x1A9F60  mov     r14, [rbp+var_198]
+0x1A9F67  mov     r12, [rbp+var_1A0]
+0x1A9F6E  mov     ebx, dword ptr [rbp+var_1A8]
+0x1A9F74  mov     eax, [r14+100h]
+0x1A9F7B  test    eax, eax
+0x1A9F7D  jz      loc_1AA00F
+0x1A9F83  mov     rcx, [rbp+var_1B0]
+0x1A9F8A  mov     rdx, [rbp+var_1C0]
+0x1A9F91  mov     r13, qword ptr [rbp+var_190]
+0x1A9F98  lea     ecx, [rdx+rcx]
+0x1A9F9B  cmp     ecx, eax
+0x1A9F9D  ja      short loc_1A9FF9
+0x1A9F9F  mov     rdx, [r14+0F8h]
+0x1A9FA6  mov     eax, ecx
+0x1A9FA8  mov     rdi, [rbp+var_170]; _QWORD
+0x1A9FAF  lea     rsi, [rbp+var_150]; _QWORD
+0x1A9FB6  movzx   eax, word ptr [rdx+rax*4]
+0x1A9FBA  mov     word ptr [rbp+var_150], 10h
+0x1A9FC3  mov     word ptr [rbp+var_150+2], 0
+0x1A9FCC  mov     dword ptr [rbp+var_150+4], 10000005h
+0x1A9FD6  vcvtsi2ss xmm0, xmm0, eax
+0x1A9FDA  vmulss  xmm0, xmm0, cs:dword_14DAE40
+0x1A9FE2  vmovss  dword ptr [rbp+var_148], xmm0
+0x1A9FEA  mov     dword ptr [rbp+var_148+4], 0
+0x1A9FF4  call    sceNgs2VoiceControl
+0x1A9FF9  mov     rax, [rbp+var_1B0]
+0x1AA000  add     eax, [rbp+var_1B4]
+0x1AA006  mov     [rbp+var_1B0], rax
+0x1AA00D  jmp     short loc_1AA016
+0x1AA00F  mov     r13, qword ptr [rbp+var_190]
+0x1AA016  mov     esi, dword ptr [rbp+var_180]
+0x1AA01C  cmp     r12, 0Fh
+0x1AA020  ja      short loc_1AA038
+0x1AA022  add     ebx, dword ptr [rbp+var_168+4]
+0x1AA028  movzx   edx, byte ptr [r13+101h]
+0x1AA030  cmp     ebx, edx
+0x1AA032  jb      loc_1A9C30
+0x1AA038  movzx   eax, cs:byte_57F1C18
+0x1AA03F  mov     r15, r14
+0x1AA042  and     eax, 1
+0x1AA045  cmp     eax, 1
+0x1AA048  jnz     short loc_1AA0AA
+0x1AA04A  mov     rax, [rbp+var_1C8]
+0x1AA051  cmp     dword ptr [rax+0A0h], 0FFFFFFFFh
+0x1AA058  jz      short loc_1AA0AA
+0x1AA05A  mov     rdi, [rbp+var_170]; _QWORD
+0x1AA061  lea     rsi, [rbp+var_150]; _QWORD
+0x1AA068  lea     rax, sub_1AB580
+0x1AA06F  vxorps  xmm0, xmm0, xmm0
+0x1AA073  mov     word ptr [rbp+var_150], 28h ; '('
+0x1AA07C  mov     word ptr [rbp+var_150+2], 0
+0x1AA085  mov     dword ptr [rbp+var_150+4], 10000008h
+0x1AA08F  mov     qword ptr [rbp+var_148], rax
+0x1AA096  mov     qword ptr [rbp+var_148+8], r13
+0x1AA09D  vmovups [rbp+var_138], xmm0
+0x1AA0A5  call    sceNgs2VoiceControl
+0x1AA0AA  mov     [r13+124h], r12b
+0x1AA0B1  jmp     loc_1AB015
+0x1AA0B6  lea     r12, byte_1705C10; jumptable 00000000001A96F5 case 1
+0x1AA0BD  xor     ebx, ebx
+0x1AA0BF  nop
+0x1AA0C0  mov     ebx, ebx
+0x1AA0C2  mov     r15, [r13+rbx*8+80h]
+0x1AA0CA  test    r15, r15
+0x1AA0CD  jz      loc_1AA2E8
+0x1AA0D3  mov     rdi, r14
+0x1AA0D6  mov     esi, ebx
+0x1AA0D8  lea     rdx, [rbp+var_50]
+0x1AA0DC  call    sub_1EDAE0
+0x1AA0E1  mov     eax, dword ptr [rbp+var_50]
+0x1AA0E4  vmovss  xmm4, cs:dword_14DAE20
+0x1AA0EC  vmovss  xmm5, cs:dword_14DAE34
+0x1AA0F4  mov     [r15+4Ch], eax
+0x1AA0F8  mov     eax, dword ptr [rbp+var_50+4]
+0x1AA0FB  mov     [r15+50h], eax
+0x1AA0FF  mov     eax, dword ptr [rbp+var_50+8]
+0x1AA102  mov     [r15+54h], eax
+0x1AA106  mov     eax, dword ptr [rbp+var_50+0Ch]
+0x1AA109  mov     [r15+58h], eax
+0x1AA10D  mov     eax, dword ptr [rbp+var_40]
+0x1AA110  mov     [r15+5Ch], eax
+0x1AA114  mov     eax, dword ptr [rbp+var_40+4]
+0x1AA117  mov     [r15+60h], eax
+0x1AA11B  mov     eax, dword ptr [rbp+var_38]
+0x1AA11E  mov     [r15+64h], eax
+0x1AA122  mov     eax, dword ptr [rbp+var_38+4]
+0x1AA125  mov     [r15+68h], eax
+0x1AA129  mov     eax, [r14+4]
+0x1AA12D  mov     [r15+6Ch], eax
+0x1AA131  vmovss  xmm0, dword ptr [r14+2Ch]
+0x1AA137  vaddss  xmm0, xmm0, dword ptr [r14+34h]
+0x1AA13D  vmovss  dword ptr [r15+74h], xmm0
+0x1AA143  vmovss  xmm1, dword ptr [r14+48h]
+0x1AA149  vmovss  xmm2, dword ptr [r14+38h]
+0x1AA14F  vmovss  xmm0, dword ptr [r14+30h]
+0x1AA155  vmulss  xmm3, xmm1, xmm2
+0x1AA159  vmulss  xmm3, xmm3, xmm0
+0x1AA15D  vminss  xmm4, xmm4, xmm3
+0x1AA161  vcmpltss xmm3, xmm3, xmm5
+0x1AA166  vandnps xmm4, xmm3, xmm4
+0x1AA16A  vandps  xmm3, xmm3, xmm5
+0x1AA16E  vorps   xmm3, xmm4, xmm3
+0x1AA172  vmovss  dword ptr [r15+78h], xmm3
+0x1AA178  mov     eax, [r14+44h]
+0x1AA17C  mov     [r15+7Ch], eax
+0x1AA180  mov     ecx, [r14+3Ch]
+0x1AA184  mov     [r15+80h], ecx
+0x1AA18B  mov     ecx, [r14+40h]
+0x1AA18F  mov     [r15+84h], ecx
+0x1AA196  cmp     dword ptr [r15+0A0h], 0FFFFFFFFh
+0x1AA19E  jz      loc_1AA263
+0x1AA1A4  vmulss  xmm1, xmm1, dword ptr [r14+4Ch]
+0x1AA1AA  vmovd   xmm3, eax
+0x1AA1AE  vmulss  xmm1, xmm1, xmm2
+0x1AA1B2  vmulss  xmm0, xmm1, xmm0
+0x1AA1B6  vmovss  dword ptr [rbp+var_180], xmm0
+0x1AA1BE  vmovss  xmm0, cs:dword_14DAE38
+0x1AA1C6  vmulss  xmm0, xmm3, xmm0
+0x1AA1CA  call    sub_1B4C50
+0x1AA1CF  vmulss  xmm0, xmm0, dword ptr [rbp+var_180]
+0x1AA1D7  vxorps  xmm0, xmm0, cs:xmmword_14DAD50
+0x1AA1DF  vmovaps [rbp+var_190], xmm0
+0x1AA1E7  vmovss  xmm0, cs:dword_14DAE38
+0x1AA1EF  vmulss  xmm0, xmm0, dword ptr [r15+7Ch]
+0x1AA1F5  call    sub_1B4DE0
+0x1AA1FA  vmulss  xmm0, xmm0, dword ptr [rbp+var_180]
+0x1AA202  vmovss  dword ptr [rbp+var_180], xmm0
+0x1AA20A  vmovss  xmm0, cs:dword_14DAE3C
+0x1AA212  vmulss  xmm0, xmm0, dword ptr [r15+74h]
+0x1AA218  call    sub_1B4C50
+0x1AA21D  vmulss  xmm0, xmm0, dword ptr [rbp+var_180]
+0x1AA225  vmovss  dword ptr [r15+88h], xmm0
+0x1AA22E  vmovaps xmm0, [rbp+var_190]
+0x1AA236  vmovss  dword ptr [r15+8Ch], xmm0
+0x1AA23F  vmovss  xmm0, cs:dword_14DAE3C
+0x1AA247  vmulss  xmm0, xmm0, dword ptr [r15+74h]
+0x1AA24D  call    sub_1B4DE0
+0x1AA252  vmulss  xmm0, xmm0, dword ptr [rbp+var_180]
+0x1AA25A  vmovss  dword ptr [r15+90h], xmm0
+0x1AA263  test    byte ptr [r12+2], 4
+0x1AA269  jnz     short loc_1AA277
+0x1AA26B  lea     rax, unk_57F1E04
+0x1AA272  cmp     dword ptr [rax], 0
+0x1AA275  jz      short loc_1AA2E8
+0x1AA277  mov     rdi, [r13+128h]
+0x1AA27E  call    sub_1B6370
+0x1AA283  mov     rdx, [r13+rbx*8+80h]
+0x1AA28B  vxorps  xmm1, xmm1, xmm1
+0x1AA28F  vcvtss2sd xmm0, xmm1, dword ptr [rbp+var_50]
+0x1AA294  vcvtss2sd xmm1, xmm1, dword ptr [rbp+var_50+4]
+0x1AA299  mov     rcx, [r13+130h]
+0x1AA2A0  movzx   esi, byte ptr [r13+101h]
+0x1AA2A8  mov     edi, 0
+0x1AA2AD  mov     r8d, 0
+0x1AA2B3  lea     r9, aXPDVoiceVolume; "$%x,$%p,%d:VOICE_VOLUME %d/%d,%f,%f\n"
+0x1AA2BA  movzx   edx, word ptr [rdx+8]
+0x1AA2BE  mov     [rsp+250h+var_230], esi
+0x1AA2C2  mov     [rsp+250h+var_238], ebx
+0x1AA2C6  mov     esi, offset qword_40000
+0x1AA2CB  mov     [rsp+250h+var_240], edx
+0x1AA2CF  mov     [rsp+250h+var_248], rcx
+0x1AA2D4  mov     [rsp+250h+var_250], eax
+0x1AA2D7  mov     edx, 0
+0x1AA2DC  mov     ecx, 0
+0x1AA2E1  mov     al, 2
+0x1AA2E3  call    sub_1D60B0
+0x1AA2E8  movzx   eax, byte ptr [r13+101h]
+0x1AA2F0  inc     ebx
+0x1AA2F2  cmp     ebx, eax
+0x1AA2F4  jb      loc_1AA0C0
+0x1AA2FA  mov     r8b, [r13+124h]
+0x1AA301  test    r8b, r8b
+0x1AA304  jz      loc_1AB544
+0x1AA30A  mov     rax, r13
+0x1AA30D  xor     r12d, r12d
+0x1AA310  lea     r15, [rbp+var_168]
+0x1AA317  sub     rax, 0FFFFFFFFFFFFFF80h
+0x1AA31B  mov     qword ptr [rbp+var_180], rax
+0x1AA322  nop     word ptr [rax+rax+00000000h]
+0x1AA330  mov     edx, r12d
+0x1AA333  movzx   r14d, byte ptr [r13+rdx+104h]
+0x1AA33C  movzx   ecx, byte ptr [r13+rdx+114h]
+0x1AA345  test    r14d, r14d
+0x1AA348  jz      loc_1AA4D0
+0x1AA34E  mov     rax, qword ptr [rbp+var_180]
+0x1AA355  lea     edx, [r14+rcx]
+0x1AA359  xor     esi, esi
+0x1AA35B  lea     rdi, [rax+rcx*8]
+0x1AA35F  nop
+0x1AA360  mov     rax, [rdi+rsi*8]
+0x1AA364  mov     eax, [rax+4Ch]
+0x1AA367  mov     dword ptr [rbp+rsi*4+var_150], eax
+0x1AA36E  inc     rsi
+0x1AA371  lea     eax, [rcx+rsi]
+0x1AA374  cmp     eax, edx
+0x1AA376  jb      short loc_1AA360
+0x1AA378  test    r14b, r14b
+0x1AA37B  jz      loc_1AA4D0
+0x1AA381  mov     rdi, rcx
+0x1AA384  nop     word ptr [rax+rax+00000000h]
+0x1AA390  mov     rax, [r13+rdi*8+80h]
+0x1AA398  mov     ebx, esi
+0x1AA39A  inc     esi
+0x1AA39C  inc     rdi
+0x1AA39F  cmp     edi, edx
+0x1AA3A1  mov     eax, [rax+50h]
+0x1AA3A4  mov     dword ptr [rbp+rbx*4+var_150], eax
+0x1AA3AB  jb      short loc_1AA390
+0x1AA3AD  test    r14b, r14b
+0x1AA3B0  jz      loc_1AA4D0
+0x1AA3B6  mov     rdi, rcx
+0x1AA3B9  nop     dword ptr [rax+00000000h]
+0x1AA3C0  mov     rax, [r13+rdi*8+80h]
+0x1AA3C8  mov     ebx, esi
+0x1AA3CA  inc     esi
+0x1AA3CC  inc     rdi
+0x1AA3CF  cmp     edi, edx
+0x1AA3D1  mov     eax, [rax+54h]
+0x1AA3D4  mov     dword ptr [rbp+rbx*4+var_150], eax
+0x1AA3DB  jb      short loc_1AA3C0
+0x1AA3DD  test    r14b, r14b
+0x1AA3E0  jz      loc_1AA4D0
+0x1AA3E6  mov     rdi, rcx
+0x1AA3E9  nop     dword ptr [rax+00000000h]
+0x1AA3F0  mov     rax, [r13+rdi*8+80h]
+0x1AA3F8  mov     ebx, esi
+0x1AA3FA  inc     esi
+0x1AA3FC  inc     rdi
+0x1AA3FF  cmp     edi, edx
+0x1AA401  mov     eax, [rax+58h]
+0x1AA404  mov     dword ptr [rbp+rbx*4+var_150], eax
+0x1AA40B  jb      short loc_1AA3F0
+0x1AA40D  test    r14b, r14b
+0x1AA410  jz      loc_1AA4D0
+0x1AA416  mov     rdi, rcx
+0x1AA419  nop     dword ptr [rax+00000000h]
+0x1AA420  mov     rax, [r13+rdi*8+80h]
+0x1AA428  mov     ebx, esi
+0x1AA42A  inc     esi
+0x1AA42C  inc     rdi
+0x1AA42F  cmp     edi, edx
+0x1AA431  mov     eax, [rax+5Ch]
+0x1AA434  mov     dword ptr [rbp+rbx*4+var_150], eax
+0x1AA43B  jb      short loc_1AA420
+0x1AA43D  test    r14b, r14b
+0x1AA440  jz      loc_1AA4D0
+0x1AA446  mov     rdi, rcx
+0x1AA449  nop     dword ptr [rax+00000000h]
+0x1AA450  mov     rax, [r13+rdi*8+80h]
+0x1AA458  mov     ebx, esi
+0x1AA45A  inc     esi
+0x1AA45C  inc     rdi
+0x1AA45F  cmp     edi, edx
+0x1AA461  mov     eax, [rax+60h]
+0x1AA464  mov     dword ptr [rbp+rbx*4+var_150], eax
+0x1AA46B  jb      short loc_1AA450
+0x1AA46D  test    r14b, r14b
+0x1AA470  jz      short loc_1AA4D0
+0x1AA472  mov     rdi, rcx
+0x1AA475  nop     word ptr [rax+rax+00000000h]
+0x1AA480  mov     rax, [r13+rdi*8+80h]
+0x1AA488  mov     ebx, esi
+0x1AA48A  inc     esi
+0x1AA48C  inc     rdi
+0x1AA48F  cmp     edi, edx
+0x1AA491  mov     eax, [rax+64h]
+0x1AA494  mov     dword ptr [rbp+rbx*4+var_150], eax
+0x1AA49B  jb      short loc_1AA480
+0x1AA49D  test    r14b, r14b
+0x1AA4A0  jz      short loc_1AA4D0
+0x1AA4A2  mov     rdi, rcx
+0x1AA4A5  nop     word ptr [rax+rax+00000000h]
+0x1AA4B0  mov     rax, [r13+rdi*8+80h]
+0x1AA4B8  mov     ebx, esi
+0x1AA4BA  inc     esi
+0x1AA4BC  inc     rdi
+0x1AA4BF  cmp     edi, edx
+0x1AA4C1  mov     eax, [rax+68h]
+0x1AA4C4  mov     dword ptr [rbp+rbx*4+var_150], eax
+0x1AA4CB  jb      short loc_1AA4B0
+0x1AA4CD  nop     dword ptr [rax]
+0x1AA4D0  mov     rcx, [r13+rcx*8+80h]
+0x1AA4D8  test    rcx, rcx
+0x1AA4DB  jz      loc_1AA72B
+0x1AA4E1  mov     rax, cs:qword_57F1C20
+0x1AA4E8  movzx   esi, word ptr [rcx+8]; _QWORD
+0x1AA4EC  lea     rdx, [rbp+var_170]; _QWORD
+0x1AA4F3  shl     r14d, 3
+0x1AA4F7  mov     rdi, [rax+78h]; _QWORD
+0x1AA4FB  call    sceNgs2RackGetVoiceHandle
+0x1AA500  mov     rdi, [rbp+var_170]; _QWORD
+0x1AA507  mov     rsi, r15; _QWORD
+0x1AA50A  lea     rax, [rbp+var_150]
+0x1AA511  mov     word ptr [rbp+var_168], 18h
+0x1AA51A  mov     word ptr [rbp+var_168+2], 0
+0x1AA523  mov     dword ptr [rbp+var_168+4], 1
+0x1AA52D  mov     [rbp+var_160], 0
+0x1AA537  mov     [rbp+var_15C], r14d
+0x1AA53E  mov     [rbp+var_158], rax
+0x1AA545  call    sceNgs2VoiceControl
+0x1AA54A  mov     rdi, [rbp+var_170]; _QWORD
+0x1AA551  mov     rsi, r15; _QWORD
+0x1AA554  mov     word ptr [rbp+var_168], 10h
+0x1AA55D  mov     word ptr [rbp+var_168+2], 0
+0x1AA566  mov     [rbp+var_168+4], 3
+0x1AA571  mov     [rbp+var_15C], 0
+0x1AA57B  call    sceNgs2VoiceControl
+0x1AA580  mov     rdi, [rbp+var_170]; _QWORD
+0x1AA587  mov     rsi, r15; _QWORD
+0x1AA58A  mov     rax, 100000003h
+0x1AA594  mov     word ptr [rbp+var_168], 10h
+0x1AA59D  mov     word ptr [rbp+var_168+2], 0
+0x1AA5A6  mov     [rbp+var_168+4], rax
+0x1AA5AD  mov     [rbp+var_15C], 0
+0x1AA5B7  call    sceNgs2VoiceControl
+0x1AA5BC  mov     rdi, [rbp+var_170]; _QWORD
+0x1AA5C3  mov     rsi, r15; _QWORD
+0x1AA5C6  mov     rax, 200000003h
+0x1AA5D0  mov     word ptr [rbp+var_168], 10h
+0x1AA5D9  mov     word ptr [rbp+var_168+2], 0
+0x1AA5E2  mov     [rbp+var_168+4], rax
+0x1AA5E9  mov     [rbp+var_15C], 0
+0x1AA5F3  call    sceNgs2VoiceControl
+0x1AA5F8  mov     rdi, [rbp+var_170]; _QWORD
+0x1AA5FF  mov     rsi, r15; _QWORD
+0x1AA602  mov     rax, 300000003h
+0x1AA60C  mov     word ptr [rbp+var_168], 10h
+0x1AA615  mov     word ptr [rbp+var_168+2], 0
+0x1AA61E  mov     [rbp+var_168+4], rax
+0x1AA625  mov     [rbp+var_15C], 0
+0x1AA62F  call    sceNgs2VoiceControl
+0x1AA634  mov     rdi, [rbp+var_170]; _QWORD
+0x1AA63B  mov     rsi, r15; _QWORD
+0x1AA63E  mov     rax, 400000003h
+0x1AA648  mov     word ptr [rbp+var_168], 10h
+0x1AA651  mov     word ptr [rbp+var_168+2], 0
+0x1AA65A  mov     [rbp+var_168+4], rax
+0x1AA661  mov     [rbp+var_15C], 0
+0x1AA66B  call    sceNgs2VoiceControl
+0x1AA670  mov     rdi, [rbp+var_170]; _QWORD
+0x1AA677  mov     rsi, r15; _QWORD
+0x1AA67A  mov     rax, 500000003h
+0x1AA684  mov     word ptr [rbp+var_168], 10h
+0x1AA68D  mov     word ptr [rbp+var_168+2], 0
+0x1AA696  mov     [rbp+var_168+4], rax
+0x1AA69D  mov     [rbp+var_15C], 0
+0x1AA6A7  call    sceNgs2VoiceControl
+0x1AA6AC  mov     rdi, [rbp+var_170]; _QWORD
+0x1AA6B3  mov     rsi, r15; _QWORD
+0x1AA6B6  mov     rax, 600000003h
+0x1AA6C0  mov     word ptr [rbp+var_168], 10h
+0x1AA6C9  mov     word ptr [rbp+var_168+2], 0
+0x1AA6D2  mov     [rbp+var_168+4], rax
+0x1AA6D9  mov     [rbp+var_15C], 0
+0x1AA6E3  call    sceNgs2VoiceControl
+0x1AA6E8  mov     rdi, [rbp+var_170]; _QWORD
+0x1AA6EF  mov     rsi, r15; _QWORD
+0x1AA6F2  mov     rax, 700000003h
+0x1AA6FC  mov     word ptr [rbp+var_168], 10h
+0x1AA705  mov     word ptr [rbp+var_168+2], 0
+0x1AA70E  mov     [rbp+var_168+4], rax
+0x1AA715  mov     [rbp+var_15C], 0
+0x1AA71F  call    sceNgs2VoiceControl
+0x1AA724  mov     r8b, [r13+124h]
+0x1AA72B  inc     r12d
+0x1AA72E  movzx   eax, r8b
+0x1AA732  cmp     r12d, eax
+0x1AA735  jb      loc_1AA330
+0x1AA73B  jmp     loc_1AB544
+0x1AA740  cmp     byte ptr [r13+124h], 0; jumptable 00000000001A96F5 case 2
+0x1AA748  mov     r12, r14
+0x1AA74B  jz      loc_1AB544
+0x1AA751  xor     ebx, ebx
+0x1AA753  lea     r15, [rbp+var_150]
+0x1AA75A  nop     word ptr [rax+rax+00h]
+0x1AA760  mov     eax, ebx
+0x1AA762  movzx   eax, byte ptr [r13+rax+114h]
+0x1AA76B  mov     r14, [r13+rax*8+80h]
+0x1AA773  test    r14, r14
+0x1AA776  jz      loc_1AA85C
+0x1AA77C  mov     rax, cs:qword_57F1C20
+0x1AA783  movzx   esi, word ptr [r14+8]; _QWORD
+0x1AA788  lea     rdx, [rbp+var_50]; _QWORD
+0x1AA78C  mov     rdi, [rax+78h]; _QWORD
+0x1AA790  call    sceNgs2RackGetVoiceHandle
+0x1AA795  mov     eax, [r12]
+0x1AA799  mov     rdi, [rbp+var_50]; _QWORD
+0x1AA79D  mov     rsi, r15; _QWORD
+0x1AA7A0  mov     word ptr [rbp+var_150], 10h
+0x1AA7A9  mov     word ptr [rbp+var_150+2], 0
+0x1AA7B2  mov     dword ptr [rbp+var_150+4], 10000005h
+0x1AA7BC  mov     dword ptr [rbp+var_148], eax
+0x1AA7C2  mov     dword ptr [rbp+var_148+4], 0
+0x1AA7CC  call    sceNgs2VoiceControl
+0x1AA7D1  mov     eax, [r12]
+0x1AA7D5  lea     rcx, byte_1705C10
+0x1AA7DC  mov     [r14+94h], eax
+0x1AA7E3  test    byte ptr [rcx+2], 4
+0x1AA7E7  jnz     short loc_1AA7F5
+0x1AA7E9  lea     rax, unk_57F1E04
+0x1AA7F0  cmp     dword ptr [rax], 0
+0x1AA7F3  jz      short loc_1AA85C
+0x1AA7F5  mov     rdi, [r13+128h]
+0x1AA7FC  call    sub_1B6370
+0x1AA801  vxorps  xmm0, xmm0, xmm0
+0x1AA805  vcvtss2sd xmm0, xmm0, dword ptr [r12]
+0x1AA80B  mov     rcx, [r13+130h]
+0x1AA812  movzx   edx, word ptr [r14+8]
+0x1AA817  movzx   esi, byte ptr [r13+101h]
+0x1AA81F  mov     edi, 0
+0x1AA824  xor     r8d, r8d
+0x1AA827  lea     r9, aXPDVoicePitchD; "$%x,$%p,%d:VOICE_PITCH %d/%d,%f\n"
+0x1AA82E  mov     [rsp+250h+var_230], esi
+0x1AA832  mov     [rsp+250h+var_240], edx
+0x1AA836  mov     esi, offset qword_40000
+0x1AA83B  mov     edx, 0
+0x1AA840  mov     [rsp+250h+var_248], rcx
+0x1AA845  mov     [rsp+250h+var_250], eax
+0x1AA848  mov     ecx, 0
+0x1AA84D  mov     al, 1
+0x1AA84F  mov     [rsp+250h+var_238], 0
+0x1AA857  call    sub_1D60B0
+0x1AA85C  movzx   eax, byte ptr [r13+124h]
+0x1AA864  inc     ebx
+0x1AA866  cmp     ebx, eax
+0x1AA868  jb      loc_1AA760
+0x1AA86E  jmp     loc_1AB544
+0x1AA873  mov     eax, [r14]; jumptable 00000000001A96F5 case 3
+0x1AA876  xor     r12d, r12d
+0x1AA879  cmp     eax, 2
+0x1AA87C  jz      loc_1AB35F
+0x1AA882  cmp     eax, 1
+0x1AA885  jnz     loc_1AB3F9
+0x1AA88B  mov     esi, [r14+8]
+0x1AA88F  mov     r15d, 0
+0x1AA895  test    esi, esi
+0x1AA897  jz      loc_1AB3FC
+0x1AA89D  mov     eax, esi
+0x1AA89F  lea     r8, qword_14DC810
+0x1AA8A6  mov     ecx, 718h
+0x1AA8AB  lea     r9, qword_14DBD90
+0x1AA8B2  vmovss  xmm0, cs:dword_14DAE30
+0x1AA8BA  mov     r15, r14
+0x1AA8BD  mov     edx, esi
+0x1AA8BF  mov     r12d, 1
+0x1AA8C5  shr     eax, 1Fh
+0x1AA8C8  bextr   ebx, esi, ecx
+0x1AA8CD  mov     ecx, 414h
+0x1AA8D2  shr     edx, 0Eh
+0x1AA8D5  mov     edi, [r8+rax*4]
+0x1AA8D9  add     eax, eax
+0x1AA8DB  bextr   r14d, esi, ecx
+0x1AA8E0  mov     ecx, 410h
+0x1AA8E5  and     edx, 2
+0x1AA8E8  shl     rax, 9
+0x1AA8EC  bextr   r11d, esi, ecx
+0x1AA8F1  mov     ecx, 706h
+0x1AA8F6  add     rax, r9
+0x1AA8F9  bextr   r10d, esi, ecx
+0x1AA8FE  mov     ecx, 105h
+0x1AA903  vmulss  xmm1, xmm0, dword ptr [rax+rbx*4]
+0x1AA908  lea     rbx, qword_14DC590
+0x1AA90F  bextr   ecx, esi, ecx
+0x1AA914  and     esi, 1Fh
+0x1AA917  mov     dword ptr [rbp+var_150], edi
+0x1AA91D  mov     edi, [r8+rcx*4]
+0x1AA921  shl     rcx, 8
+0x1AA925  vcvttss2si rax, xmm1
+0x1AA92A  vmulss  xmm1, xmm0, dword ptr [rbx+r14*4]
+0x1AA930  mov     r14, r15
+0x1AA933  mov     r15d, 3
+0x1AA939  mov     dword ptr [rbp+var_150+4], eax
+0x1AA93F  mov     dword ptr [rbp+var_148], 3F800000h
+0x1AA949  mov     dword ptr [rbp+var_148+4], 1
+0x1AA953  vcvttss2si rax, xmm1
+0x1AA958  mov     dword ptr [rbp+var_148+8], eax
+0x1AA95E  lea     rax, qword_14DC7D0
+0x1AA965  mov     eax, [rax+r11*4]
+0x1AA969  mov     dword ptr [rbp+var_148+0Ch], eax
+0x1AA96F  lea     rax, qword_14DADE0
+0x1AA976  mov     eax, [rax+rdx*4]
+0x1AA979  mov     dword ptr [rbp+var_138], eax
+0x1AA97F  lea     rax, qword_14DADF0
+0x1AA986  mov     eax, [rax+rdx*4]
+0x1AA989  shl     rdx, 9
+0x1AA98D  add     rdx, r9
+0x1AA990  vmulss  xmm1, xmm0, dword ptr [rdx+r10*4]
+0x1AA996  vcvttss2si rdx, xmm1
+0x1AA99B  mov     dword ptr [rbp+var_138+4], edx
+0x1AA9A1  lea     rdx, qword_14DC5D0
+0x1AA9A8  mov     dword ptr [rbp+var_138+8], eax
+0x1AA9AE  mov     dword ptr [rbp+var_138+0Ch], edi
+0x1AA9B4  add     rdx, rcx
+0x1AA9B7  vmulss  xmm0, xmm0, dword ptr [rdx+rsi*4]
+0x1AA9BC  vcvttss2si rax, xmm0
+0x1AA9C1  mov     [rbp+var_128], eax
+0x1AA9C7  mov     [rbp+var_124], 0
+0x1AA9D1  jmp     loc_1AB3FC
+0x1AA9D6  mov     r8d, dword ptr [rbp+var_180]; jumptable 00000000001A96F5 default case
+0x1AA9DD  lea     rcx, aUnknownParamet; "Unknown parameter (%d)\n"
+0x1AA9E4  mov     edi, 0FFFFFFF9h
+0x1AA9E9  mov     edx, 0E22h
+0x1AA9EE  xor     eax, eax
+0x1AA9F0  call    sub_1A7F10
+0x1AA9F5  jmp     loc_1AB544
+0x1AA9FA  mov     al, [r13+124h]; jumptable 00000000001A96F5 case 5
+0x1AAA01  test    al, al
+0x1AAA03  jz      loc_1AB546; jumptable 00000000001A96F5 case 6
+0x1AAA09  lea     r12, byte_1705C10
+0x1AAA10  xor     ebx, ebx
+0x1AAA12  nop     word ptr [rax+rax+00000000h]
+0x1AAA20  mov     r15, r13
+0x1AAA23  mov     ecx, ebx
+0x1AAA25  mov     r13, r14
+0x1AAA28  movzx   ecx, byte ptr [r15+rcx+114h]
+0x1AAA31  mov     r14, [r15+rcx*8+80h]
+0x1AAA39  test    r14, r14
+0x1AAA3C  jz      loc_1AAADF
+0x1AAA42  vmovss  xmm0, dword ptr [r13+0]
+0x1AAA48  vmulss  xmm0, xmm0, dword ptr [r13+4]
+0x1AAA4E  vmovss  dword ptr [r14+70h], xmm0
+0x1AAA54  test    byte ptr [r12+2], 4
+0x1AAA5A  jnz     short loc_1AAA68
+0x1AAA5C  lea     rcx, unk_57F1E04
+0x1AAA63  cmp     dword ptr [rcx], 0
+0x1AAA66  jz      short loc_1AAADF
+0x1AAA68  mov     rdi, [r15+128h]
+0x1AAA6F  call    sub_1B6370
+0x1AAA74  vxorps  xmm1, xmm1, xmm1
+0x1AAA78  vcvtss2sd xmm0, xmm1, dword ptr [r13+0]
+0x1AAA7E  vcvtss2sd xmm1, xmm1, dword ptr [r13+4]
+0x1AAA84  mov     rcx, [r15+130h]
+0x1AAA8B  movzx   edx, word ptr [r14+8]
+0x1AAA90  movzx   esi, byte ptr [r15+101h]
+0x1AAA98  mov     edi, 0
+0x1AAA9D  mov     r8d, 0
+0x1AAAA3  lea     r9, aXPDVoiceFilter_0; "$%x,$%p,%d:VOICE_FILTER_IO %d/%d,%f,%f"...
+0x1AAAAA  mov     [rsp+250h+var_230], esi
+0x1AAAAE  mov     [rsp+250h+var_240], edx
+0x1AAAB2  mov     esi, offset qword_40000
+0x1AAAB7  mov     edx, 0
+0x1AAABC  mov     [rsp+250h+var_248], rcx
+0x1AAAC1  mov     [rsp+250h+var_250], eax
+0x1AAAC4  mov     ecx, 0
+0x1AAAC9  mov     al, 2
+0x1AAACB  mov     [rsp+250h+var_238], 0
+0x1AAAD3  call    sub_1D60B0
+0x1AAAD8  mov     al, [r15+124h]
+0x1AAADF  mov     r14, r13
+0x1AAAE2  inc     ebx
+0x1AAAE4  movzx   ecx, al
+0x1AAAE7  xor     edi, edi
+0x1AAAE9  mov     r13, r15
+0x1AAAEC  cmp     ebx, ecx
+0x1AAAEE  jb      loc_1AAA20
+0x1AAAF4  jmp     loc_1AB546; jumptable 00000000001A96F5 case 6
+0x1AAAF9  mov     rax, [r13+80h]; jumptable 00000000001A96F5 case 16
+0x1AAB00  test    rax, rax
+0x1AAB03  jz      short loc_1AAB12
+0x1AAB05  cmp     dword ptr [rax+0A0h], 0FFFFFFFFh
+0x1AAB0C  jnz     loc_1AB546; jumptable 00000000001A96F5 case 6
+0x1AAB12  mov     al, [r13+124h]
+0x1AAB19  test    al, al
+0x1AAB1B  jz      loc_1AB546; jumptable 00000000001A96F5 case 6
+0x1AAB21  xor     ebx, ebx
+0x1AAB23  lea     r15, [rbp+var_50]
+0x1AAB27  lea     r12, [rbp+var_150]
+0x1AAB2E  mov     r14, 700000002h
+0x1AAB38  nop     dword ptr [rax+rax+00000000h]
+0x1AAB40  mov     ecx, ebx
+0x1AAB42  movzx   ecx, byte ptr [r13+rcx+114h]
+0x1AAB4B  mov     rcx, [r13+rcx*8+80h]
+0x1AAB53  test    rcx, rcx
+0x1AAB56  jz      loc_1AAD82
+0x1AAB5C  mov     rax, cs:qword_57F1C20
+0x1AAB63  movzx   esi, word ptr [rcx+8]; _QWORD
+0x1AAB67  mov     rdx, r15; _QWORD
+0x1AAB6A  mov     rdi, [rax+78h]; _QWORD
+0x1AAB6E  call    sceNgs2RackGetVoiceHandle
+0x1AAB73  mov     rdi, [rbp+var_50]; _QWORD
+0x1AAB77  mov     rsi, r12; _QWORD
+0x1AAB7A  mov     word ptr [rbp+var_150], 10h
+0x1AAB83  mov     word ptr [rbp+var_150+2], 0
+0x1AAB8C  mov     [rbp+var_150+4], 2
+0x1AAB97  mov     dword ptr [rbp+var_148+4], 3F800000h
+0x1AABA1  call    sceNgs2VoiceControl
+0x1AABA6  mov     rdi, [rbp+var_50]; _QWORD
+0x1AABAA  mov     rsi, r12; _QWORD
+0x1AABAD  mov     rax, 100000002h
+0x1AABB7  mov     word ptr [rbp+var_150], 10h
+0x1AABC0  mov     word ptr [rbp+var_150+2], 0
+0x1AABC9  mov     [rbp+var_150+4], rax
+0x1AABD0  mov     dword ptr [rbp+var_148+4], 3F800000h
+0x1AABDA  call    sceNgs2VoiceControl
+0x1AABDF  mov     rdi, [rbp+var_50]; _QWORD
+0x1AABE3  mov     rsi, r12; _QWORD
+0x1AABE6  mov     rax, 200000002h
+0x1AABF0  mov     word ptr [rbp+var_150], 10h
+0x1AABF9  mov     word ptr [rbp+var_150+2], 0
+0x1AAC02  mov     [rbp+var_150+4], rax
+0x1AAC09  mov     dword ptr [rbp+var_148+4], 3F800000h
+0x1AAC13  call    sceNgs2VoiceControl
+0x1AAC18  mov     rdi, [rbp+var_50]; _QWORD
+0x1AAC1C  mov     rsi, r12; _QWORD
+0x1AAC1F  mov     rax, 300000002h
+0x1AAC29  mov     word ptr [rbp+var_150], 10h
+0x1AAC32  mov     word ptr [rbp+var_150+2], 0
+0x1AAC3B  mov     [rbp+var_150+4], rax
+0x1AAC42  mov     dword ptr [rbp+var_148+4], 3F800000h
+0x1AAC4C  call    sceNgs2VoiceControl
+0x1AAC51  mov     rdi, [rbp+var_50]; _QWORD
+0x1AAC55  mov     rsi, r12; _QWORD
+0x1AAC58  mov     rax, 400000002h
+0x1AAC62  mov     word ptr [rbp+var_150], 10h
+0x1AAC6B  mov     word ptr [rbp+var_150+2], 0
+0x1AAC74  mov     [rbp+var_150+4], rax
+0x1AAC7B  mov     dword ptr [rbp+var_148+4], 3F800000h
+0x1AAC85  call    sceNgs2VoiceControl
+0x1AAC8A  mov     rdi, [rbp+var_50]; _QWORD
+0x1AAC8E  mov     rsi, r12; _QWORD
+0x1AAC91  mov     rax, 500000002h
+0x1AAC9B  mov     word ptr [rbp+var_150], 10h
+0x1AACA4  mov     word ptr [rbp+var_150+2], 0
+0x1AACAD  mov     [rbp+var_150+4], rax
+0x1AACB4  mov     dword ptr [rbp+var_148+4], 3F800000h
+0x1AACBE  call    sceNgs2VoiceControl
+0x1AACC3  mov     rdi, [rbp+var_50]; _QWORD
+0x1AACC7  mov     rsi, r12; _QWORD
+0x1AACCA  mov     rax, 600000002h
+0x1AACD4  mov     word ptr [rbp+var_150], 10h
+0x1AACDD  mov     word ptr [rbp+var_150+2], 0
+0x1AACE6  mov     [rbp+var_150+4], rax
+0x1AACED  mov     dword ptr [rbp+var_148+4], 3F800000h
+0x1AACF7  call    sceNgs2VoiceControl
+0x1AACFC  mov     rdi, [rbp+var_50]; _QWORD
+0x1AAD00  mov     rsi, r12; _QWORD
+0x1AAD03  mov     word ptr [rbp+var_150], 10h
+0x1AAD0C  mov     word ptr [rbp+var_150+2], 0
+0x1AAD15  mov     [rbp+var_150+4], r14
+0x1AAD1C  mov     dword ptr [rbp+var_148+4], 3F800000h
+0x1AAD26  call    sceNgs2VoiceControl
+0x1AAD2B  mov     rax, cs:qword_57F1C20
+0x1AAD32  mov     rdi, [rbp+var_50]; _QWORD
+0x1AAD36  mov     rsi, r12; _QWORD
+0x1AAD39  mov     rax, [rax+70h]
+0x1AAD3D  mov     word ptr [rbp+var_150], 18h
+0x1AAD46  mov     word ptr [rbp+var_150+2], 0
+0x1AAD4F  mov     dword ptr [rbp+var_150+4], 5
+0x1AAD59  mov     dword ptr [rbp+var_148], 0
+0x1AAD63  mov     qword ptr [rbp+var_148+8], rax
+0x1AAD6A  mov     dword ptr [rbp+var_148+4], 0
+0x1AAD74  call    sceNgs2VoiceControl
+0x1AAD79  mov     al, [r13+124h]
+0x1AAD80  xor     edi, edi
+0x1AAD82  inc     ebx
+0x1AAD84  movzx   ecx, al
+0x1AAD87  cmp     ebx, ecx
+0x1AAD89  jb      loc_1AAB40
+0x1AAD8F  jmp     loc_1AB546; jumptable 00000000001A96F5 case 6
+0x1AAD94  mov     al, [r13+124h]; jumptable 00000000001A96F5 case 26
+0x1AAD9B  test    al, al
+0x1AAD9D  jz      loc_1AB546; jumptable 00000000001A96F5 case 6
+0x1AADA3  xor     ebx, ebx
+0x1AADA5  lea     r12, [rbp+var_50]
+0x1AADA9  lea     r15, [rbp+var_150]
+0x1AADB0  mov     ecx, ebx
+0x1AADB2  movzx   ecx, byte ptr [r13+rcx+114h]
+0x1AADBB  mov     rcx, [r13+rcx*8+80h]
+0x1AADC3  test    rcx, rcx
+0x1AADC6  jz      loc_1AAEA1
+0x1AADCC  mov     rax, cs:qword_57F1C20
+0x1AADD3  vmovss  xmm0, dword ptr [r14+18h]
+0x1AADD9  vmovss  xmm2, dword ptr [r14+1Ch]
+0x1AADDF  vmovups xmm1, xmmword ptr [r14+8]
+0x1AADE5  movzx   esi, word ptr [rcx+8]; _QWORD
+0x1AADE9  mov     rdx, r12; _QWORD
+0x1AADEC  mov     rdi, [rax+78h]; _QWORD
+0x1AADF0  vmovss  dword ptr [rbp+var_1A0], xmm0
+0x1AADF8  vmovss  dword ptr [rbp+var_190], xmm2
+0x1AAE00  vmovaps [rbp+var_180], xmm1
+0x1AAE08  call    sceNgs2RackGetVoiceHandle
+0x1AAE0D  vmovss  xmm0, dword ptr [rbp+var_1A0]
+0x1AAE15  mov     rdi, [rbp+var_50]; _QWORD
+0x1AAE19  mov     rsi, r15; _QWORD
+0x1AAE1C  vucomiss xmm0, cs:dword_14DAE44
+0x1AAE24  vmovss  xmm1, dword ptr [rbp+var_190]
+0x1AAE2C  vmovaps xmm2, [rbp+var_180]
+0x1AAE34  mov     word ptr [rbp+var_150], 28h ; '('
+0x1AAE3D  mov     word ptr [rbp+var_150+2], 0
+0x1AAE46  mov     dword ptr [rbp+var_150+4], 10000007h
+0x1AAE50  setnp   al
+0x1AAE53  setz    cl
+0x1AAE56  and     cl, al
+0x1AAE58  vucomiss xmm1, cs:dword_14DAE20
+0x1AAE60  setnp   al
+0x1AAE63  setz    dl
+0x1AAE66  and     dl, al
+0x1AAE68  and     dl, cl
+0x1AAE6A  movzx   eax, dl
+0x1AAE6D  mov     dword ptr [rbp+var_148], eax
+0x1AAE73  vmovups [rbp+var_148+4], xmm2
+0x1AAE7B  vmovss  dword ptr [rbp+var_138+4], xmm0
+0x1AAE83  vmovss  dword ptr [rbp+var_138+8], xmm1
+0x1AAE8B  mov     dword ptr [rbp+var_138+0Ch], 0
+0x1AAE95  call    sceNgs2VoiceControl
+0x1AAE9A  mov     al, [r13+124h]
+0x1AAEA1  inc     ebx
+0x1AAEA3  xor     edi, edi
+0x1AAEA5  movzx   ecx, al
+0x1AAEA8  cmp     ebx, ecx
+0x1AAEAA  jb      loc_1AADB0
+0x1AAEB0  jmp     loc_1AB546; jumptable 00000000001A96F5 case 6
+0x1AAEB5  mov     r15, r14
+0x1AAEB8  cmp     eax, 4
+0x1AAEBB  jnz     loc_1AB015
+0x1AAEC1  xor     r14d, r14d
+0x1AAEC4  lea     r12, [rbp+var_150]
+0x1AAECB  nop     dword ptr [rax+rax+00h]
+0x1AAED0  mov     rdi, r15
+0x1AAED3  mov     esi, r14d
+0x1AAED6  lea     rcx, [rbp+var_168]
+0x1AAEDD  call    sub_1ED690
+0x1AAEE2  mov     eax, r14d
+0x1AAEE5  mov     rax, [r13+rax*8+80h]
+0x1AAEED  test    rax, rax
+0x1AAEF0  jz      loc_1AAFFD
+0x1AAEF6  mov     rcx, cs:qword_57F1C20
+0x1AAEFD  movzx   esi, word ptr [rax+8]; _QWORD
+0x1AAF01  lea     rdx, [rbp+var_170]; _QWORD
+0x1AAF08  mov     rdi, [rcx+78h]; _QWORD
+0x1AAF0C  call    sceNgs2RackGetVoiceHandle
+0x1AAF11  mov     rdi, [rbp+var_170]; _QWORD
+0x1AAF18  mov     eax, [rbp+var_15C]
+0x1AAF1E  mov     rsi, r12; _QWORD
+0x1AAF21  mov     word ptr [rbp+var_150], 10h
+0x1AAF2A  mov     word ptr [rbp+var_150+2], 0
+0x1AAF33  mov     dword ptr [rbp+var_150+4], 10000003h
+0x1AAF3D  mov     dword ptr [rbp+var_148], eax
+0x1AAF43  mov     dword ptr [rbp+var_148+4], 0
+0x1AAF4D  call    sceNgs2VoiceControl
+0x1AAF52  cmp     dword ptr [r15+100h], 0
+0x1AAF5A  jz      loc_1AAFFD
+0x1AAF60  xor     ebx, ebx
+0x1AAF62  cmp     dword ptr [r15+0F0h], 0
+0x1AAF6A  jz      loc_1AAFFD
+0x1AAF70  mov     eax, 0
+0x1AAF75  mov     ecx, 0
+0x1AAF7A  test    ebx, ebx
+0x1AAF7C  jz      short loc_1AAF8C
+0x1AAF7E  mov     eax, ebx
+0x1AAF80  mov     rcx, [r15+0E8h]
+0x1AAF87  movzx   ecx, byte ptr [rcx+rax*8+5]
+0x1AAF8C  mov     rsi, [r15+108h]
+0x1AAF93  mov     rdx, [r15+0F8h]
+0x1AAF9A  mov     rdi, [rbp+var_170]; _QWORD
+0x1AAFA1  movzx   eax, byte ptr [rsi+rax]
+0x1AAFA5  mov     rsi, r12; _QWORD
+0x1AAFA8  add     rax, rcx
+0x1AAFAB  movzx   eax, word ptr [rdx+rax*4]
+0x1AAFAF  mov     word ptr [rbp+var_150], 10h
+0x1AAFB8  mov     word ptr [rbp+var_150+2], 0
+0x1AAFC1  mov     dword ptr [rbp+var_150+4], 10000005h
+0x1AAFCB  vcvtsi2ss xmm0, xmm0, eax
+0x1AAFCF  vmulss  xmm0, xmm0, cs:dword_14DAE40
+0x1AAFD7  vmovss  dword ptr [rbp+var_148], xmm0
+0x1AAFDF  mov     dword ptr [rbp+var_148+4], 0
+0x1AAFE9  call    sceNgs2VoiceControl
+0x1AAFEE  inc     ebx
+0x1AAFF0  cmp     ebx, [r15+0F0h]
+0x1AAFF7  jb      loc_1AAF70
+0x1AAFFD  add     r14d, dword ptr [rbp+var_168+4]
+0x1AB004  movzx   edx, byte ptr [r13+101h]
+0x1AB00C  cmp     r14d, edx
+0x1AB00F  jb      loc_1AAED0
+0x1AB015  cmp     dword ptr [r15+4], 28h ; '('
+0x1AB01A  jz      loc_1AB544
+0x1AB020  movzx   edx, byte ptr [r13+101h]
+0x1AB028  mov     rdi, r15
+0x1AB02B  mov     eax, 0
+0x1AB030  mov     [rbp+var_198], rdi
+0x1AB037  test    edx, edx
+0x1AB039  jz      loc_1AB2A0
+0x1AB03F  lea     r15, [rdi+10h]
+0x1AB043  xor     ebx, ebx
+0x1AB045  mov     esi, ebx
+0x1AB047  lea     rcx, [rbp+var_168]
+0x1AB04E  call    sub_1ED690
+0x1AB053  mov     ebx, ebx
+0x1AB055  mov     rax, [r13+rbx*8+80h]
+0x1AB05D  mov     [rbp+var_1B0], rbx
+0x1AB064  test    rax, rax
+0x1AB067  jz      loc_1AB27A
+0x1AB06D  mov     rcx, cs:qword_57F1C20
+0x1AB074  movzx   esi, word ptr [rax+8]; _QWORD
+0x1AB078  lea     rdx, [rbp+var_170]; _QWORD
+0x1AB07F  mov     rdi, [rcx+78h]; _QWORD
+0x1AB083  call    sceNgs2RackGetVoiceHandle
+0x1AB088  mov     rax, [rbp+var_198]
+0x1AB08F  xor     r14d, r14d
+0x1AB092  cmp     dword ptr [rax+0D0h], 0
+0x1AB099  jz      loc_1AB27A
+0x1AB09F  nop
+0x1AB0A0  mov     eax, r14d
+0x1AB0A3  mov     dword ptr [rbp+var_50], 0
+0x1AB0AA  mov     rdi, [rbp+var_170]; _QWORD
+0x1AB0B1  lea     rsi, [rbp+var_150]; _QWORD
+0x1AB0B8  lea     rbx, [rax+rax*2]
+0x1AB0BC  mov     eax, [r15+rbx*8+8]
+0x1AB0C1  mov     dword ptr [rbp+var_50+4], eax
+0x1AB0C4  movzx   eax, byte ptr [r15+rbx*8+11h]
+0x1AB0CA  dec     eax
+0x1AB0CC  mov     dword ptr [rbp+var_50+8], eax
+0x1AB0CF  mov     eax, [r15+rbx*8+14h]
+0x1AB0D4  mov     dword ptr [rbp+var_40], eax
+0x1AB0D7  movzx   eax, word ptr [r15+rbx*8+12h]
+0x1AB0DD  mov     dword ptr [rbp+var_50+0Ch], eax
+0x1AB0E0  mov     dword ptr [rbp+var_40+4], 0
+0x1AB0E7  mov     [rbp+var_38], 0
+0x1AB0EF  mov     rax, [r15+rbx*8]
+0x1AB0F3  mov     word ptr [rbp+var_150], 20h ; ' '
+0x1AB0FC  mov     word ptr [rbp+var_150+2], 0
+0x1AB105  mov     dword ptr [rbp+var_150+4], 10000001h
+0x1AB10F  mov     dword ptr [rbp+var_148+8], 1
+0x1AB119  mov     qword ptr [rbp+var_148], rax
+0x1AB120  lea     rax, [rbp+var_50]
+0x1AB124  mov     dword ptr [rbp+var_148+0Ch], 1
+0x1AB12E  mov     qword ptr [rbp+var_138], rax
+0x1AB135  call    sceNgs2VoiceControl
+0x1AB13A  test    eax, eax
+0x1AB13C  js      loc_1AB56A
+0x1AB142  lea     rax, byte_1705C10
+0x1AB149  test    byte ptr [rax+2], 4
+0x1AB14D  jnz     short loc_1AB15F
+0x1AB14F  lea     rax, unk_57F1E04
+0x1AB156  cmp     dword ptr [rax], 0
+0x1AB159  jz      loc_1AB263
+0x1AB15F  mov     rdi, [r13+128h]
+0x1AB166  lea     rax, [r15+rbx*8]
+0x1AB16A  lea     r12, [r15+rbx*8+11h]
+0x1AB16F  mov     [rbp+var_1A0], rax
+0x1AB176  lea     rax, [r15+rbx*8+14h]
+0x1AB17B  mov     qword ptr [rbp+var_190], rax
+0x1AB182  lea     rax, [r15+rbx*8+12h]
+0x1AB187  mov     [rbp+var_1A8], rax
+0x1AB18E  call    sub_1B6370
+0x1AB193  mov     dword ptr [rbp+var_180], eax
+0x1AB199  mov     rax, [rbp+var_1B0]
+0x1AB1A0  mov     rsi, [rbp+var_1A0]
+0x1AB1A7  movzx   r11d, byte ptr [r12]
+0x1AB1AC  mov     r8, [r13+130h]
+0x1AB1B3  movzx   r10d, byte ptr [r13+101h]
+0x1AB1BB  mov     rdx, [r13+rax*8+80h]
+0x1AB1C3  mov     rax, [rbp+var_198]
+0x1AB1CA  mov     rbx, [rsi]
+0x1AB1CD  mov     rsi, qword ptr [rbp+var_190]
+0x1AB1D4  mov     esi, [rsi]
+0x1AB1D6  movzx   r9d, word ptr [rdx+8]
+0x1AB1DB  mov     rdx, [rbp+var_1A8]
+0x1AB1E2  movzx   edx, word ptr [rdx]
+0x1AB1E5  mov     rcx, [rax]
+0x1AB1E8  mov     eax, [rax+0D0h]
+0x1AB1EE  mov     [rsp+250h+var_1E8], esi
+0x1AB1F2  lea     r12d, [rdx+rsi]
+0x1AB1F6  mov     rdi, rcx
+0x1AB1F9  mov     esi, offset qword_40000
+0x1AB1FE  mov     [rsp+250h+var_1F0], r12d
+0x1AB203  mov     [rsp+250h+var_1F8], edx
+0x1AB207  mov     [rsp+250h+var_200], rbx
+0x1AB20C  mov     [rsp+250h+var_208], eax
+0x1AB210  mov     eax, dword ptr [rbp+var_180]
+0x1AB216  shr     rdi, 20h
+0x1AB21A  mov     [rsp+250h+var_218], r11d
+0x1AB21F  mov     edx, 0
+0x1AB224  mov     [rsp+250h+var_220], edi
+0x1AB228  mov     [rsp+250h+var_228], ecx
+0x1AB22C  mov     [rsp+250h+var_230], r10d
+0x1AB231  mov     [rsp+250h+var_238], r14d
+0x1AB236  mov     [rsp+250h+var_240], r9d
+0x1AB23B  mov     [rsp+250h+var_248], r8
+0x1AB240  mov     edi, 0
+0x1AB245  xor     ecx, ecx
+0x1AB247  xor     r8d, r8d
+0x1AB24A  lea     r9, aXPDVoiceSegmen; "$%x,$%p,%d:VOICE_SEGMENT %d/%d,%d,%d,%d"...
+0x1AB251  mov     [rsp+250h+var_250], eax
+0x1AB254  xor     eax, eax
+0x1AB256  mov     [rsp+250h+var_210], 0
+0x1AB25E  call    sub_1D60B0
+0x1AB263  mov     rax, [rbp+var_198]
+0x1AB26A  inc     r14d
+0x1AB26D  cmp     r14d, [rax+0D0h]
+0x1AB274  jb      loc_1AB0A0
+0x1AB27A  mov     rbx, [rbp+var_1B0]
+0x1AB281  mov     al, [r13+101h]
+0x1AB288  mov     rdi, [rbp+var_198]
+0x1AB28F  add     ebx, dword ptr [rbp+var_168+4]
+0x1AB295  movzx   edx, al
+0x1AB298  cmp     ebx, edx
+0x1AB29A  jb      loc_1AB045
+0x1AB2A0  mov     ecx, [rdi]
+0x1AB2A2  mov     r15, rdi
+0x1AB2A5  cmp     ecx, 3
+0x1AB2A8  jz      short loc_1AB2B2
+0x1AB2AA  test    ecx, ecx
+0x1AB2AC  jnz     loc_1AB544
+0x1AB2B2  test    al, al
+0x1AB2B4  jz      loc_1AB544
+0x1AB2BA  movzx   edx, al
+0x1AB2BD  xor     ebx, ebx
+0x1AB2BF  lea     r14, [rbp+var_148]
+0x1AB2C6  lea     r12, [rbp+var_168]
+0x1AB2CD  mov     rdi, r15
+0x1AB2D0  mov     esi, ebx
+0x1AB2D2  mov     rcx, r12
+0x1AB2D5  call    sub_1ED690
+0x1AB2DA  mov     eax, ebx
+0x1AB2DC  mov     rax, [r13+rax*8+80h]
+0x1AB2E4  test    rax, rax
+0x1AB2E7  jz      short loc_1AB344
+0x1AB2E9  mov     rcx, cs:qword_57F1C20
+0x1AB2F0  movzx   esi, word ptr [rax+8]; _QWORD
+0x1AB2F4  lea     rdx, [rbp+var_170]; _QWORD
+0x1AB2FB  mov     rdi, [rcx+78h]; _QWORD
+0x1AB2FF  call    sceNgs2RackGetVoiceHandle
+0x1AB304  mov     rdi, [rbp+var_170]; _QWORD
+0x1AB30B  lea     rsi, [rbp+var_150]; _QWORD
+0x1AB312  vxorps  xmm0, xmm0, xmm0
+0x1AB316  mov     word ptr [rbp+var_150], 20h ; ' '
+0x1AB31F  mov     word ptr [rbp+var_150+2], 0
+0x1AB328  mov     dword ptr [rbp+var_150+4], 10000001h
+0x1AB332  vmovups xmmword ptr [r14], xmm0
+0x1AB337  mov     qword ptr [r14+10h], 0
+0x1AB33F  call    sceNgs2VoiceControl
+0x1AB344  add     ebx, dword ptr [rbp+var_168+4]
+0x1AB34A  movzx   edx, byte ptr [r13+101h]
+0x1AB352  cmp     ebx, edx
+0x1AB354  jb      loc_1AB2CD
+0x1AB35A  jmp     loc_1AB544
+0x1AB35F  mov     ecx, [r14+4]
+0x1AB363  mov     eax, 10h
+0x1AB368  mov     r15d, 0
+0x1AB36E  cmp     ecx, 10h
+0x1AB371  cmovb   eax, ecx
+0x1AB374  test    eax, eax
+0x1AB376  jz      loc_1AB3FC
+0x1AB37C  vmovss  xmm0, cs:dword_14DAE2C
+0x1AB384  mov     r11d, eax
+0x1AB387  lea     rdx, [rbp+var_148]
+0x1AB38E  xor     esi, esi
+0x1AB390  mov     r8d, 718h
+0x1AB396  mov     r9d, 810h
+0x1AB39C  lea     r10, qword_14DC820
+0x1AB3A3  xor     r15d, r15d
+0x1AB3A6  xor     r12d, r12d
+0x1AB3A9  mov     ebx, [r14+rsi*4+8]
+0x1AB3AE  inc     rsi
+0x1AB3B1  bextr   edi, ebx, r8d
+0x1AB3B6  bextr   ecx, ebx, r9d
+0x1AB3BB  mov     eax, ebx
+0x1AB3BD  vcvtsi2ss xmm1, xmm0, ecx
+0x1AB3C1  mov     edi, [r10+rdi*4]
+0x1AB3C5  mov     ecx, ebx
+0x1AB3C7  shr     ebx, 1Fh
+0x1AB3CA  and     eax, 0FFFh
+0x1AB3CF  shr     ecx, 0Ch
+0x1AB3D2  add     r12d, ebx
+0x1AB3D5  xor     ebx, 1
+0x1AB3D8  and     cl, 0Fh
+0x1AB3DB  add     r15d, ebx
+0x1AB3DE  vmulss  xmm1, xmm1, xmm0
+0x1AB3E2  shl     eax, cl
+0x1AB3E4  mov     [rdx-8], edi
+0x1AB3E7  vmovss  dword ptr [rdx], xmm1
+0x1AB3EB  mov     [rdx-4], eax
+0x1AB3EE  add     rdx, 0Ch
+0x1AB3F2  cmp     rsi, r11
+0x1AB3F5  jb      short loc_1AB3A9
+0x1AB3F7  jmp     short loc_1AB3FC
+0x1AB3F9  xor     r15d, r15d
+0x1AB3FC  cmp     byte ptr [r13+124h], 0
+0x1AB404  mov     [rbp+var_198], r14
+0x1AB40B  jz      loc_1AB544
+0x1AB411  xor     ebx, ebx
+0x1AB413  nop     word ptr [rax+rax+00000000h]
+0x1AB420  mov     eax, ebx
+0x1AB422  movzx   eax, byte ptr [r13+rax+114h]
+0x1AB42B  mov     r14, [r13+rax*8+80h]
+0x1AB433  test    r14, r14
+0x1AB436  jz      loc_1AB532
+0x1AB43C  mov     rax, cs:qword_57F1C20
+0x1AB443  movzx   esi, word ptr [r14+8]; _QWORD
+0x1AB448  lea     rdx, [rbp+var_168]; _QWORD
+0x1AB44F  mov     rdi, [rax+78h]; _QWORD
+0x1AB453  call    sceNgs2RackGetVoiceHandle
+0x1AB458  mov     rdi, [rbp+var_168]; _QWORD
+0x1AB45F  lea     rsi, [rbp+var_50]; _QWORD
+0x1AB463  lea     rax, [rbp+var_150]
+0x1AB46A  mov     word ptr [rbp+var_50], 18h
+0x1AB470  mov     word ptr [rbp+var_50+2], 0
+0x1AB476  mov     dword ptr [rbp+var_50+4], 10000006h
+0x1AB47D  mov     dword ptr [rbp+var_50+8], r15d
+0x1AB481  mov     dword ptr [rbp+var_50+0Ch], r12d
+0x1AB485  mov     [rbp+var_40], rax
+0x1AB489  call    sceNgs2VoiceControl
+0x1AB48E  lea     rax, byte_1705C10
+0x1AB495  test    byte ptr [rax+2], 4
+0x1AB499  jnz     short loc_1AB4AB
+0x1AB49B  lea     rax, unk_57F1E04
+0x1AB4A2  cmp     dword ptr [rax], 0
+0x1AB4A5  jz      loc_1AB532
+0x1AB4AB  mov     rdi, [r13+128h]
+0x1AB4B2  call    sub_1B6370
+0x1AB4B7  mov     rdi, [rbp+var_198]
+0x1AB4BE  mov     r8, [r13+130h]
+0x1AB4C5  movzx   r9d, word ptr [r14+8]
+0x1AB4CA  movzx   r10d, byte ptr [r13+101h]
+0x1AB4D2  mov     r11d, [rdi]
+0x1AB4D5  mov     ecx, [rdi+8]
+0x1AB4D8  mov     edx, [rdi+0Ch]
+0x1AB4DB  mov     esi, [rdi+10h]
+0x1AB4DE  mov     edi, [rdi+14h]
+0x1AB4E1  mov     [rsp+250h+var_208], edi
+0x1AB4E5  mov     [rsp+250h+var_210], esi
+0x1AB4E9  mov     [rsp+250h+var_218], edx
+0x1AB4ED  mov     [rsp+250h+var_220], ecx
+0x1AB4F1  mov     [rsp+250h+var_228], r11d
+0x1AB4F6  mov     [rsp+250h+var_230], r10d
+0x1AB4FB  mov     [rsp+250h+var_240], r9d
+0x1AB500  mov     [rsp+250h+var_248], r8
+0x1AB505  mov     [rsp+250h+var_250], eax
+0x1AB508  mov     edi, 0
+0x1AB50D  mov     esi, offset qword_40000
+0x1AB512  mov     edx, 0
+0x1AB517  xor     ecx, ecx
+0x1AB519  xor     r8d, r8d
+0x1AB51C  xor     eax, eax
+0x1AB51E  lea     r9, aXPDVoiceAdsrDD; "$%x,$%p,%d:VOICE_ADSR %d/%d,%d,$%x,$%x,"...
+0x1AB525  mov     [rsp+250h+var_238], 0
+0x1AB52D  call    sub_1D60B0
+0x1AB532  movzx   eax, byte ptr [r13+124h]
+0x1AB53A  inc     ebx
+0x1AB53C  cmp     ebx, eax
+0x1AB53E  jb      loc_1AB420
+0x1AB544  xor     edi, edi
+0x1AB546  mov     rax, cs:qword_1700698; jumptable 00000000001A96F5 case 6
+0x1AB54D  mov     rax, [rax]
+0x1AB550  cmp     rax, [rbp+var_30]
+0x1AB554  jnz     short loc_1AB56E
+0x1AB556  mov     eax, edi
+0x1AB558  add     rsp, 228h
+0x1AB55F  pop     rbx
+0x1AB560  pop     r12
+0x1AB562  pop     r13
+0x1AB564  pop     r14
+0x1AB566  pop     r15
+0x1AB568  pop     rbp
+0x1AB569  retn
+0x1AB56A  mov     edi, eax
+0x1AB56C  jmp     short loc_1AB546; jumptable 00000000001A96F5 case 6
+0x1AB56E  call    __stack_chk_fail
+
+========================================
+sub_1ADC10 0x1ADC10 - 0x1AEFCD
+0x1ADC10  push    rbp
+0x1ADC11  mov     rbp, rsp
+0x1ADC14  push    r15
+0x1ADC16  push    r14
+0x1ADC18  push    r13
+0x1ADC1A  push    r12
+0x1ADC1C  push    rbx
+0x1ADC1D  sub     rsp, 128h
+0x1ADC24  mov     rdx, cs:qword_1700698
+0x1ADC2B  mov     r9, rdi
+0x1ADC2E  mov     rbx, rsi
+0x1ADC31  mov     [rbp+var_130], rbx
+0x1ADC38  mov     [rbp+var_E8], r9
+0x1ADC3F  test    r9, r9
+0x1ADC42  mov     rax, [rdx]
+0x1ADC45  mov     [rbp+var_30], rax
+0x1ADC49  mov     eax, 0FFFFFFF9h
+0x1ADC4E  jz      loc_1AEFAD
+0x1ADC54  test    rbx, rbx
+0x1ADC57  jz      loc_1AEFAD
+0x1ADC5D  mov     ecx, [rbx]
+0x1ADC5F  cmp     ecx, 1
+0x1ADC62  ja      loc_1AEFAD
+0x1ADC68  jz      loc_1ADD3E
+0x1ADC6E  test    ecx, ecx
+0x1ADC70  jnz     loc_1ADED0
+0x1ADC76  mov     rax, cs:qword_57F1C20
+0x1ADC7D  vmovups xmm1, cs:xmmword_14DADB0
+0x1ADC85  xor     ecx, ecx
+0x1ADC87  vxorps  xmm0, xmm0, xmm0
+0x1ADC8B  nop     dword ptr [rax+rax+00h]
+0x1ADC90  mov     dword ptr [rax+rcx+0A8h], 0
+0x1ADC9B  vmovups xmmword ptr [rax+rcx+0B0h], xmm0
+0x1ADCA4  mov     dword ptr [rax+rcx+0F4h], 0
+0x1ADCAF  mov     byte ptr [rax+rcx+0C3h], 0
+0x1ADCB7  vmovups xmmword ptr [rax+rcx+0D0h], xmm1
+0x1ADCC0  vmovups ymmword ptr [rax+rcx+0F8h], ymm0
+0x1ADCC9  mov     dword ptr [rax+rcx+0E0h], 3F800000h
+0x1ADCD4  mov     qword ptr [rax+rcx+118h], 0
+0x1ADCE0  mov     dword ptr [rax+rcx+0E4h], 3F800000h
+0x1ADCEB  mov     qword ptr [rax+rcx+120h], 0
+0x1ADCF7  mov     dword ptr [rax+rcx+0E8h], 3F800000h
+0x1ADD02  mov     qword ptr [rax+rcx+128h], 0
+0x1ADD0E  mov     dword ptr [rax+rcx+0ECh], 3F800000h
+0x1ADD19  mov     qword ptr [rax+rcx+130h], 0
+0x1ADD25  add     rcx, 98h
+0x1ADD2C  cmp     rcx, 4C00h
+0x1ADD33  jnz     loc_1ADC90
+0x1ADD39  jmp     loc_1ADED0
+0x1ADD3E  mov     r15, [rbx+40h]
+0x1ADD42  mov     r14, r9
+0x1ADD45  test    r15, r15
+0x1ADD48  jz      loc_1ADECD
+0x1ADD4E  cmp     byte ptr [r15], 0
+0x1ADD52  jz      loc_1ADECD
+0x1ADD58  mov     rax, cs:qword_57F1C20
+0x1ADD5F  lea     rdx, [rbp+var_C8]; _QWORD
+0x1ADD66  xor     esi, esi; _QWORD
+0x1ADD68  mov     rdi, [rax+68h]; _QWORD
+0x1ADD6C  call    sceNgs2RackGetVoiceHandle
+0x1ADD71  lea     rcx, asc_14DAC3F; "; \t\n"
+0x1ADD78  lea     rsi, [rbp+var_70]
+0x1ADD7C  mov     edx, 40h ; '@'
+0x1ADD81  xor     r8d, r8d
+0x1ADD84  mov     rdi, r15
+0x1ADD87  call    sub_1B34E0
+0x1ADD8C  mov     cl, byte ptr [rbp+var_70]
+0x1ADD8F  mov     r15, rax
+0x1ADD92  or      cl, [r15]
+0x1ADD95  jz      loc_1ADECD
+0x1ADD9B  lea     r13, [rbp+var_70]
+0x1ADD9F  lea     r12, [rbp+var_90]
+0x1ADDA6  nop     word ptr [rax+rax+00000000h]
+0x1ADDB0  mov     edx, 20h ; ' '
+0x1ADDB5  xor     r8d, r8d
+0x1ADDB8  mov     rdi, r13
+0x1ADDBB  mov     rsi, r12
+0x1ADDBE  lea     rcx, qword_14DA4A0
+0x1ADDC5  call    sub_1B34E0
+0x1ADDCA  mov     edx, 20h ; ' '
+0x1ADDCF  xor     r8d, r8d
+0x1ADDD2  mov     rdi, rax
+0x1ADDD5  lea     rsi, [rbp+var_B0]
+0x1ADDDC  lea     rcx, byte_14C0CC5
+0x1ADDE3  call    sub_1B34E0
+0x1ADDE8  mov     rdi, r12
+0x1ADDEB  lea     rsi, aOutputlevel; "outputLevel"
+0x1ADDF2  call    sub_1B1E90
+0x1ADDF7  test    eax, eax
+0x1ADDF9  jnz     short loc_1ADE46
+0x1ADDFB  lea     rdi, [rbp+var_B0]
+0x1ADE02  call    sub_1B2130
+0x1ADE07  mov     rdi, [rbp+var_C8]; _QWORD
+0x1ADE0E  lea     rsi, [rbp+var_C0]; _QWORD
+0x1ADE15  mov     word ptr [rbp+var_C0], 10h
+0x1ADE1E  mov     word ptr [rbp+var_C0+2], 0
+0x1ADE27  mov     dword ptr [rbp+var_C0+4], 30000004h
+0x1ADE31  vmovss  [rbp+var_B8], xmm0
+0x1ADE39  vmovss  [rbp+var_B4], xmm0
+0x1ADE41  call    sceNgs2VoiceControl
+0x1ADE46  mov     rdi, r12
+0x1ADE49  lea     rsi, aIslimiterenabl; "isLimiterEnable"
+0x1ADE50  call    sub_1B1E90
+0x1ADE55  test    eax, eax
+0x1ADE57  jnz     short loc_1ADEA4
+0x1ADE59  lea     rdi, [rbp+var_B0]
+0x1ADE60  call    sub_1B2010
+0x1ADE65  mov     rdi, [rbp+var_C8]; _QWORD
+0x1ADE6C  lea     rsi, [rbp+var_C0]; _QWORD
+0x1ADE73  mov     word ptr [rbp+var_C0], 10h
+0x1ADE7C  mov     word ptr [rbp+var_C0+2], 0
+0x1ADE85  mov     dword ptr [rbp+var_C0+4], 30000003h
+0x1ADE8F  mov     [rbp+var_B8], eax
+0x1ADE95  mov     [rbp+var_B4], 3F800000h
+0x1ADE9F  call    sceNgs2VoiceControl
+0x1ADEA4  mov     edx, 40h ; '@'
+0x1ADEA9  xor     r8d, r8d
+0x1ADEAC  mov     rdi, r15
+0x1ADEAF  mov     rsi, r13
+0x1ADEB2  lea     rcx, asc_14DAC3F; "; \t\n"
+0x1ADEB9  call    sub_1B34E0
+0x1ADEBE  mov     cl, byte ptr [rbp+var_70]
+0x1ADEC1  mov     r15, rax
+0x1ADEC4  or      cl, [r15]
+0x1ADEC7  jnz     loc_1ADDB0
+0x1ADECD  mov     r9, r14
+0x1ADED0  cmp     dword ptr [r9+28h], 0
+0x1ADED5  jnz     short loc_1ADF47
+0x1ADED7  mov     rax, cs:qword_57F1C20
+0x1ADEDE  lea     rdx, [rbp+var_90]; _QWORD
+0x1ADEE5  xor     esi, esi; _QWORD
+0x1ADEE7  mov     r14, r9
+0x1ADEEA  mov     rdi, [rax+70h]; _QWORD
+0x1ADEEE  mov     r15, [rax+68h]
+0x1ADEF2  call    sceNgs2RackGetVoiceHandle
+0x1ADEF7  lea     rdx, [rbp+var_B0]; _QWORD
+0x1ADEFE  xor     esi, esi; _QWORD
+0x1ADF00  mov     rdi, r15; _QWORD
+0x1ADF03  call    sceNgs2RackGetVoiceHandle
+0x1ADF08  mov     rdi, [rbp+var_90]; _QWORD
+0x1ADF0F  mov     rax, [rbp+var_B0]
+0x1ADF16  lea     rsi, [rbp+var_70]; _QWORD
+0x1ADF1A  mov     word ptr [rbp+var_70], 18h
+0x1ADF20  mov     word ptr [rbp+var_70+2], 0
+0x1ADF26  mov     dword ptr [rbp+var_70+4], 5
+0x1ADF2D  mov     dword ptr [rbp-68h], 0
+0x1ADF34  mov     [rbp+var_60], rax
+0x1ADF38  mov     [rbp+var_64], 0
+0x1ADF3F  call    sceNgs2VoiceControl
+0x1ADF44  mov     r9, r14
+0x1ADF47  xor     eax, eax
+0x1ADF49  cmp     dword ptr [rbx+28h], 0
+0x1ADF4D  jz      short loc_1ADFC8
+0x1ADF4F  xor     r14d, r14d
+0x1ADF52  nop     word ptr [rax+rax+00000000h]
+0x1ADF60  mov     r8, [rbx+30h]
+0x1ADF64  mov     r14d, r14d
+0x1ADF67  mov     rsi, [r9]
+0x1ADF6A  mov     r15, r9
+0x1ADF6D  lea     rcx, [r14+r14*4]
+0x1ADF71  mov     eax, [r8+rcx*8+8]
+0x1ADF76  imul    rax, 250h
+0x1ADF7D  mov     dword ptr [rsi+rax+14h], 0
+0x1ADF85  lea     rdi, [rsi+rax]
+0x1ADF89  mov     edx, [rsi+rax+10h]
+0x1ADF8D  test    rdx, rdx
+0x1ADF90  jz      short loc_1ADFB0
+0x1ADF92  mov     rsi, [rsi+rax+58h]
+0x1ADF97  xor     eax, eax
+0x1ADF99  nop     dword ptr [rax+00000000h]
+0x1ADFA0  mov     qword ptr [rsi+rax*8], 0
+0x1ADFA8  inc     rax
+0x1ADFAB  cmp     rax, rdx
+0x1ADFAE  jb      short loc_1ADFA0
+0x1ADFB0  mov     rsi, [r8+rcx*8+10h]
+0x1ADFB5  call    sub_1AEFD0
+0x1ADFBA  mov     eax, [rbx+28h]
+0x1ADFBD  inc     r14d
+0x1ADFC0  mov     r9, r15
+0x1ADFC3  cmp     r14d, eax
+0x1ADFC6  jb      short loc_1ADF60
+0x1ADFC8  cmp     dword ptr [rbx+18h], 0
+0x1ADFCC  jz      loc_1AE839
+0x1ADFD2  mov     eax, [rbx+28h]
+0x1ADFD5  xor     edx, edx
+0x1ADFD7  mov     ecx, eax
+0x1ADFD9  nop     dword ptr [rax+00000000h]
+0x1ADFE0  test    ecx, ecx
+0x1ADFE2  jz      loc_1AE820
+0x1ADFE8  mov     esi, edx
+0x1ADFEA  xor     r12d, r12d
+0x1ADFED  mov     dword ptr [rbp+var_110], edx
+0x1ADFF3  mov     dword ptr [rbp+var_D0], 1
+0x1ADFFD  mov     dword ptr [rbp+var_F8], 1
+0x1AE007  mov     [rbp+var_100], rsi
+0x1AE00E  xchg    ax, ax
+0x1AE010  mov     rcx, [rbx+20h]
+0x1AE014  mov     r13, [rbx+30h]
+0x1AE018  mov     r14, rsi
+0x1AE01B  mov     r12d, r12d
+0x1AE01E  shl     r14, 4
+0x1AE022  lea     rdx, [r12+r12*4]
+0x1AE026  mov     ecx, [rcx+r14+8]
+0x1AE02B  cmp     ecx, [r13+rdx*8+0Ch]
+0x1AE030  jnz     loc_1AE7FF
+0x1AE036  lea     rax, [r13+rdx*8+0Ch]
+0x1AE03B  mov     rcx, [r9]
+0x1AE03E  mov     [rbp+var_E0], r13
+0x1AE045  mov     [rbp+var_F0], rdx
+0x1AE04C  xor     esi, esi; _QWORD
+0x1AE04E  mov     [rbp+var_D8], rax
+0x1AE055  mov     eax, [r13+rdx*8+8]
+0x1AE05A  lea     rdx, [rbp+var_C0]; _QWORD
+0x1AE061  imul    rax, 250h
+0x1AE068  mov     r13, [rcx+rax]
+0x1AE06C  mov     rdi, r13; _QWORD
+0x1AE06F  call    sceNgs2RackGetVoiceHandle
+0x1AE074  mov     rdi, [rbp+var_C0]; _QWORD
+0x1AE07B  lea     r15, [rbp+var_70]
+0x1AE07F  mov     word ptr [rbp+var_70], 10h
+0x1AE085  mov     word ptr [rbp+var_70+2], 0
+0x1AE08B  mov     [rbp+var_70+4], 2
+0x1AE093  mov     [rbp+var_64], 3F800000h
+0x1AE09A  mov     rsi, r15; _QWORD
+0x1AE09D  call    sceNgs2VoiceControl
+0x1AE0A2  mov     rdi, [rbp+var_C0]; _QWORD
+0x1AE0A9  mov     rsi, r15; _QWORD
+0x1AE0AC  mov     rax, 100000002h
+0x1AE0B6  mov     word ptr [rbp+var_70], 10h
+0x1AE0BC  mov     word ptr [rbp+var_70+2], 0
+0x1AE0C2  mov     [rbp+var_70+4], rax
+0x1AE0C6  mov     [rbp+var_64], 3F800000h
+0x1AE0CD  call    sceNgs2VoiceControl
+0x1AE0D2  mov     rdi, [rbp+var_C0]; _QWORD
+0x1AE0D9  mov     rsi, r15; _QWORD
+0x1AE0DC  mov     rax, 200000002h
+0x1AE0E6  mov     word ptr [rbp+var_70], 10h
+0x1AE0EC  mov     word ptr [rbp+var_70+2], 0
+0x1AE0F2  mov     [rbp+var_70+4], rax
+0x1AE0F6  mov     [rbp+var_64], 3F800000h
+0x1AE0FD  call    sceNgs2VoiceControl
+0x1AE102  mov     rdi, [rbp+var_C0]; _QWORD
+0x1AE109  mov     rsi, r15; _QWORD
+0x1AE10C  mov     rax, 300000002h
+0x1AE116  mov     word ptr [rbp+var_70], 10h
+0x1AE11C  mov     word ptr [rbp+var_70+2], 0
+0x1AE122  mov     [rbp+var_70+4], rax
+0x1AE126  mov     [rbp+var_64], 3F800000h
+0x1AE12D  call    sceNgs2VoiceControl
+0x1AE132  mov     rdi, [rbp+var_C0]; _QWORD
+0x1AE139  mov     rsi, r15; _QWORD
+0x1AE13C  mov     rax, 400000002h
+0x1AE146  mov     word ptr [rbp+var_70], 10h
+0x1AE14C  mov     word ptr [rbp+var_70+2], 0
+0x1AE152  mov     [rbp+var_70+4], rax
+0x1AE156  mov     [rbp+var_64], 3F800000h
+0x1AE15D  call    sceNgs2VoiceControl
+0x1AE162  mov     rdi, [rbp+var_C0]; _QWORD
+0x1AE169  mov     rsi, r15; _QWORD
+0x1AE16C  mov     rax, 500000002h
+0x1AE176  mov     word ptr [rbp+var_70], 10h
+0x1AE17C  mov     word ptr [rbp+var_70+2], 0
+0x1AE182  mov     [rbp+var_70+4], rax
+0x1AE186  mov     [rbp+var_64], 3F800000h
+0x1AE18D  call    sceNgs2VoiceControl
+0x1AE192  mov     rdi, [rbp+var_C0]; _QWORD
+0x1AE199  mov     rsi, r15; _QWORD
+0x1AE19C  mov     rax, 600000002h
+0x1AE1A6  mov     word ptr [rbp+var_70], 10h
+0x1AE1AC  mov     word ptr [rbp+var_70+2], 0
+0x1AE1B2  mov     [rbp+var_70+4], rax
+0x1AE1B6  mov     [rbp+var_64], 3F800000h
+0x1AE1BD  call    sceNgs2VoiceControl
+0x1AE1C2  mov     rdi, [rbp+var_C0]; _QWORD
+0x1AE1C9  mov     rsi, r15; _QWORD
+0x1AE1CC  mov     rax, 700000002h
+0x1AE1D6  mov     word ptr [rbp+var_70], 10h
+0x1AE1DC  mov     word ptr [rbp+var_70+2], 0
+0x1AE1E2  mov     [rbp+var_70+4], rax
+0x1AE1E6  mov     [rbp+var_64], 3F800000h
+0x1AE1ED  call    sceNgs2VoiceControl
+0x1AE1F2  cmp     dword ptr [rbp+var_F8], 0
+0x1AE1F9  jz      loc_1AE291
+0x1AE1FF  mov     rax, [rbx+20h]
+0x1AE203  mov     rdx, [rbp+var_D8]
+0x1AE20A  mov     ecx, [rax+r14+8]
+0x1AE20F  mov     rax, cs:qword_57F1C20
+0x1AE216  imul    rcx, 98h
+0x1AE21D  mov     [rax+rcx+0B0h], r13
+0x1AE225  mov     edx, [rdx]
+0x1AE227  mov     [rax+rcx+0A8h], edx
+0x1AE22E  cmp     dword ptr [rbx], 1
+0x1AE231  jnz     short loc_1AE291
+0x1AE233  mov     rdi, [rax+70h]; _QWORD
+0x1AE237  xor     esi, esi; _QWORD
+0x1AE239  lea     rdx, [rbp+var_90]; _QWORD
+0x1AE240  call    sceNgs2RackGetVoiceHandle
+0x1AE245  xor     esi, esi; _QWORD
+0x1AE247  mov     rdi, r13; _QWORD
+0x1AE24A  lea     rdx, [rbp+var_B0]; _QWORD
+0x1AE251  call    sceNgs2RackGetVoiceHandle
+0x1AE256  mov     rdi, [rbp+var_90]; _QWORD
+0x1AE25D  mov     rax, [rbp+var_B0]
+0x1AE264  mov     rsi, r15; _QWORD
+0x1AE267  mov     word ptr [rbp+var_70], 18h
+0x1AE26D  mov     word ptr [rbp+var_70+2], 0
+0x1AE273  mov     dword ptr [rbp+var_70+4], 5
+0x1AE27A  mov     dword ptr [rbp-68h], 0
+0x1AE281  mov     [rbp+var_60], rax
+0x1AE285  mov     [rbp+var_64], 0
+0x1AE28C  call    sceNgs2VoiceControl
+0x1AE291  mov     rcx, [rbp+var_E0]
+0x1AE298  mov     rax, [rbp+var_F0]
+0x1AE29F  mov     [rbp+var_F8], r13
+0x1AE2A6  lea     rdi, [rcx+rax*8+8]
+0x1AE2AB  mov     eax, [rbx+28h]
+0x1AE2AE  mov     ecx, dword ptr [rbp+var_D0]
+0x1AE2B4  nop     word ptr [rax+rax+00000000h]
+0x1AE2C0  cmp     ecx, eax
+0x1AE2C2  jnb     loc_1AE420
+0x1AE2C8  mov     rsi, [rbx+20h]
+0x1AE2CC  mov     r13, [rbx+30h]
+0x1AE2D0  mov     edx, ecx
+0x1AE2D2  inc     ecx
+0x1AE2D4  lea     r15, [rdx+rdx*4]
+0x1AE2D8  mov     esi, [rsi+r14+8]
+0x1AE2DD  cmp     esi, [r13+r15*8+0Ch]
+0x1AE2E2  jnz     short loc_1AE2C0
+0x1AE2E4  mov     rax, [rbp+var_E8]
+0x1AE2EB  mov     ecx, [rdi]
+0x1AE2ED  vmovss  xmm0, cs:dword_14DAE60
+0x1AE2F5  mov     [rbp+var_108], rdi
+0x1AE2FC  mov     rax, [rax]
+0x1AE2FF  imul    rcx, 250h
+0x1AE306  cmp     dword ptr [rax+rcx+0Ch], 1
+0x1AE30B  jnz     short loc_1AE32C
+0x1AE30D  vmovss  xmm0, dword ptr [rax+rcx+0F0h]
+0x1AE316  vmovss  xmm1, cs:dword_14DAE58
+0x1AE31E  vaddss  xmm0, xmm0, dword ptr [rax+rcx+0F4h]
+0x1AE327  call    sub_1B55F0
+0x1AE32C  mov     r14, [rbp+var_F8]
+0x1AE333  xor     esi, esi; _QWORD
+0x1AE335  lea     rdx, [rbp+var_C8]; _QWORD
+0x1AE33C  vmovss  dword ptr [rbp+var_E0], xmm0
+0x1AE344  mov     rdi, r14; _QWORD
+0x1AE347  call    sceNgs2RackGetVoiceHandle
+0x1AE34C  mov     rdi, [rbp+var_C8]; _QWORD
+0x1AE353  vmovss  xmm0, dword ptr [rbp+var_E0]
+0x1AE35B  lea     rbx, [rbp+var_70]
+0x1AE35F  mov     word ptr [rbp+var_70], 10h
+0x1AE365  mov     word ptr [rbp+var_70+2], 0
+0x1AE36B  mov     dword ptr [rbp+var_70+4], 2
+0x1AE372  mov     dword ptr [rbp-68h], 0
+0x1AE379  mov     rsi, rbx; _QWORD
+0x1AE37C  vmovss  [rbp+var_64], xmm0
+0x1AE381  call    sceNgs2VoiceControl
+0x1AE386  mov     eax, [r13+r15*8+8]
+0x1AE38B  mov     r13, [rbp+var_E8]
+0x1AE392  mov     r15, rbx
+0x1AE395  xor     esi, esi; _QWORD
+0x1AE397  mov     rdi, r14; _QWORD
+0x1AE39A  lea     rdx, [rbp+var_90]; _QWORD
+0x1AE3A1  mov     rcx, [r13+0]
+0x1AE3A5  imul    rax, 250h
+0x1AE3AC  mov     rbx, [rcx+rax]
+0x1AE3B0  call    sceNgs2RackGetVoiceHandle
+0x1AE3B5  xor     esi, esi; _QWORD
+0x1AE3B7  mov     rdi, rbx; _QWORD
+0x1AE3BA  lea     rdx, [rbp+var_B0]; _QWORD
+0x1AE3C1  call    sceNgs2RackGetVoiceHandle
+0x1AE3C6  mov     rdi, [rbp+var_90]; _QWORD
+0x1AE3CD  mov     rax, [rbp+var_B0]
+0x1AE3D4  mov     rsi, r15; _QWORD
+0x1AE3D7  mov     word ptr [rbp+var_70], 18h
+0x1AE3DD  mov     word ptr [rbp+var_70+2], 0
+0x1AE3E3  mov     dword ptr [rbp+var_70+4], 5
+0x1AE3EA  mov     dword ptr [rbp-68h], 0
+0x1AE3F1  mov     [rbp+var_60], rax
+0x1AE3F5  mov     [rbp+var_64], 0
+0x1AE3FC  call    sceNgs2VoiceControl
+0x1AE401  mov     r9, r13
+0x1AE404  mov     r13, [rbp+var_108]
+0x1AE40B  mov     rbx, [rbp+var_130]
+0x1AE412  jmp     loc_1AE7D0
+0x1AE417  align 20h
+0x1AE420  mov     rax, [rbx+20h]
+0x1AE424  mov     r13, rdi
+0x1AE427  mov     rdi, [rbp+var_F8]; _QWORD
+0x1AE42E  mov     ecx, [rax+r14+8]
+0x1AE433  mov     rax, cs:qword_57F1C20
+0x1AE43A  imul    rcx, 98h
+0x1AE441  mov     [rax+rcx+0B8h], rdi
+0x1AE449  cmp     dword ptr [rbx], 0
+0x1AE44C  jz      short loc_1AE4BF
+0x1AE44E  mov     r14, [rax+68h]
+0x1AE452  xor     esi, esi; _QWORD
+0x1AE454  lea     rdx, [rbp+var_90]; _QWORD
+0x1AE45B  call    sceNgs2RackGetVoiceHandle
+0x1AE460  xor     esi, esi; _QWORD
+0x1AE462  mov     rdi, r14; _QWORD
+0x1AE465  lea     rdx, [rbp+var_B0]; _QWORD
+0x1AE46C  call    sceNgs2RackGetVoiceHandle
+0x1AE471  mov     rdi, [rbp+var_90]; _QWORD
+0x1AE478  mov     rax, [rbp+var_B0]
+0x1AE47F  lea     r15, [rbp+var_70]
+0x1AE483  mov     word ptr [rbp+var_70], 18h
+0x1AE489  mov     word ptr [rbp+var_70+2], 0
+0x1AE48F  mov     dword ptr [rbp+var_70+4], 5
+0x1AE496  mov     dword ptr [rbp-68h], 0
+0x1AE49D  mov     rsi, r15; _QWORD
+0x1AE4A0  mov     [rbp+var_60], rax
+0x1AE4A4  mov     [rbp+var_64], 0
+0x1AE4AB  call    sceNgs2VoiceControl
+0x1AE4B0  mov     rax, [rbp+var_E8]
+0x1AE4B7  mov     r9, rax
+0x1AE4BA  jmp     loc_1AE7D0
+0x1AE4BF  mov     rcx, [rbp+var_D8]
+0x1AE4C6  mov     r15d, [rcx]
+0x1AE4C9  lea     ecx, [r15-64h]
+0x1AE4CD  cmp     ecx, 15h; switch 22 cases
+0x1AE4D0  ja      loc_1AE6EB; jumptable 00000000001AE4E4 default case
+0x1AE4D6  lea     rdx, off_14DB0C8
+0x1AE4DD  movsxd  rcx, dword ptr [rdx+rcx*4]
+0x1AE4E1  add     rcx, rdx
+0x1AE4E4  jmp     rcx; switch jump
+0x1AE4E6  add     r15d, 0FFFFFF9Dh; jumptable 00000000001AE4E4 cases 0-3
+0x1AE4EA  cmp     r15d, [rax+90h]
+0x1AE4F1  ja      loc_1AE6EB; jumptable 00000000001AE4E4 default case
+0x1AE4F7  jmp     short loc_1AE517
+0x1AE4F9  mov     rax, [rax+90h]; jumptable 00000000001AE4E4 cases 10-13
+0x1AE500  add     r15d, 0FFFFFF93h
+0x1AE504  mov     rcx, rax
+0x1AE507  shr     rcx, 20h
+0x1AE50B  cmp     r15d, ecx
+0x1AE50E  ja      loc_1AE6EB; jumptable 00000000001AE4E4 default case
+0x1AE514  add     r15d, eax
+0x1AE517  xor     esi, esi; _QWORD
+0x1AE519  lea     rdx, [rbp+var_90]; _QWORD
+0x1AE520  call    sceNgs2RackGetVoiceHandle
+0x1AE525  mov     rax, cs:qword_57F1C20
+0x1AE52C  mov     esi, r15d; _QWORD
+0x1AE52F  lea     rdx, [rbp+var_B0]; _QWORD
+0x1AE536  mov     rdi, [rax+68h]; _QWORD
+0x1AE53A  call    sceNgs2RackGetVoiceHandle
+0x1AE53F  mov     rdi, [rbp+var_90]; _QWORD
+0x1AE546  mov     rax, [rbp+var_B0]
+0x1AE54D  lea     rsi, [rbp+var_70]; _QWORD
+0x1AE551  mov     word ptr [rbp+var_70], 18h
+0x1AE557  mov     word ptr [rbp+var_70+2], 0
+0x1AE55D  mov     dword ptr [rbp+var_70+4], 5
+0x1AE564  mov     dword ptr [rbp-68h], 0
+0x1AE56B  mov     [rbp+var_60], rax
+0x1AE56F  mov     [rbp+var_64], 0
+0x1AE576  call    sceNgs2VoiceControl
+0x1AE57B  mov     rax, [rbp+var_E0]
+0x1AE582  mov     rcx, [rbp+var_F0]
+0x1AE589  cmp     dword ptr [rax+rcx*8+18h], 0
+0x1AE58E  jz      loc_1AE6EB; jumptable 00000000001AE4E4 default case
+0x1AE594  mov     rax, [rbp+var_E0]
+0x1AE59B  mov     rcx, [rbp+var_F0]
+0x1AE5A2  vmovss  xmm1, cs:dword_14DAE58
+0x1AE5AA  mov     rax, [rax+rcx*8+20h]
+0x1AE5AF  vmovss  xmm0, dword ptr [rax+4]
+0x1AE5B4  call    sub_1B55F0
+0x1AE5B9  mov     rdi, [rbp+var_90]; _QWORD
+0x1AE5C0  lea     rsi, [rbp+var_70]; _QWORD
+0x1AE5C4  mov     word ptr [rbp+var_70], 10h
+0x1AE5CA  mov     word ptr [rbp+var_70+2], 0
+0x1AE5D0  mov     dword ptr [rbp+var_70+4], 2
+0x1AE5D7  mov     dword ptr [rbp-68h], 0
+0x1AE5DE  vmovss  [rbp+var_64], xmm0
+0x1AE5E3  call    sceNgs2VoiceControl
+0x1AE5E8  jmp     loc_1AE6EB; jumptable 00000000001AE4E4 default case
+0x1AE5ED  mov     rax, [rax+90h]; jumptable 00000000001AE4E4 case 20
+0x1AE5F4  mov     [rbp+var_108], r13
+0x1AE5FB  mov     rcx, rax
+0x1AE5FE  shr     rcx, 20h
+0x1AE602  lea     r15d, [rax+rcx+1]
+0x1AE607  jmp     short loc_1AE623
+0x1AE609  mov     rax, [rax+90h]; jumptable 00000000001AE4E4 case 21
+0x1AE610  mov     [rbp+var_108], r13
+0x1AE617  mov     rcx, rax
+0x1AE61A  shr     rcx, 20h
+0x1AE61E  lea     r15d, [rax+rcx+2]
+0x1AE623  xor     esi, esi; _QWORD
+0x1AE625  lea     rdx, [rbp+var_90]; _QWORD
+0x1AE62C  call    sceNgs2RackGetVoiceHandle
+0x1AE631  mov     rax, cs:qword_57F1C20
+0x1AE638  mov     esi, r15d; _QWORD
+0x1AE63B  lea     rdx, [rbp+var_B0]; _QWORD
+0x1AE642  mov     rdi, [rax+68h]; _QWORD
+0x1AE646  call    sceNgs2RackGetVoiceHandle
+0x1AE64B  mov     rdi, [rbp+var_90]; _QWORD
+0x1AE652  mov     rax, [rbp+var_B0]
+0x1AE659  lea     r15, [rbp+var_70]
+0x1AE65D  mov     word ptr [rbp+var_70], 18h
+0x1AE663  mov     word ptr [rbp+var_70+2], 0
+0x1AE669  mov     dword ptr [rbp+var_70+4], 5
+0x1AE670  mov     dword ptr [rbp-68h], 0
+0x1AE677  mov     rsi, r15; _QWORD
+0x1AE67A  mov     [rbp+var_60], rax
+0x1AE67E  mov     [rbp+var_64], 0
+0x1AE685  call    sceNgs2VoiceControl
+0x1AE68A  mov     rax, [rbp+var_E0]
+0x1AE691  mov     rcx, [rbp+var_F0]
+0x1AE698  cmp     dword ptr [rax+rcx*8+18h], 0
+0x1AE69D  jz      short loc_1AE6E4
+0x1AE69F  mov     rax, [rax+rcx*8+20h]
+0x1AE6A4  vmovss  xmm1, cs:dword_14DAE58
+0x1AE6AC  vmovss  xmm0, dword ptr [rax+4]
+0x1AE6B1  call    sub_1B55F0
+0x1AE6B6  mov     rdi, [rbp+var_90]; _QWORD
+0x1AE6BD  mov     rsi, r15; _QWORD
+0x1AE6C0  mov     word ptr [rbp+var_70], 10h
+0x1AE6C6  mov     word ptr [rbp+var_70+2], 0
+0x1AE6CC  mov     dword ptr [rbp+var_70+4], 2
+0x1AE6D3  mov     dword ptr [rbp-68h], 0
+0x1AE6DA  vmovss  [rbp+var_64], xmm0
+0x1AE6DF  call    sceNgs2VoiceControl
+0x1AE6E4  mov     r13, [rbp+var_108]
+0x1AE6EB  mov     rax, [rbx+20h]; jumptable 00000000001AE4E4 default case
+0x1AE6EF  movzx   ecx, byte ptr [rax+r14+0Ch]
+0x1AE6F5  test    ecx, ecx
+0x1AE6F7  jz      short loc_1AE729
+0x1AE6F9  mov     r9, [rbp+var_E8]
+0x1AE700  cmp     ecx, 1
+0x1AE703  jz      short loc_1AE74F
+0x1AE705  cmp     ecx, 2
+0x1AE708  jnz     short loc_1AE76E
+0x1AE70A  mov     eax, [rax+r14+8]
+0x1AE70F  mov     rcx, cs:qword_57F1C20
+0x1AE716  imul    rdx, rax, 98h
+0x1AE71D  mov     word ptr [rcx+rdx+0C1h], 101h
+0x1AE727  jmp     short loc_1AE77A
+0x1AE729  mov     eax, [rax+r14+8]
+0x1AE72E  mov     rcx, cs:qword_57F1C20
+0x1AE735  mov     r9, [rbp+var_E8]
+0x1AE73C  imul    rdx, rax, 98h
+0x1AE743  mov     word ptr [rcx+rdx+0C1h], 0
+0x1AE74D  jmp     short loc_1AE77A
+0x1AE74F  mov     eax, [rax+r14+8]
+0x1AE754  mov     rcx, cs:qword_57F1C20
+0x1AE75B  imul    rdx, rax, 98h
+0x1AE762  mov     word ptr [rcx+rdx+0C1h], 1
+0x1AE76C  jmp     short loc_1AE77A
+0x1AE76E  mov     eax, [rax+r14+8]
+0x1AE773  mov     rcx, cs:qword_57F1C20
+0x1AE77A  mov     rdx, [rbx+50h]
+0x1AE77E  vmovss  xmm1, cs:dword_14DAE5C
+0x1AE786  mov     eax, eax
+0x1AE788  imul    rax, 98h
+0x1AE78F  mov     esi, edx
+0x1AE791  shr     rdx, 20h
+0x1AE795  vcvtsi2ss xmm0, xmm0, rsi
+0x1AE79A  vdivss  xmm0, xmm0, xmm1
+0x1AE79E  vmovss  dword ptr [rcx+rax+0C4h], xmm0
+0x1AE7A7  vxorps  xmm0, xmm0, xmm0
+0x1AE7AB  vcvtsi2ss xmm0, xmm0, rdx
+0x1AE7B0  vdivss  xmm0, xmm0, xmm1
+0x1AE7B4  vmovss  dword ptr [rcx+rax+0C8h], xmm0
+0x1AE7BD  mov     dword ptr [rcx+rax+0CCh], 0
+0x1AE7C8  nop     dword ptr [rax+rax+00000000h]
+0x1AE7D0  mov     rax, [rbp+var_D8]
+0x1AE7D7  mov     ecx, [r13+0]
+0x1AE7DB  mov     rdx, [r9]
+0x1AE7DE  mov     rsi, [rbp+var_100]
+0x1AE7E5  mov     dword ptr [rbp+var_F8], 0
+0x1AE7EF  mov     eax, [rax]
+0x1AE7F1  imul    rcx, 250h
+0x1AE7F8  mov     [rdx+rcx+8], eax
+0x1AE7FC  mov     eax, [rbx+28h]
+0x1AE7FF  inc     dword ptr [rbp+var_D0]
+0x1AE805  inc     r12d
+0x1AE808  mov     ecx, eax
+0x1AE80A  cmp     r12d, eax
+0x1AE80D  jb      loc_1AE010
+0x1AE813  jmp     short loc_1AE828
+0x1AE815  align 20h
+0x1AE820  mov     dword ptr [rbp+var_110], edx
+0x1AE826  xor     ecx, ecx
+0x1AE828  mov     edx, dword ptr [rbp+var_110]
+0x1AE82E  inc     edx
+0x1AE830  cmp     edx, [rbx+18h]
+0x1AE833  jb      loc_1ADFE0
+0x1AE839  test    eax, eax
+0x1AE83B  jz      loc_1AECFC
+0x1AE841  xor     edi, edi
+0x1AE843  nop     word ptr [rax+rax+00000000h]
+0x1AE850  mov     rdx, [rbx+30h]
+0x1AE854  mov     edi, edi
+0x1AE856  mov     r10, [r9]
+0x1AE859  lea     rsi, [rdi+rdi*4]
+0x1AE85D  mov     r8d, [rdx+rsi*8+8]
+0x1AE862  cmp     dword ptr [rdx+rsi*8+18h], 0
+0x1AE867  jz      loc_1AEC60
+0x1AE86D  lea     rax, [rdx+rsi*8+8]
+0x1AE872  mov     [rbp+var_138], rdi
+0x1AE879  lea     rdi, [rdx+rsi*8+18h]
+0x1AE87E  lea     rcx, [rdx+rsi*8+20h]
+0x1AE883  lea     rdx, [rdx+rsi*8+0Ch]
+0x1AE888  mov     r14, rbx
+0x1AE88B  xor     r15d, r15d
+0x1AE88E  mov     [rbp+var_140], r8
+0x1AE895  mov     [rbp+var_148], r10
+0x1AE89C  mov     [rbp+var_120], rax
+0x1AE8A3  imul    rax, r8, 250h
+0x1AE8AA  mov     [rbp+var_F0], rdi
+0x1AE8B1  mov     [rbp+var_F8], rcx
+0x1AE8B8  mov     [rbp+var_E0], rdx
+0x1AE8BF  lea     rcx, [r10+rax+0Ch]
+0x1AE8C4  lea     r8, [r10+rax+0F0h]
+0x1AE8CC  lea     rdi, [r10+rax+0F4h]
+0x1AE8D4  lea     rax, [r10+rax+58h]
+0x1AE8D9  mov     [rbp+var_100], rcx
+0x1AE8E0  mov     [rbp+var_110], r8
+0x1AE8E7  mov     [rbp+var_118], rdi
+0x1AE8EE  mov     [rbp+var_108], rax
+0x1AE8F5  nop     word ptr [rax+rax+00000000h]
+0x1AE900  mov     rax, [rbp+var_F8]
+0x1AE907  mov     r13d, r15d
+0x1AE90A  vmovss  xmm1, cs:dword_14DAE58
+0x1AE912  mov     rax, [rax]
+0x1AE915  vmovss  xmm0, dword ptr [rax+r13*8+4]
+0x1AE91C  mov     r12d, [rax+r13*8]
+0x1AE920  call    sub_1B55F0
+0x1AE925  mov     rax, [rbp+var_100]
+0x1AE92C  vmovss  dword ptr [rbp+var_D0], xmm0
+0x1AE934  vmovss  xmm0, cs:dword_14DAE60
+0x1AE93C  cmp     dword ptr [rax], 1
+0x1AE93F  jnz     short loc_1AE964
+0x1AE941  mov     rax, [rbp+var_110]
+0x1AE948  mov     rcx, [rbp+var_118]
+0x1AE94F  vmovss  xmm1, cs:dword_14DAE58
+0x1AE957  vmovss  xmm0, dword ptr [rax]
+0x1AE95B  vaddss  xmm0, xmm0, dword ptr [rcx]
+0x1AE95F  call    sub_1B55F0
+0x1AE964  test    r12d, r12d
+0x1AE967  jz      short loc_1AE9B0
+0x1AE969  mov     ecx, [r14+28h]
+0x1AE96D  vmovss  dword ptr [rbp+var_D8], xmm0
+0x1AE975  test    ecx, ecx
+0x1AE977  jz      loc_1AEB9E
+0x1AE97D  mov     rax, [r14+30h]
+0x1AE981  xor     edx, edx
+0x1AE983  lea     rsi, [rax+0Ch]
+0x1AE987  nop     word ptr [rax+rax+00000000h]
+0x1AE990  cmp     [rsi], r12d
+0x1AE993  jz      loc_1AEABB
+0x1AE999  inc     rdx
+0x1AE99C  add     rsi, 28h
+0x1AE9A0  cmp     edx, ecx
+0x1AE9A2  jb      short loc_1AE990
+0x1AE9A4  jmp     loc_1AEB9E
+0x1AE9A9  align 10h
+0x1AE9B0  mov     rax, [rbp+var_E0]
+0x1AE9B7  mov     eax, [rax]
+0x1AE9B9  cmp     eax, 63h ; 'c'
+0x1AE9BC  ja      loc_1AEBD9
+0x1AE9C2  mov     rcx, [rbp+var_E8]
+0x1AE9C9  mov     rax, [rbp+var_120]
+0x1AE9D0  mov     eax, [rax]
+0x1AE9D2  xor     esi, esi; _QWORD
+0x1AE9D4  lea     rdx, [rbp+var_90]; _QWORD
+0x1AE9DB  vmovss  dword ptr [rbp+var_D8], xmm0
+0x1AE9E3  mov     rcx, [rcx]
+0x1AE9E6  imul    rax, 250h
+0x1AE9ED  mov     rdi, [rcx+rax]; _QWORD
+0x1AE9F1  mov     rax, cs:qword_57F1C20
+0x1AE9F8  mov     rbx, [rax+70h]
+0x1AE9FC  mov     [rbp+var_128], rdi
+0x1AEA03  call    sceNgs2RackGetVoiceHandle
+0x1AEA08  xor     esi, esi; _QWORD
+0x1AEA0A  mov     rdi, rbx; _QWORD
+0x1AEA0D  lea     rdx, [rbp+var_B0]; _QWORD
+0x1AEA14  call    sceNgs2RackGetVoiceHandle
+0x1AEA19  mov     rdi, [rbp+var_90]; _QWORD
+0x1AEA20  mov     rax, [rbp+var_B0]
+0x1AEA27  lea     rbx, [rbp+var_70]
+0x1AEA2B  mov     word ptr [rbp+var_70], 18h
+0x1AEA31  mov     word ptr [rbp+var_70+2], 0
+0x1AEA37  mov     dword ptr [rbp+var_70+4], 5
+0x1AEA3E  mov     [rbp-68h], r15d
+0x1AEA42  mov     rsi, rbx; _QWORD
+0x1AEA45  mov     [rbp+var_60], rax
+0x1AEA49  mov     [rbp+var_64], 0
+0x1AEA50  call    sceNgs2VoiceControl
+0x1AEA55  mov     rdi, [rbp+var_128]; _QWORD
+0x1AEA5C  xor     esi, esi; _QWORD
+0x1AEA5E  lea     rdx, [rbp+var_C0]; _QWORD
+0x1AEA65  call    sceNgs2RackGetVoiceHandle
+0x1AEA6A  vmovss  xmm0, dword ptr [rbp+var_D8]
+0x1AEA72  mov     rdi, [rbp+var_C0]; _QWORD
+0x1AEA79  mov     rsi, rbx; _QWORD
+0x1AEA7C  mov     word ptr [rbp+var_70], 10h
+0x1AEA82  mov     word ptr [rbp+var_70+2], 0
+0x1AEA88  mov     dword ptr [rbp+var_70+4], 2
+0x1AEA8F  mov     [rbp-68h], r15d
+0x1AEA93  vmulss  xmm0, xmm0, dword ptr [rbp+var_D0]
+0x1AEA9B  vmovss  [rbp+var_64], xmm0
+0x1AEAA0  call    sceNgs2VoiceControl
+0x1AEAA5  mov     rax, [rbp+var_E0]
+0x1AEAAC  vmovss  xmm0, dword ptr [rbp+var_D8]
+0x1AEAB4  mov     eax, [rax]
+0x1AEAB6  jmp     loc_1AEBD9
+0x1AEABB  mov     rsi, [rbp+var_E8]
+0x1AEAC2  mov     rcx, [rbp+var_120]
+0x1AEAC9  mov     ecx, [rcx]
+0x1AEACB  mov     rsi, [rsi]
+0x1AEACE  imul    rcx, 250h
+0x1AEAD5  mov     rdi, [rsi+rcx]; _QWORD
+0x1AEAD9  lea     rcx, [rdx+rdx*4]
+0x1AEADD  lea     rdx, [rbp+var_90]; _QWORD
+0x1AEAE4  mov     eax, [rax+rcx*8+8]
+0x1AEAE8  mov     [rbp+var_128], rdi
+0x1AEAEF  imul    rax, 250h
+0x1AEAF6  mov     rbx, [rsi+rax]
+0x1AEAFA  xor     esi, esi; _QWORD
+0x1AEAFC  call    sceNgs2RackGetVoiceHandle
+0x1AEB01  xor     esi, esi; _QWORD
+0x1AEB03  mov     rdi, rbx; _QWORD
+0x1AEB06  lea     rdx, [rbp+var_B0]; _QWORD
+0x1AEB0D  call    sceNgs2RackGetVoiceHandle
+0x1AEB12  mov     rdi, [rbp+var_90]; _QWORD
+0x1AEB19  mov     rax, [rbp+var_B0]
+0x1AEB20  lea     rbx, [rbp+var_70]
+0x1AEB24  mov     word ptr [rbp+var_70], 18h
+0x1AEB2A  mov     word ptr [rbp+var_70+2], 0
+0x1AEB30  mov     dword ptr [rbp+var_70+4], 5
+0x1AEB37  mov     [rbp-68h], r15d
+0x1AEB3B  mov     rsi, rbx; _QWORD
+0x1AEB3E  mov     [rbp+var_60], rax
+0x1AEB42  mov     [rbp+var_64], 0
+0x1AEB49  call    sceNgs2VoiceControl
+0x1AEB4E  mov     rdi, [rbp+var_128]; _QWORD
+0x1AEB55  xor     esi, esi; _QWORD
+0x1AEB57  lea     rdx, [rbp+var_C0]; _QWORD
+0x1AEB5E  call    sceNgs2RackGetVoiceHandle
+0x1AEB63  vmovss  xmm0, dword ptr [rbp+var_D8]
+0x1AEB6B  mov     rdi, [rbp+var_C0]; _QWORD
+0x1AEB72  mov     rsi, rbx; _QWORD
+0x1AEB75  mov     word ptr [rbp+var_70], 10h
+0x1AEB7B  mov     word ptr [rbp+var_70+2], 0
+0x1AEB81  mov     dword ptr [rbp+var_70+4], 2
+0x1AEB88  mov     [rbp-68h], r15d
+0x1AEB8C  vmulss  xmm0, xmm0, dword ptr [rbp+var_D0]
+0x1AEB94  vmovss  [rbp+var_64], xmm0
+0x1AEB99  call    sceNgs2VoiceControl
+0x1AEB9E  mov     rcx, cs:qword_57F1C20
+0x1AEBA5  imul    rax, r12, 98h
+0x1AEBAC  vmovss  xmm0, dword ptr [rbp+var_D8]
+0x1AEBB4  lea     rdx, [rcx+rax+0A8h]
+0x1AEBBC  mov     rax, [rbp+var_E0]
+0x1AEBC3  mov     eax, [rax]
+0x1AEBC5  imul    rsi, rax, 98h
+0x1AEBCC  lea     rcx, [rcx+rsi+0A8h]
+0x1AEBD4  mov     [rcx+r13*8+50h], rdx
+0x1AEBD9  mov     rcx, [rbp+var_108]
+0x1AEBE0  vmovss  xmm1, dword ptr [rbp+var_D0]
+0x1AEBE8  mov     eax, eax
+0x1AEBEA  mov     rsi, [rbp+var_F0]
+0x1AEBF1  inc     r15d
+0x1AEBF4  imul    rax, 98h
+0x1AEBFB  mov     rcx, [rcx]
+0x1AEBFE  vmulss  xmm0, xmm1, xmm0
+0x1AEC02  mov     [rcx+r13*8], r12d
+0x1AEC06  vmovss  dword ptr [rcx+r13*8+4], xmm1
+0x1AEC0D  mov     rcx, cs:qword_57F1C20
+0x1AEC14  add     rax, rcx
+0x1AEC17  vmovss  dword ptr [rax+r13*4+0D0h], xmm0
+0x1AEC21  mov     edx, [rsi]
+0x1AEC23  cmp     r15d, edx
+0x1AEC26  jb      loc_1AE900
+0x1AEC2C  mov     rbx, r14
+0x1AEC2F  mov     r9, [rbp+var_E8]
+0x1AEC36  mov     rdi, [rbp+var_138]
+0x1AEC3D  mov     r8, [rbp+var_140]
+0x1AEC44  mov     r10, [rbp+var_148]
+0x1AEC4B  mov     r11, [rbp+var_E0]
+0x1AEC52  mov     eax, [rbx+28h]
+0x1AEC55  jmp     short loc_1AEC6E
+0x1AEC57  align 20h
+0x1AEC60  mov     rcx, cs:qword_57F1C20
+0x1AEC67  lea     r11, [rdx+rsi*8+0Ch]
+0x1AEC6C  xor     edx, edx
+0x1AEC6E  imul    rsi, r8, 250h
+0x1AEC75  inc     edi
+0x1AEC77  mov     [r10+rsi+14h], edx
+0x1AEC7C  mov     esi, [r11]
+0x1AEC7F  imul    rsi, 98h
+0x1AEC86  cmp     edi, eax
+0x1AEC88  mov     [rcx+rsi+0C3h], dl
+0x1AEC8F  jb      loc_1AE850
+0x1AEC95  mov     ecx, [rbx]
+0x1AEC97  xor     r15d, r15d
+0x1AEC9A  test    eax, eax
+0x1AEC9C  jz      short loc_1AECAB
+0x1AEC9E  cmp     ecx, 1
+0x1AECA1  jnz     short loc_1AECAB
+0x1AECA3  mov     rdx, [rbx+30h]
+0x1AECA7  mov     r15d, [rdx+8]
+0x1AECAB  test    eax, eax
+0x1AECAD  jz      short loc_1AED01
+0x1AECAF  xor     r14d, r14d
+0x1AECB2  nop     word ptr [rax+rax+00000000h]
+0x1AECC0  mov     rcx, [r9+10h]
+0x1AECC4  lea     eax, [r15+r14]
+0x1AECC8  mov     edx, 28h ; '('
+0x1AECCD  mov     r12, r9
+0x1AECD0  lea     rax, [rax+rax*4]
+0x1AECD4  lea     rdi, [rcx+rax*8]
+0x1AECD8  mov     eax, r14d
+0x1AECDB  lea     rsi, [rax+rax*4]
+0x1AECDF  shl     rsi, 3
+0x1AECE3  add     rsi, [rbx+30h]
+0x1AECE7  call    sub_1B17C0
+0x1AECEC  inc     r14d
+0x1AECEF  cmp     r14d, [rbx+28h]
+0x1AECF3  mov     r9, r12
+0x1AECF6  jb      short loc_1AECC0
+0x1AECF8  mov     ecx, [rbx]
+0x1AECFA  jmp     short loc_1AED01
+0x1AECFC  mov     ecx, [rbx]
+0x1AECFE  xor     r15d, r15d
+0x1AED01  mov     eax, ecx
+0x1AED03  mov     r13, r9
+0x1AED06  mov     [r9+rax*4+1Ch], r15d
+0x1AED0B  mov     eax, [rbx]
+0x1AED0D  mov     ecx, [rbx+28h]
+0x1AED10  mov     [r9+rax*4+24h], ecx
+0x1AED15  call    sub_1B0050
+0x1AED1A  mov     rax, rbx
+0x1AED1D  mov     ebx, [rax]
+0x1AED1F  cmp     rbx, 2
+0x1AED23  jb      short loc_1AED2C
+0x1AED25  xor     eax, eax
+0x1AED27  jmp     loc_1AEFA6
+0x1AED2C  cmp     dword ptr [r13+rbx*4+24h], 0
+0x1AED32  mov     r14, rax
+0x1AED35  jz      loc_1AEDD6
+0x1AED3B  mov     eax, [r13+rbx*4+1Ch]
+0x1AED40  xor     r15d, r15d
+0x1AED43  mov     [rbp+var_D0], rax
+0x1AED4A  mov     rax, [r13+10h]
+0x1AED4E  xchg    ax, ax
+0x1AED50  mov     rcx, [rbp+var_D0]
+0x1AED57  lea     ecx, [rcx+r15]
+0x1AED5B  xor     esi, esi; _QWORD
+0x1AED5D  lea     rdx, [rbp+var_B0]; _QWORD
+0x1AED64  shl     rcx, 3
+0x1AED68  lea     r12, [rcx+rcx*4]
+0x1AED6C  mov     rcx, [r13+0]
+0x1AED70  mov     eax, [rax+r12+8]
+0x1AED75  imul    rax, 250h
+0x1AED7C  mov     rdi, [rcx+rax]; _QWORD
+0x1AED80  call    sceNgs2RackGetVoiceHandle
+0x1AED85  mov     rdi, [rbp+var_B0]; _QWORD
+0x1AED8C  lea     rsi, [rbp+var_70]; _QWORD
+0x1AED90  mov     word ptr [rbp+var_70], 0Ch
+0x1AED96  mov     word ptr [rbp+var_70+2], 0
+0x1AED9C  mov     [rbp+var_70+4], 6
+0x1AEDA4  call    sceNgs2VoiceControl
+0x1AEDA9  mov     rax, [r13+10h]
+0x1AEDAD  mov     rdx, cs:qword_57F1C20
+0x1AEDB4  inc     r15d
+0x1AEDB7  mov     ecx, [rax+r12+0Ch]
+0x1AEDBC  imul    rcx, 98h
+0x1AEDC3  mov     byte ptr [rdx+rcx+0C0h], 1
+0x1AEDCB  cmp     r15d, [r13+rbx*4+24h]
+0x1AEDD0  jb      loc_1AED50
+0x1AEDD6  xor     r15d, r15d
+0x1AEDD9  mov     [rbp+var_E8], r13
+0x1AEDE0  test    ebx, ebx
+0x1AEDE2  jnz     short loc_1AEE46
+0x1AEDE4  nop     word ptr [rax+rax+00000000h]
+0x1AEDF0  mov     rax, cs:qword_57F1C20
+0x1AEDF7  imul    r12, r15, 98h
+0x1AEDFE  mov     ebx, [rax+r12+0F0h]
+0x1AEE06  test    ebx, ebx
+0x1AEE08  jz      short loc_1AEE3A
+0x1AEE0A  lea     rdi, [rax+r12+0A8h]
+0x1AEE12  xor     esi, esi
+0x1AEE14  call    sub_1B1470
+0x1AEE19  cmp     ebx, 1
+0x1AEE1C  jz      short loc_1AEE3A
+0x1AEE1E  dec     ebx
+0x1AEE20  mov     rax, cs:qword_57F1C20
+0x1AEE27  xor     esi, esi
+0x1AEE29  lea     rdi, [rax+r12+0A8h]
+0x1AEE31  call    sub_1B1470
+0x1AEE36  dec     ebx
+0x1AEE38  jnz     short loc_1AEE20
+0x1AEE3A  inc     r15
+0x1AEE3D  cmp     r15, 80h
+0x1AEE44  jnz     short loc_1AEDF0
+0x1AEE46  mov     r12, [rbp+var_E8]
+0x1AEE4D  mov     ebx, 1
+0x1AEE52  nop     word ptr [rax+rax+00000000h]
+0x1AEE60  mov     rax, cs:qword_57F1C20
+0x1AEE67  imul    r13, rbx, 98h
+0x1AEE6E  cmp     qword ptr [rax+r13+0B0h], 0
+0x1AEE77  jz      loc_1AEF70
+0x1AEE7D  cmp     byte ptr [rax+r13+0C1h], 0
+0x1AEE86  jz      loc_1AEF70
+0x1AEE8C  cmp     byte ptr [rax+r13+0C0h], 0
+0x1AEE95  jz      loc_1AEF70
+0x1AEE9B  cmp     dword ptr [rax+r13+0F0h], 0
+0x1AEEA4  jg      loc_1AEF70
+0x1AEEAA  cmp     dword ptr [rax+r13+0F4h], 0
+0x1AEEB3  jg      loc_1AEF70
+0x1AEEB9  mov     rax, [rbp+var_E8]
+0x1AEEC0  xor     r15d, r15d
+0x1AEEC3  mov     dword ptr [rbp+var_D0], 0
+0x1AEECD  mov     eax, [rax+24h]
+0x1AEED0  test    eax, eax
+0x1AEED2  jz      loc_1AEF70
+0x1AEED8  nop     dword ptr [rax+rax+00000000h]
+0x1AEEE0  mov     rcx, [r12+10h]
+0x1AEEE5  mov     r15d, r15d
+0x1AEEE8  lea     rdx, [r15+r15*4]
+0x1AEEEC  mov     esi, [rcx+rdx*8+0Ch]
+0x1AEEF0  cmp     rsi, rbx
+0x1AEEF3  jnz     short loc_1AEF4B
+0x1AEEF5  mov     eax, [rcx+rdx*8+8]
+0x1AEEF9  mov     rcx, [r12]
+0x1AEEFD  xor     esi, esi; _QWORD
+0x1AEEFF  lea     rdx, [rbp+var_90]; _QWORD
+0x1AEF06  imul    rax, 250h
+0x1AEF0D  mov     rdi, [rcx+rax]; _QWORD
+0x1AEF11  call    sceNgs2RackGetVoiceHandle
+0x1AEF16  mov     rdi, [rbp+var_90]; _QWORD
+0x1AEF1D  lea     rsi, [rbp+var_70]; _QWORD
+0x1AEF21  mov     rax, 100000006h
+0x1AEF2B  mov     word ptr [rbp+var_70], 0Ch
+0x1AEF31  mov     word ptr [rbp+var_70+2], 0
+0x1AEF37  mov     [rbp+var_70+4], rax
+0x1AEF3B  call    sceNgs2VoiceControl
+0x1AEF40  mov     eax, [r12+24h]
+0x1AEF45  inc     dword ptr [rbp+var_D0]
+0x1AEF4B  inc     r15d
+0x1AEF4E  cmp     r15d, eax
+0x1AEF51  jb      short loc_1AEEE0
+0x1AEF53  cmp     dword ptr [rbp+var_D0], 0
+0x1AEF5A  jz      short loc_1AEF70
+0x1AEF5C  mov     rax, cs:qword_57F1C20
+0x1AEF63  mov     byte ptr [rax+r13+0C0h], 0
+0x1AEF6C  nop     dword ptr [rax+00h]
+0x1AEF70  inc     rbx
+0x1AEF73  cmp     rbx, 80h
+0x1AEF7A  jnz     loc_1AEE60
+0x1AEF80  vxorps  xmm0, xmm0, xmm0
+0x1AEF84  call    sub_1B08E0
+0x1AEF89  xor     eax, eax
+0x1AEF8B  cmp     dword ptr [r14], 0
+0x1AEF8F  jnz     short loc_1AEFA6
+0x1AEF91  mov     rcx, cs:qword_57F1C20
+0x1AEF98  mov     rdx, [rbp+var_E8]
+0x1AEF9F  mov     [rcx+4CA8h], rdx
+0x1AEFA6  mov     rdx, cs:qword_1700698
+0x1AEFAD  mov     rcx, [rdx]
+0x1AEFB0  cmp     rcx, [rbp+var_30]
+0x1AEFB4  jnz     short loc_1AEFC8
+0x1AEFB6  add     rsp, 128h
+0x1AEFBD  pop     rbx
+0x1AEFBE  pop     r12
+0x1AEFC0  pop     r13
+0x1AEFC2  pop     r14
+0x1AEFC4  pop     r15
+0x1AEFC6  pop     rbp
+0x1AEFC7  retn
+0x1AEFC8  call    __stack_chk_fail
+
+========================================
+sub_1AEFD0 0x1AEFD0 - 0x1B0042
+0x1AEFD0  push    rbp
+0x1AEFD1  mov     rbp, rsp
+0x1AEFD4  push    r15
+0x1AEFD6  push    r14
+0x1AEFD8  push    r13
+0x1AEFDA  push    r12
+0x1AEFDC  push    rbx
+0x1AEFDD  and     rsp, 0FFFFFFFFFFFFFFE0h
+0x1AEFE1  sub     rsp, 280h
+0x1AEFE8  mov     rcx, cs:qword_1700698
+0x1AEFEF  mov     r13, rdi
+0x1AEFF2  mov     [rsp+2A8h+var_200], r13
+0x1AEFFA  test    r13, r13
+0x1AEFFD  mov     rax, [rcx]
+0x1AF000  mov     [rsp+2A8h+var_48], rax
+0x1AF008  jz      loc_1B0021
+0x1AF00E  test    rsi, rsi
+0x1AF011  jz      loc_1B0021
+0x1AF017  cmp     byte ptr [rsi], 0
+0x1AF01A  jz      loc_1B0021
+0x1AF020  lea     rax, [rsp+2A8h+var_178]
+0x1AF028  mov     rdi, rsi
+0x1AF02B  lea     rcx, asc_14DAC3F; "; \t\n"
+0x1AF032  mov     edx, 40h ; '@'
+0x1AF037  xor     r8d, r8d
+0x1AF03A  mov     rsi, rax
+0x1AF03D  call    sub_1B34E0
+0x1AF042  mov     cl, [rsp+2A8h+var_178]
+0x1AF049  or      cl, [rax]
+0x1AF04B  jz      loc_1AF7F4
+0x1AF051  lea     rsi, [r13+60h]
+0x1AF055  lea     rdx, [r13+0F8h]
+0x1AF05C  lea     rcx, [r13+10h]
+0x1AF060  lea     rbx, [rsp+2A8h+var_178]
+0x1AF068  lea     r12, [rsp+2A8h+var_1B8]
+0x1AF070  mov     [rsp+2A8h+var_204], 0
+0x1AF07B  mov     [rsp+2A8h+var_230], rsi
+0x1AF080  lea     rsi, [r13+110h]
+0x1AF087  mov     [rsp+2A8h+var_238], rdx
+0x1AF08C  lea     rdx, [r13+148h]
+0x1AF093  mov     [rsp+2A8h+var_218], rcx
+0x1AF09B  mov     [rsp+2A8h+var_240], rsi
+0x1AF0A0  lea     rsi, [r13+150h]
+0x1AF0A7  mov     [rsp+2A8h+var_248], rdx
+0x1AF0AC  lea     rdx, [r13+1A8h]
+0x1AF0B3  mov     [rsp+2A8h+var_250], rsi
+0x1AF0B8  lea     rsi, [r13+1C8h]
+0x1AF0BF  mov     [rsp+2A8h+var_258], rdx
+0x1AF0C4  lea     rdx, [r13+230h]
+0x1AF0CB  mov     [rsp+2A8h+var_260], rsi
+0x1AF0D0  lea     rsi, [r13+234h]
+0x1AF0D7  mov     [rsp+2A8h+var_268], rdx
+0x1AF0DC  lea     rdx, [r13+240h]
+0x1AF0E3  mov     [rsp+2A8h+var_270], rsi
+0x1AF0E8  lea     rsi, [rsp+2A8h+var_198]
+0x1AF0F0  mov     [rsp+2A8h+var_278], rdx
+0x1AF0F5  jmp     loc_1AF190
+0x1AF0FA  movzx   ecx, word ptr [r12+r13+0Eh]
+0x1AF100  lea     r12, [rsp+2A8h+var_1B8]
+0x1AF108  cmp     ecx, 4
+0x1AF10B  jz      short loc_1AF16E
+0x1AF10D  mov     r13, [rsp+2A8h+var_200]
+0x1AF115  mov     rdi, qword ptr [rsp+2A8h+var_1E8]
+0x1AF11D  lea     rbx, [rsp+2A8h+var_178]
+0x1AF125  cmp     ecx, 2
+0x1AF128  jz      short loc_1AF179
+0x1AF12A  mov     r14, r9
+0x1AF12D  cmp     ecx, 1
+0x1AF130  jnz     loc_1AF7B6
+0x1AF136  mov     [rax], r15b
+0x1AF139  jmp     loc_1AF7B6
+0x1AF13E  mov     r14, r9
+0x1AF141  mov     [rax], r15d
+0x1AF144  jmp     short loc_1AF149
+0x1AF146  mov     r14, r9
+0x1AF149  mov     r13, [rsp+2A8h+var_200]
+0x1AF151  mov     rdi, qword ptr [rsp+2A8h+var_1E8]
+0x1AF159  lea     rbx, [rsp+2A8h+var_178]
+0x1AF161  lea     r12, [rsp+2A8h+var_1B8]
+0x1AF169  jmp     loc_1AF7B6
+0x1AF16E  mov     r14, r9
+0x1AF171  mov     [rax], r15d
+0x1AF174  jmp     loc_1AF79E
+0x1AF179  mov     r14, r9
+0x1AF17C  mov     [rax], r15w
+0x1AF180  jmp     loc_1AF7B6
+0x1AF185  align 10h
+0x1AF190  mov     rdi, rbx
+0x1AF193  mov     edx, 20h ; ' '
+0x1AF198  xor     r8d, r8d
+0x1AF19B  lea     rcx, qword_14DA4A0
+0x1AF1A2  mov     qword ptr [rsp+2A8h+var_1E8], rax
+0x1AF1AA  xor     r15d, r15d
+0x1AF1AD  mov     rbx, rsi
+0x1AF1B0  call    sub_1B34E0
+0x1AF1B5  mov     edx, 20h ; ' '
+0x1AF1BA  xor     r8d, r8d
+0x1AF1BD  mov     rdi, rax
+0x1AF1C0  mov     rsi, r12
+0x1AF1C3  lea     rcx, byte_14C0CC5
+0x1AF1CA  call    sub_1B34E0
+0x1AF1CF  mov     eax, [r13+0Ch]
+0x1AF1D3  mov     r9, rbx
+0x1AF1D6  mov     r8d, 0FFFFFFF9h
+0x1AF1DC  cmp     rax, 0Ah; switch 11 cases
+0x1AF1E0  ja      loc_1AF770; jumptable 00000000001AF1FE default case
+0x1AF1E6  lea     rcx, off_14DB120
+0x1AF1ED  lea     r14, off_1704C00
+0x1AF1F4  movsxd  rax, dword ptr [rcx+rax*4]
+0x1AF1F8  mov     r12, r14
+0x1AF1FB  add     rax, rcx
+0x1AF1FE  jmp     rax; switch jump
+0x1AF200  mov     r15, [rsp+2A8h+var_230]; jumptable 00000000001AF1FE case 1
+0x1AF205  lea     rax, off_1704C60
+0x1AF20C  mov     r12, rax
+0x1AF20F  jmp     loc_1AF2C0; jumptable 00000000001AF1FE case 0
+0x1AF214  mov     r15, [rsp+2A8h+var_238]; jumptable 00000000001AF1FE case 2
+0x1AF219  lea     rax, off_1704D80
+0x1AF220  mov     r12, rax
+0x1AF223  jmp     loc_1AF2C0; jumptable 00000000001AF1FE case 0
+0x1AF228  mov     r15, [rsp+2A8h+var_240]; jumptable 00000000001AF1FE case 3
+0x1AF22D  lea     rax, off_1704EA0
+0x1AF234  mov     r12, rax
+0x1AF237  jmp     loc_1AF2C0; jumptable 00000000001AF1FE case 0
+0x1AF23C  mov     r15, [rsp+2A8h+var_248]; jumptable 00000000001AF1FE case 4
+0x1AF241  lea     rax, off_17050C0
+0x1AF248  mov     r12, rax
+0x1AF24B  jmp     short loc_1AF2C0; jumptable 00000000001AF1FE case 0
+0x1AF24D  mov     r15, [rsp+2A8h+var_250]; jumptable 00000000001AF1FE case 5
+0x1AF252  lea     rax, off_1705160
+0x1AF259  mov     r12, rax
+0x1AF25C  jmp     short loc_1AF2C0; jumptable 00000000001AF1FE case 0
+0x1AF25E  mov     r15, [rsp+2A8h+var_258]; jumptable 00000000001AF1FE case 6
+0x1AF263  lea     rax, off_1705440
+0x1AF26A  mov     r12, rax
+0x1AF26D  jmp     short loc_1AF2C0; jumptable 00000000001AF1FE case 0
+0x1AF26F  mov     r15, [rsp+2A8h+var_260]; jumptable 00000000001AF1FE case 7
+0x1AF274  lea     rax, off_17055A0
+0x1AF27B  mov     r12, rax
+0x1AF27E  jmp     short loc_1AF2C0; jumptable 00000000001AF1FE case 0
+0x1AF280  mov     r15, [rsp+2A8h+var_268]; jumptable 00000000001AF1FE case 8
+0x1AF285  lea     rax, off_1705700
+0x1AF28C  mov     r12, rax
+0x1AF28F  jmp     short loc_1AF2C0; jumptable 00000000001AF1FE case 0
+0x1AF291  mov     r15, [rsp+2A8h+var_270]; jumptable 00000000001AF1FE case 9
+0x1AF296  lea     rax, off_1705780
+0x1AF29D  mov     r12, rax
+0x1AF2A0  jmp     short loc_1AF2C0; jumptable 00000000001AF1FE case 0
+0x1AF2A2  mov     r15, [rsp+2A8h+var_278]; jumptable 00000000001AF1FE case 10
+0x1AF2A7  lea     rax, off_1705820
+0x1AF2AE  mov     r12, rax
+0x1AF2B1  nop     word ptr [rax+rax+00000000h]
+0x1AF2C0  mov     rcx, [r12]; jumptable 00000000001AF1FE case 0
+0x1AF2C4  mov     r13d, 0
+0x1AF2CA  mov     r8d, 0FFFFFFF9h
+0x1AF2D0  test    rcx, rcx
+0x1AF2D3  jz      loc_1AF770; jumptable 00000000001AF1FE default case
+0x1AF2D9  mov     dl, [rcx]
+0x1AF2DB  mov     rax, r9
+0x1AF2DE  test    dl, dl
+0x1AF2E0  jz      short loc_1AF30B
+0x1AF2E2  inc     rcx
+0x1AF2E5  mov     rax, r9
+0x1AF2E8  nop     dword ptr [rax+rax+00000000h]
+0x1AF2F0  movzx   esi, byte ptr [rax]
+0x1AF2F3  movzx   edx, dl
+0x1AF2F6  cmp     edx, esi
+0x1AF2F8  jnz     short loc_1AF360
+0x1AF2FA  test    sil, sil
+0x1AF2FD  jz      short loc_1AF360
+0x1AF2FF  mov     dl, [rcx]
+0x1AF301  inc     rax
+0x1AF304  inc     rcx
+0x1AF307  test    dl, dl
+0x1AF309  jnz     short loc_1AF2F0
+0x1AF30B  mov     cl, [rax]
+0x1AF30D  xor     ebx, ebx
+0x1AF30F  test    cl, cl
+0x1AF311  jz      short loc_1AF390
+0x1AF313  mov     rdx, r13
+0x1AF316  shl     rdx, 5
+0x1AF31A  cmp     word ptr [r12+rdx+12h], 0
+0x1AF321  jz      short loc_1AF360
+0x1AF323  inc     rax
+0x1AF326  xor     ebx, ebx
+0x1AF328  nop     dword ptr [rax+rax+00000000h]
+0x1AF330  mov     dl, cl
+0x1AF332  add     dl, 0D0h
+0x1AF335  movzx   edx, dl
+0x1AF338  cmp     edx, 9
+0x1AF33B  ja      short loc_1AF360
+0x1AF33D  movsx   ecx, cl
+0x1AF340  lea     edx, [rbx+rbx*4]
+0x1AF343  lea     ebx, [rcx+rdx*2-30h]
+0x1AF347  mov     cl, [rax]
+0x1AF349  inc     rax
+0x1AF34C  test    cl, cl
+0x1AF34E  jnz     short loc_1AF330
+0x1AF350  jmp     short loc_1AF390
+0x1AF352  align 20h
+0x1AF360  inc     r13d
+0x1AF363  mov     rax, r13
+0x1AF366  shl     rax, 5
+0x1AF36A  mov     rcx, [r12+rax]
+0x1AF36E  test    rcx, rcx
+0x1AF371  jnz     loc_1AF2D9
+0x1AF377  mov     r8d, 0FFFFFFF9h
+0x1AF37D  jmp     loc_1AF770; jumptable 00000000001AF1FE default case
+0x1AF382  align 10h
+0x1AF390  shl     r13, 5
+0x1AF394  mov     rcx, [rsp+2A8h+var_218]
+0x1AF39C  movzx   edx, word ptr [r12+r13+0Ah]
+0x1AF3A2  cmp     word ptr [r12+r13+8], 0
+0x1AF3A9  jz      short loc_1AF3AE
+0x1AF3AB  mov     rcx, r15
+0x1AF3AE  lea     eax, [rdx-1]
+0x1AF3B1  cmp     eax, 2
+0x1AF3B4  jb      loc_1AF500
+0x1AF3BA  cmp     edx, 3
+0x1AF3BD  jz      loc_1AF5BA
+0x1AF3C3  mov     r8d, 0FFFFFFFFh
+0x1AF3C9  test    edx, edx
+0x1AF3CB  jnz     loc_1AF770; jumptable 00000000001AF1FE default case
+0x1AF3D1  mov     rdi, [r12+r13+18h]
+0x1AF3D6  xor     r15d, r15d
+0x1AF3D9  mov     edx, 40h ; '@'
+0x1AF3DE  xor     r8d, r8d
+0x1AF3E1  lea     r14, [rsp+2A8h+var_D8]
+0x1AF3E9  mov     [rsp+2A8h+var_210], rcx
+0x1AF3F1  mov     qword ptr [rsp+2A8h+var_228], r12
+0x1AF3F9  jmp     short loc_1AF413
+0x1AF3FB  align 20h
+0x1AF400  mov     rdi, qword ptr [rsp+2A8h+var_1F8]
+0x1AF408  xor     r15d, r15d
+0x1AF40B  mov     edx, 40h ; '@'
+0x1AF410  xor     r8d, r8d
+0x1AF413  mov     rsi, r14
+0x1AF416  lea     rcx, off_14D90B6
+0x1AF41D  call    sub_1B34E0
+0x1AF422  mov     cl, byte ptr [rsp+2A8h+var_D8]
+0x1AF429  mov     sil, [rax]
+0x1AF42C  mov     dl, cl
+0x1AF42E  or      dl, sil
+0x1AF431  mov     edx, 0
+0x1AF436  jz      loc_1AF4CF
+0x1AF43C  lea     r12, [rsp+2A8h+var_118]
+0x1AF444  mov     edx, 20h ; ' '
+0x1AF449  xor     r8d, r8d
+0x1AF44C  mov     rdi, r14
+0x1AF44F  lea     rcx, off_14DBD8C
+0x1AF456  mov     qword ptr [rsp+2A8h+var_1F8], rax
+0x1AF45E  mov     rsi, r12
+0x1AF461  call    sub_1B34E0
+0x1AF466  lea     r15, [rsp+2A8h+var_138]
+0x1AF46E  mov     edx, 20h ; ' '
+0x1AF473  xor     ecx, ecx
+0x1AF475  xor     r8d, r8d
+0x1AF478  mov     rdi, rax
+0x1AF47B  mov     rsi, r15
+0x1AF47E  call    sub_1B34E0
+0x1AF483  mov     rdi, r12
+0x1AF486  lea     r12, [rsp+2A8h+var_1B8]
+0x1AF48E  mov     rsi, r12
+0x1AF491  call    sub_1B1E90
+0x1AF496  test    eax, eax
+0x1AF498  jz      short loc_1AF4AD
+0x1AF49A  mov     rdi, r15
+0x1AF49D  mov     rsi, r12
+0x1AF4A0  call    sub_1B1E90
+0x1AF4A5  test    eax, eax
+0x1AF4A7  jnz     loc_1AF400
+0x1AF4AD  mov     rdi, r15
+0x1AF4B0  call    sub_1B2010
+0x1AF4B5  mov     rdx, qword ptr [rsp+2A8h+var_1F8]
+0x1AF4BD  mov     cl, byte ptr [rsp+2A8h+var_D8]
+0x1AF4C4  mov     r15d, eax
+0x1AF4C7  mov     sil, [rdx]
+0x1AF4CA  mov     edx, 2
+0x1AF4CF  mov     r12, qword ptr [rsp+2A8h+var_228]
+0x1AF4D7  mov     r10, [rsp+2A8h+var_210]
+0x1AF4DF  mov     r8d, 0FFFFFFF9h
+0x1AF4E5  lea     r9, [rsp+2A8h+var_198]
+0x1AF4ED  or      cl, sil
+0x1AF4F0  jnz     loc_1AF68E
+0x1AF4F6  jmp     loc_1AF770; jumptable 00000000001AF1FE default case
+0x1AF4FB  align 20h
+0x1AF500  lea     rdi, [rsp+2A8h+var_1B8]
+0x1AF508  mov     qword ptr [rsp+2A8h+var_1F8], rdx
+0x1AF510  mov     [rsp+2A8h+var_210], rcx
+0x1AF518  call    sub_1B2010
+0x1AF51D  mov     rdi, [r12+r13+18h]
+0x1AF522  mov     r15d, eax
+0x1AF525  test    rdi, rdi
+0x1AF528  jz      short loc_1AF59D
+0x1AF52A  mov     qword ptr [rsp+2A8h+var_228], r15
+0x1AF532  lea     r15, [rsp+2A8h+var_D8]
+0x1AF53A  mov     edx, 20h ; ' '
+0x1AF53F  xor     r8d, r8d
+0x1AF542  lea     rcx, off_14DBD8C+2
+0x1AF549  mov     rsi, r15
+0x1AF54C  call    sub_1B34E0
+0x1AF551  lea     r14, [rsp+2A8h+var_118]
+0x1AF559  mov     edx, 20h ; ' '
+0x1AF55E  xor     r8d, r8d
+0x1AF561  mov     rdi, rax
+0x1AF564  lea     rcx, byte_14C0CC5
+0x1AF56B  mov     rsi, r14
+0x1AF56E  call    sub_1B34E0
+0x1AF573  mov     rdi, r15
+0x1AF576  call    sub_1B2010
+0x1AF57B  mov     rdi, r14
+0x1AF57E  mov     r15d, eax
+0x1AF581  call    sub_1B2010
+0x1AF586  mov     rcx, qword ptr [rsp+2A8h+var_228]
+0x1AF58E  cmp     eax, ecx
+0x1AF590  cmovg   eax, ecx
+0x1AF593  cmp     ecx, r15d
+0x1AF596  cmovl   eax, r15d
+0x1AF59A  mov     r15d, eax
+0x1AF59D  mov     r10, [rsp+2A8h+var_210]
+0x1AF5A5  mov     rdx, qword ptr [rsp+2A8h+var_1F8]
+0x1AF5AD  lea     r9, [rsp+2A8h+var_198]
+0x1AF5B5  jmp     loc_1AF68E
+0x1AF5BA  lea     rdi, [rsp+2A8h+var_1B8]
+0x1AF5C2  mov     [rsp+2A8h+var_210], rcx
+0x1AF5CA  call    sub_1B2130
+0x1AF5CF  mov     rdi, [r12+r13+18h]
+0x1AF5D4  mov     edx, 3
+0x1AF5D9  test    rdi, rdi
+0x1AF5DC  jz      loc_1AF679
+0x1AF5E2  mov     r15, r12
+0x1AF5E5  lea     r12, [rsp+2A8h+var_D8]
+0x1AF5ED  mov     edx, 20h ; ' '
+0x1AF5F2  xor     r8d, r8d
+0x1AF5F5  lea     rcx, off_14DBD8C+2
+0x1AF5FC  vmovss  dword ptr [rsp+2A8h+var_1F8], xmm0
+0x1AF605  mov     rsi, r12
+0x1AF608  call    sub_1B34E0
+0x1AF60D  lea     r14, [rsp+2A8h+var_118]
+0x1AF615  mov     edx, 20h ; ' '
+0x1AF61A  xor     r8d, r8d
+0x1AF61D  mov     rdi, rax
+0x1AF620  lea     rcx, byte_14C0CC5
+0x1AF627  mov     rsi, r14
+0x1AF62A  call    sub_1B34E0
+0x1AF62F  mov     rdi, r12
+0x1AF632  mov     r12, r15
+0x1AF635  call    sub_1B2130
+0x1AF63A  mov     rdi, r14
+0x1AF63D  vmovaps [rsp+2A8h+var_228], xmm0
+0x1AF646  call    sub_1B2130
+0x1AF64B  vmovss  xmm1, dword ptr [rsp+2A8h+var_1F8]
+0x1AF654  vmovaps xmm2, [rsp+2A8h+var_228]
+0x1AF65D  mov     edx, 3
+0x1AF662  vminss  xmm0, xmm0, xmm1
+0x1AF666  vcmpltss xmm1, xmm1, xmm2
+0x1AF66B  vblendvps xmm0, xmm0, xmm2, xmm1
+0x1AF671  vextractps r15d, xmm0, 0
+0x1AF677  jmp     short loc_1AF67E
+0x1AF679  vmovd   r15d, xmm0
+0x1AF67E  mov     r10, [rsp+2A8h+var_210]
+0x1AF686  lea     r9, [rsp+2A8h+var_198]
+0x1AF68E  movzx   ecx, word ptr [r12+r13+12h]
+0x1AF694  test    ecx, ecx
+0x1AF696  jz      short loc_1AF6D2
+0x1AF698  movzx   edi, word ptr [r12+r13+14h]
+0x1AF69E  movzx   eax, word ptr [r12+r13+0Ch]
+0x1AF6A4  movzx   esi, word ptr [r12+r13+16h]
+0x1AF6AA  imul    esi, ebx
+0x1AF6AD  add     rax, [rdi+r10]
+0x1AF6B1  add     rax, rsi
+0x1AF6B4  cmp     ecx, 4
+0x1AF6B7  jz      short loc_1AF6E2
+0x1AF6B9  cmp     ecx, 2
+0x1AF6BC  jz      short loc_1AF6EE
+0x1AF6BE  xor     esi, esi
+0x1AF6C0  cmp     ecx, 1
+0x1AF6C3  jnz     short loc_1AF700
+0x1AF6C5  movzx   ecx, word ptr [r12+r13+10h]
+0x1AF6CB  movzx   esi, byte ptr [rcx+r10]
+0x1AF6D0  jmp     short loc_1AF700
+0x1AF6D2  movzx   eax, word ptr [r12+r13+0Ch]
+0x1AF6D8  mov     esi, 1
+0x1AF6DD  add     rax, r10
+0x1AF6E0  jmp     short loc_1AF700
+0x1AF6E2  movzx   ecx, word ptr [r12+r13+10h]
+0x1AF6E8  mov     esi, [rcx+r10]
+0x1AF6EC  jmp     short loc_1AF700
+0x1AF6EE  movzx   ecx, word ptr [r12+r13+10h]
+0x1AF6F4  movzx   esi, word ptr [rcx+r10]
+0x1AF6F9  nop     dword ptr [rax+00000000h]
+0x1AF700  mov     r8d, 0FFFFFFF9h
+0x1AF706  cmp     ebx, esi
+0x1AF708  jnb     short loc_1AF770; jumptable 00000000001AF1FE default case
+0x1AF70A  cmp     edx, 1
+0x1AF70D  jz      loc_1AF0FA
+0x1AF713  cmp     edx, 3
+0x1AF716  jz      loc_1AF13E
+0x1AF71C  cmp     edx, 2
+0x1AF71F  jnz     loc_1AF146
+0x1AF725  movzx   ecx, word ptr [r12+r13+0Eh]
+0x1AF72B  lea     r12, [rsp+2A8h+var_1B8]
+0x1AF733  cmp     ecx, 4
+0x1AF736  jz      loc_1AF16E
+0x1AF73C  mov     r13, [rsp+2A8h+var_200]
+0x1AF744  mov     rdi, qword ptr [rsp+2A8h+var_1E8]
+0x1AF74C  lea     rbx, [rsp+2A8h+var_178]
+0x1AF754  cmp     ecx, 2
+0x1AF757  jz      loc_1AF179
+0x1AF75D  mov     r14, r9
+0x1AF760  cmp     ecx, 1
+0x1AF763  jnz     short loc_1AF7B6
+0x1AF765  mov     [rax], r15b
+0x1AF768  jmp     short loc_1AF7B6
+0x1AF76A  align 10h
+0x1AF770  lea     r12, [rsp+2A8h+var_1B8]; jumptable 00000000001AF1FE default case
+0x1AF778  mov     edi, 0FFFFFFF9h
+0x1AF77D  mov     edx, 11C5h
+0x1AF782  xor     eax, eax
+0x1AF784  lea     rcx, aInvlaidRackPar; "Invlaid rack parameter (%X,%s=%s)\n"
+0x1AF78B  mov     r14, r9
+0x1AF78E  mov     [rsp+2A8h+var_2A8], r12
+0x1AF792  call    sub_1A7F10
+0x1AF797  mov     [rsp+2A8h+var_204], eax
+0x1AF79E  mov     r13, [rsp+2A8h+var_200]
+0x1AF7A6  mov     rdi, qword ptr [rsp+2A8h+var_1E8]
+0x1AF7AE  lea     rbx, [rsp+2A8h+var_178]
+0x1AF7B6  mov     edx, 40h ; '@'
+0x1AF7BB  xor     r8d, r8d
+0x1AF7BE  mov     rsi, rbx
+0x1AF7C1  lea     rcx, asc_14DAC3F; "; \t\n"
+0x1AF7C8  call    sub_1B34E0
+0x1AF7CD  mov     cl, [rsp+2A8h+var_178]
+0x1AF7D4  mov     rsi, r14
+0x1AF7D7  or      cl, [rax]
+0x1AF7D9  jnz     loc_1AF190
+0x1AF7DF  mov     rcx, cs:qword_1700698
+0x1AF7E6  cmp     [rsp+2A8h+var_204], 0
+0x1AF7EE  js      loc_1B0021
+0x1AF7F4  cmp     dword ptr [r13+14h], 0
+0x1AF7F9  jz      loc_1AF8A5
+0x1AF7FF  xor     ebx, ebx
+0x1AF801  lea     r14, [rsp+2A8h+var_D8]
+0x1AF809  nop     dword ptr [rax+00000000h]
+0x1AF810  mov     rdi, [r13+0]; _QWORD
+0x1AF814  mov     r15, r13
+0x1AF817  xor     esi, esi; _QWORD
+0x1AF819  lea     rdx, [rsp+2A8h+var_138]; _QWORD
+0x1AF821  mov     r12d, ebx
+0x1AF824  mov     r13, [r15+58h]
+0x1AF828  call    sceNgs2RackGetVoiceHandle
+0x1AF82D  mov     eax, [r13+r12*8+4]
+0x1AF832  mov     rdi, [rsp+2A8h+var_138]; _QWORD
+0x1AF83A  mov     rsi, r14; _QWORD
+0x1AF83D  mov     word ptr [rsp+2A8h+var_D8], 10h
+0x1AF847  mov     word ptr [rsp+2A8h+var_D8+2], 0
+0x1AF851  mov     dword ptr [rsp+2A8h+var_D8+4], 2
+0x1AF85C  mov     dword ptr [rsp+2A8h+var_D0], ebx
+0x1AF863  mov     dword ptr [rsp+2A8h+var_D0+4], eax
+0x1AF86A  call    sceNgs2VoiceControl
+0x1AF86F  mov     ecx, [r13+r12*8+4]
+0x1AF874  mov     r13, r15
+0x1AF877  inc     ebx
+0x1AF879  mov     rax, [r13+8]
+0x1AF87D  mov     edx, eax
+0x1AF87F  imul    rdx, 98h
+0x1AF886  add     rdx, cs:qword_57F1C20
+0x1AF88D  mov     [rdx+r12*4+0D0h], ecx
+0x1AF895  cmp     ebx, [r13+14h]
+0x1AF899  jb      loc_1AF810
+0x1AF89F  shr     rax, 20h
+0x1AF8A3  jmp     short loc_1AF8A9
+0x1AF8A5  mov     eax, [r13+0Ch]
+0x1AF8A9  dec     eax
+0x1AF8AB  cmp     eax, 9; switch 10 cases
+0x1AF8AE  ja      loc_1B001A
+0x1AF8B4  lea     rcx, off_14DB14C
+0x1AF8BB  movsxd  rax, dword ptr [rcx+rax*4]
+0x1AF8BF  add     rax, rcx
+0x1AF8C2  jmp     rax; switch jump
+0x1AF8C4  vmovss  xmm0, dword ptr [r13+0F0h]; jumptable 00000000001AF8C2 case 0
+0x1AF8CD  vmovss  xmm1, cs:dword_14DAE70
+0x1AF8D5  vaddss  xmm0, xmm0, dword ptr [r13+0F4h]
+0x1AF8DE  call    sub_1B55F0
+0x1AF8E3  mov     rdi, [r13+0]; _QWORD
+0x1AF8E7  lea     rdx, [rsp+2A8h+var_138]; _QWORD
+0x1AF8EF  xor     esi, esi; _QWORD
+0x1AF8F1  vmovss  dword ptr [rsp+2A8h+var_1F8], xmm0
+0x1AF8FA  xor     ebx, ebx
+0x1AF8FC  call    sceNgs2RackGetVoiceHandle
+0x1AF901  mov     eax, [r13+60h]
+0x1AF905  test    eax, eax
+0x1AF907  jz      loc_1AFA17
+0x1AF90D  nop     dword ptr [rax]
+0x1AF910  mov     rdx, [r13+0E8h]
+0x1AF917  mov     ecx, ebx
+0x1AF919  shl     rcx, 4
+0x1AF91D  mov     r12d, [rdx+rcx]
+0x1AF921  test    r12d, r12d
+0x1AF924  jz      loc_1AFA0D
+0x1AF92A  vmovss  xmm0, cs:dword_14DAE6C
+0x1AF932  vmovss  xmm1, cs:dword_14DAE7C
+0x1AF93A  mov     r15, r13
+0x1AF93D  mov     r14, [rsp+2A8h+var_138]
+0x1AF945  mov     r13d, [rdx+rcx+4]
+0x1AF94A  vsubss  xmm0, xmm0, dword ptr [rdx+rcx+8]
+0x1AF950  vmaxss  xmm0, xmm0, cs:dword_14DAE78
+0x1AF958  vdivss  xmm0, xmm1, xmm0
+0x1AF95C  vmovss  xmm1, cs:dword_14DAE70
+0x1AF964  vmovss  dword ptr [rsp+2A8h+var_1E8], xmm0
+0x1AF96D  vmovss  xmm0, dword ptr [rdx+rcx+0Ch]
+0x1AF973  call    sub_1B55F0
+0x1AF978  vmovss  xmm1, dword ptr [rsp+2A8h+var_1E8]
+0x1AF981  mov     rdi, r14; _QWORD
+0x1AF984  lea     rsi, [rsp+2A8h+var_D8]; _QWORD
+0x1AF98C  mov     word ptr [rsp+2A8h+var_D8], 30h ; '0'
+0x1AF996  mov     word ptr [rsp+2A8h+var_D8+2], 0
+0x1AF9A0  mov     dword ptr [rsp+2A8h+var_D8+4], 20000006h
+0x1AF9AB  mov     dword ptr [rsp+2A8h+var_D0], ebx
+0x1AF9B2  mov     dword ptr [rsp+2A8h+var_D0+4], 0
+0x1AF9BD  mov     dword ptr [rsp+2A8h+var_D0+8], r12d
+0x1AF9C5  mov     dword ptr [rsp+2A8h+var_D0+0Ch], 0
+0x1AF9D0  mov     dword ptr [rsp+2A8h+var_D0+10h], r13d
+0x1AF9D8  mov     r13, r15
+0x1AF9DB  vmovss  dword ptr [rsp+2A8h+var_D0+14h], xmm1
+0x1AF9E4  vmovss  dword ptr [rsp+2A8h+var_D0+18h], xmm0
+0x1AF9ED  mov     qword ptr [rsp+2A8h+var_D0+1Ch], 0
+0x1AF9F9  mov     dword ptr [rsp+2A8h+anonymous_0+4], 0
+0x1AFA04  call    sceNgs2VoiceControl
+0x1AFA09  mov     eax, [r13+60h]
+0x1AFA0D  inc     ebx
+0x1AFA0F  cmp     ebx, eax
+0x1AFA11  jb      loc_1AF910
+0x1AFA17  cmp     dword ptr [r13+14h], 0
+0x1AFA1C  jz      loc_1AFFC9
+0x1AFA22  vmovss  xmm1, dword ptr [rsp+2A8h+var_1F8]
+0x1AFA2B  xor     ebx, ebx
+0x1AFA2D  lea     r14, [rsp+2A8h+var_D8]
+0x1AFA35  nop     word ptr [rax+rax+00000000h]
+0x1AFA40  mov     r12, [r13+58h]
+0x1AFA44  mov     r15d, ebx
+0x1AFA47  mov     rdi, [rsp+2A8h+var_138]; _QWORD
+0x1AFA4F  mov     rsi, r14; _QWORD
+0x1AFA52  vmulss  xmm0, xmm1, dword ptr [r12+r15*8+4]
+0x1AFA59  mov     word ptr [rsp+2A8h+var_D8], 10h
+0x1AFA63  mov     word ptr [rsp+2A8h+var_D8+2], 0
+0x1AFA6D  mov     dword ptr [rsp+2A8h+var_D8+4], 2
+0x1AFA78  mov     dword ptr [rsp+2A8h+var_D0], ebx
+0x1AFA7F  vmovss  dword ptr [rsp+2A8h+var_D0+4], xmm0
+0x1AFA88  call    sceNgs2VoiceControl
+0x1AFA8D  mov     eax, [r13+8]
+0x1AFA91  vmovss  xmm1, dword ptr [rsp+2A8h+var_1F8]
+0x1AFA9A  inc     ebx
+0x1AFA9C  vmulss  xmm0, xmm1, dword ptr [r12+r15*8+4]
+0x1AFAA3  imul    rax, 98h
+0x1AFAAA  add     rax, cs:qword_57F1C20
+0x1AFAB1  vmovss  dword ptr [rax+r15*4+0D0h], xmm0
+0x1AFABB  cmp     ebx, [r13+14h]
+0x1AFABF  jb      loc_1AFA40
+0x1AFAC5  jmp     loc_1B001A
+0x1AFACA  vmovss  xmm0, dword ptr [r13+104h]
+0x1AFAD3  vxorps  xmm1, xmm1, xmm1
+0x1AFAD7  vucomiss xmm0, cs:dword_14DAE68
+0x1AFADF  jnb     short loc_1AFAF1
+0x1AFAE1  vmovss  xmm1, cs:dword_14DAE6C
+0x1AFAE9  vmaxss  xmm0, xmm0, xmm1
+0x1AFAED  vdivss  xmm1, xmm1, xmm0
+0x1AFAF1  mov     rdi, [r13+0]; _QWORD
+0x1AFAF5  lea     rdx, [rsp+2A8h+var_138]; _QWORD
+0x1AFAFD  xor     esi, esi; _QWORD
+0x1AFAFF  vmovss  dword ptr [rsp+2A8h+var_1E8], xmm1
+0x1AFB08  call    sceNgs2RackGetVoiceHandle
+0x1AFB0D  vmovss  xmm0, dword ptr [r13+108h]
+0x1AFB16  vmovss  xmm1, cs:dword_14DAE70
+0x1AFB1E  mov     rbx, [rsp+2A8h+var_138]
+0x1AFB26  call    sub_1B55F0
+0x1AFB2B  vmovss  dword ptr [rsp+2A8h+var_1F8], xmm0
+0x1AFB34  vmovss  xmm0, cs:dword_14DAE74
+0x1AFB3C  vmulss  xmm1, xmm0, dword ptr [r13+0FCh]
+0x1AFB45  vmulss  xmm0, xmm0, dword ptr [r13+100h]
+0x1AFB4E  vmovss  [rsp+2A8h+var_204], xmm1
+0x1AFB57  vmovss  dword ptr [rsp+2A8h+var_210], xmm0
+0x1AFB60  vmovss  xmm0, dword ptr [r13+10Ch]
+0x1AFB69  vmovss  xmm1, cs:dword_14DAE70
+0x1AFB71  call    sub_1B55F0
+0x1AFB76  cmp     dword ptr [r13+0F8h], 0
+0x1AFB7E  mov     eax, 2
+0x1AFB83  jnz     short loc_1AFB87
+0x1AFB85  xor     eax, eax
+0x1AFB87  vmovss  xmm1, dword ptr [rsp+2A8h+var_1F8]
+0x1AFB90  vmovss  xmm2, dword ptr [rsp+2A8h+var_1E8]
+0x1AFB99  mov     word ptr [rsp+2A8h+var_D8], 28h ; '('
+0x1AFBA3  mov     word ptr [rsp+2A8h+var_D8+2], 0
+0x1AFBAD  mov     dword ptr [rsp+2A8h+var_D8+4], 20000002h
+0x1AFBB8  mov     dword ptr [rsp+2A8h+var_D0], eax
+0x1AFBBF  vmovss  xmm3, [rsp+2A8h+var_204]
+0x1AFBC8  lea     rsi, [rsp+2A8h+var_D8]; _QWORD
+0x1AFBD0  mov     rdi, rbx; _QWORD
+0x1AFBD3  vmovss  dword ptr [rsp+2A8h+var_D0+4], xmm1
+0x1AFBDC  vmovss  dword ptr [rsp+2A8h+var_D0+8], xmm2
+0x1AFBE5  vmovss  xmm2, dword ptr [rsp+2A8h+var_210]
+0x1AFBEE  mov     dword ptr [rsp+2A8h+var_D0+0Ch], 0
+0x1AFBF9  vmovss  dword ptr [rsp+2A8h+var_D0+10h], xmm3
+0x1AFC02  vmovss  dword ptr [rsp+2A8h+var_D0+14h], xmm2
+0x1AFC0B  vmovss  dword ptr [rsp+2A8h+var_D0+18h], xmm0
+0x1AFC14  call    sceNgs2VoiceControl
+0x1AFC19  jmp     loc_1B001A
+0x1AFC1E  vmovups ymm0, ymmword ptr [r13+110h]
+0x1AFC27  vmovups xmm1, xmmword ptr [r13+130h]
+0x1AFC30  mov     rdi, [r13+0]; _QWORD
+0x1AFC34  mov     rbx, [r13+140h]
+0x1AFC3B  lea     rdx, [rsp+2A8h+var_138]; _QWORD
+0x1AFC43  xor     esi, esi; _QWORD
+0x1AFC45  vmovaps [rsp+2A8h+var_1E8], ymm0
+0x1AFC4E  vmovaps [rsp+2A8h+var_1F8], xmm1
+0x1AFC57  call    sceNgs2RackGetVoiceHandle
+0x1AFC5C  vmovaps ymm0, [rsp+2A8h+var_1E8]
+0x1AFC65  vmovaps xmm1, [rsp+2A8h+var_1F8]
+0x1AFC6E  mov     rdi, [rsp+2A8h+var_138]
+0x1AFC76  mov     word ptr [rsp+2A8h+var_D8], 60h ; '`'
+0x1AFC80  mov     word ptr [rsp+2A8h+var_D8+2], 0
+0x1AFC8A  mov     dword ptr [rsp+2A8h+var_D8+4], 20010001h
+0x1AFC95  vmovups [rsp+2A8h+var_D0], ymm0
+0x1AFC9E  vmovups xmmword ptr [rsp+1F8h], xmm1
+0x1AFCA7  mov     [rsp+2A8h+var_A0], rbx
+0x1AFCAF  jmp     loc_1B000D
+0x1AFCB4  add     r13, 148h
+0x1AFCBB  mov     rdi, r13
+0x1AFCBE  call    sub_42D0
+0x1AFCC3  jmp     loc_1B001A
+0x1AFCC8  add     r13, 150h
+0x1AFCCF  mov     rdi, r13
+0x1AFCD2  call    sub_1E6BD0
+0x1AFCD7  jmp     loc_1B001A
+0x1AFCDC  mov     rdi, [r13+0]; _QWORD
+0x1AFCE0  lea     rdx, [rsp+2A8h+var_138]; _QWORD
+0x1AFCE8  xor     esi, esi; _QWORD
+0x1AFCEA  call    sceNgs2RackGetVoiceHandle
+0x1AFCEF  vmovss  xmm1, dword ptr [r13+1B8h]
+0x1AFCF8  vmovss  xmm2, dword ptr [r13+1C4h]
+0x1AFD01  vmovss  xmm0, dword ptr [r13+1A8h]
+0x1AFD0A  mov     eax, [r13+1ACh]
+0x1AFD11  mov     ecx, [r13+1B0h]
+0x1AFD18  mov     edx, [r13+1B4h]
+0x1AFD1F  mov     rdi, [rsp+2A8h+var_138]
+0x1AFD27  vinsertps xmm1, xmm1, dword ptr [r13+1BCh], 10h
+0x1AFD31  vmulss  xmm0, xmm0, cs:dword_14DAE64
+0x1AFD39  vinsertps xmm1, xmm1, xmm2, 20h
+0x1AFD3F  vmovss  xmm2, dword ptr [r13+1C0h]
+0x1AFD48  mov     word ptr [rsp+2A8h+var_D8], 30h ; '0'
+0x1AFD52  mov     word ptr [rsp+2A8h+var_D8+2], 0
+0x1AFD5C  mov     dword ptr [rsp+2A8h+var_D8+4], 40001C00h
+0x1AFD67  mov     dword ptr [rsp+2A8h+var_D0], 0
+0x1AFD72  mov     dword ptr [rsp+2A8h+var_D0+4], eax
+0x1AFD79  mov     dword ptr [rsp+2A8h+var_D0+8], 0
+0x1AFD84  vmovss  dword ptr [rsp+2A8h+var_D0+0Ch], xmm0
+0x1AFD8D  mov     dword ptr [rsp+2A8h+var_D0+10h], ecx
+0x1AFD94  mov     dword ptr [rsp+2A8h+var_D0+14h], edx
+0x1AFD9B  vinsertps xmm1, xmm1, xmm2, 30h
+0x1AFDA1  vmulps  xmm1, xmm1, cs:xmmword_14DADC0
+0x1AFDA9  vmovups xmmword ptr [rsp+2A8h+var_D0+18h], xmm1
+0x1AFDB2  jmp     loc_1B000D
+0x1AFDB7  mov     eax, [r13+1D0h]
+0x1AFDBE  test    rax, rax
+0x1AFDC1  jz      short loc_1AFDFB
+0x1AFDC3  vmovss  xmm0, cs:dword_14DAE64
+0x1AFDCB  lea     rcx, [rsp+2A8h+var_114]
+0x1AFDD3  lea     rdx, [r13+1D8h]
+0x1AFDDA  nop     word ptr [rax+rax+00h]
+0x1AFDE0  mov     esi, [rdx-4]
+0x1AFDE3  mov     [rcx], esi
+0x1AFDE5  vmulss  xmm1, xmm0, dword ptr [rdx]
+0x1AFDE9  add     rdx, 8
+0x1AFDED  vmovss  dword ptr [rcx-4], xmm1
+0x1AFDF2  add     rcx, 8
+0x1AFDF6  dec     rax
+0x1AFDF9  jnz     short loc_1AFDE0
+0x1AFDFB  mov     rdi, [r13+0]; _QWORD
+0x1AFDFF  lea     rdx, [rsp+2A8h+var_138]; _QWORD
+0x1AFE07  xor     esi, esi; _QWORD
+0x1AFE09  call    sceNgs2RackGetVoiceHandle
+0x1AFE0E  vmovss  xmm0, dword ptr [r13+228h]
+0x1AFE17  vmovss  xmm1, dword ptr [r13+1C8h]
+0x1AFE20  mov     eax, [r13+1D0h]
+0x1AFE27  mov     rdi, [rsp+2A8h+var_138]
+0x1AFE2F  mov     ecx, [r13+224h]
+0x1AFE36  vinsertps xmm0, xmm0, dword ptr [r13+22Ch], 10h
+0x1AFE40  test    eax, eax
+0x1AFE42  vinsertps xmm0, xmm0, xmm1, 20h
+0x1AFE48  vmovss  xmm1, dword ptr [r13+220h]
+0x1AFE51  mov     word ptr [rsp+2A8h+var_D8], 88h
+0x1AFE5B  mov     word ptr [rsp+2A8h+var_D8+2], 0
+0x1AFE65  mov     dword ptr [rsp+2A8h+var_D8+4], 40001D00h
+0x1AFE70  vinsertps xmm0, xmm0, xmm1, 30h
+0x1AFE76  vmulps  xmm0, xmm0, cs:xmmword_14DADC0
+0x1AFE7E  vmovups xmmword ptr [rsp+2A8h+var_D0], xmm0
+0x1AFE87  mov     dword ptr [rsp+2A8h+var_D0+10h], ecx
+0x1AFE8E  mov     dword ptr [rsp+2A8h+var_D0+14h], eax
+0x1AFE95  jz      short loc_1AFEC8
+0x1AFE97  lea     rcx, [rsp+2A8h+var_114]
+0x1AFE9F  lea     rdx, [rsp+2A8h+var_D0+1Ch]
+0x1AFEA7  nop     word ptr [rax+rax+00000000h]
+0x1AFEB0  mov     esi, [rcx]
+0x1AFEB2  mov     r8d, [rcx-4]
+0x1AFEB6  add     rcx, 8
+0x1AFEBA  mov     [rdx], esi
+0x1AFEBC  mov     [rdx-4], r8d
+0x1AFEC0  add     rdx, 8
+0x1AFEC4  dec     eax
+0x1AFEC6  jnz     short loc_1AFEB0
+0x1AFEC8  vxorps  ymm0, ymm0, ymm0
+0x1AFECC  vmovups [rsp+2A8h+var_78], ymm0
+0x1AFED5  mov     [rsp+2A8h+var_58], 0
+0x1AFEE0  mov     [rsp+2A8h+var_54], 1
+0x1AFEEB  jmp     loc_1B000D
+0x1AFEF0  add     r13, 230h
+0x1AFEF7  mov     rdi, r13
+0x1AFEFA  call    sub_42D0
+0x1AFEFF  jmp     loc_1B001A
+0x1AFF04  mov     rdi, [r13+0]; _QWORD
+0x1AFF08  lea     rdx, [rsp+2A8h+var_138]; _QWORD
+0x1AFF10  xor     esi, esi; _QWORD
+0x1AFF12  call    sceNgs2RackGetVoiceHandle
+0x1AFF17  cmp     dword ptr [r13+23Ch], 0
+0x1AFF1F  jnz     short loc_1AFF81
+0x1AFF21  mov     eax, [r13+234h]
+0x1AFF28  mov     rdi, [rsp+2A8h+var_138]; _QWORD
+0x1AFF30  lea     rsi, [rsp+2A8h+var_D8]; _QWORD
+0x1AFF38  mov     word ptr [rsp+2A8h+var_D8], 18h
+0x1AFF42  mov     word ptr [rsp+2A8h+var_D8+2], 0
+0x1AFF4C  mov     dword ptr [rsp+2A8h+var_D8+4], 40020000h
+0x1AFF57  mov     dword ptr [rsp+2A8h+var_D0], eax
+0x1AFF5E  mov     dword ptr [rsp+2A8h+var_D0+4], eax
+0x1AFF65  mov     qword ptr [rsp+2A8h+var_D0+8], 0
+0x1AFF71  call    sceNgs2VoiceControl
+0x1AFF76  mov     dword ptr [r13+23Ch], 1
+0x1AFF81  mov     eax, [r13+238h]
+0x1AFF88  mov     rdi, [rsp+2A8h+var_138]
+0x1AFF90  mov     word ptr [rsp+2A8h+var_D8], 0Ch
+0x1AFF9A  mov     word ptr [rsp+2A8h+var_D8+2], 0
+0x1AFFA4  mov     dword ptr [rsp+2A8h+var_D8+4], 40002000h
+0x1AFFAF  mov     dword ptr [rsp+2A8h+var_D0], eax
+0x1AFFB6  jmp     short loc_1B000D
+0x1AFFB8  add     r13, 240h
+0x1AFFBF  mov     rdi, r13
+0x1AFFC2  call    sub_42D0
+0x1AFFC7  jmp     short loc_1B001A
+0x1AFFC9  vmovss  xmm0, dword ptr [rsp+2A8h+var_1F8]
+0x1AFFD2  mov     rdi, [rsp+2A8h+var_138]; _QWORD
+0x1AFFDA  mov     word ptr [rsp+2A8h+var_D8], 10h
+0x1AFFE4  mov     word ptr [rsp+2A8h+var_D8+2], 0
+0x1AFFEE  mov     dword ptr [rsp+2A8h+var_D8+4], 2
+0x1AFFF9  mov     dword ptr [rsp+2A8h+var_D0], 0
+0x1B0004  vmovss  dword ptr [rsp+2A8h+var_D0+4], xmm0
+0x1B000D  lea     rsi, [rsp+2A8h+var_D8]; _QWORD
+0x1B0015  call    sceNgs2VoiceControl
+0x1B001A  mov     rcx, cs:qword_1700698
+0x1B0021  mov     rax, [rcx]
+0x1B0024  cmp     rax, [rsp+2A8h+var_48]
+0x1B002C  jnz     short loc_1B003D
+0x1B002E  lea     rsp, [rbp-28h]
+0x1B0032  pop     rbx
+0x1B0033  pop     r12
+0x1B0035  pop     r13
+0x1B0037  pop     r14
+0x1B0039  pop     r15
+0x1B003B  pop     rbp
+0x1B003C  retn
+0x1B003D  call    __stack_chk_fail
+
+========================================
+sub_1AB580 0x1AB580 - 0x1AB91C
+0x1AB580  push    rbp
+0x1AB581  mov     rbp, rsp
+0x1AB584  push    r15
+0x1AB586  push    r14
+0x1AB588  push    r12
+0x1AB58A  push    rbx
+0x1AB58B  sub     rsp, 250h
+0x1AB592  mov     r15, cs:qword_1700698
+0x1AB599  mov     r14, rdi
+0x1AB59C  mov     rax, [r15]
+0x1AB59F  mov     [rbp+var_28], rax
+0x1AB5A3  mov     rax, [r14+8]
+0x1AB5A7  mov     rdi, [rax+130h]
+0x1AB5AE  test    rdi, rdi
+0x1AB5B1  jz      loc_1AB8FC
+0x1AB5B7  mov     r12, [rax+80h]
+0x1AB5BE  test    r12, r12
+0x1AB5C1  jz      loc_1AB8FC
+0x1AB5C7  mov     eax, [r14+20h]
+0x1AB5CB  and     eax, 0Ch
+0x1AB5CE  jnz     loc_1AB8FC
+0x1AB5D4  lea     rbx, [rbp+var_230]
+0x1AB5DB  mov     rsi, rbx
+0x1AB5DE  call    sub_1BFBE0
+0x1AB5E3  mov     esi, 4Bh ; 'K'
+0x1AB5E8  mov     rdi, rbx
+0x1AB5EB  call    sub_1BD310
+0x1AB5F0  vcvttss2si eax, xmm0
+0x1AB5F4  vxorps  xmm0, xmm0, xmm0
+0x1AB5F8  test    eax, eax
+0x1AB5FA  jnz     short loc_1AB615
+0x1AB5FC  lea     rdi, [rbp+var_230]
+0x1AB603  mov     esi, 53h ; 'S'
+0x1AB608  call    sub_1BD310
+0x1AB60D  vxorps  xmm1, xmm1, xmm1
+0x1AB611  vaddss  xmm0, xmm0, xmm1
+0x1AB615  lea     rdi, [rbp+var_230]
+0x1AB61C  mov     esi, 4Ch ; 'L'
+0x1AB621  vmovss  [rbp+var_268], xmm0
+0x1AB629  call    sub_1BD310
+0x1AB62E  vcvttss2si eax, xmm0
+0x1AB632  test    eax, eax
+0x1AB634  jnz     short loc_1AB65B
+0x1AB636  lea     rdi, [rbp+var_230]
+0x1AB63D  mov     esi, 54h ; 'T'
+0x1AB642  call    sub_1BD310
+0x1AB647  vmovss  xmm1, [rbp+var_268]
+0x1AB64F  vaddss  xmm1, xmm1, xmm0
+0x1AB653  vmovss  [rbp+var_268], xmm1
+0x1AB65B  lea     rdi, [rbp+var_230]
+0x1AB662  mov     esi, 4Dh ; 'M'
+0x1AB667  call    sub_1BD310
+0x1AB66C  vcvttss2si eax, xmm0
+0x1AB670  test    eax, eax
+0x1AB672  jnz     short loc_1AB699
+0x1AB674  lea     rdi, [rbp+var_230]
+0x1AB67B  mov     esi, 55h ; 'U'
+0x1AB680  call    sub_1BD310
+0x1AB685  vmovss  xmm1, [rbp+var_268]
+0x1AB68D  vaddss  xmm1, xmm1, xmm0
+0x1AB691  vmovss  [rbp+var_268], xmm1
+0x1AB699  lea     rdi, [rbp+var_230]
+0x1AB6A0  mov     esi, 4Eh ; 'N'
+0x1AB6A5  call    sub_1BD310
+0x1AB6AA  vcvttss2si eax, xmm0
+0x1AB6AE  test    eax, eax
+0x1AB6B0  jnz     short loc_1AB6D7
+0x1AB6B2  lea     rdi, [rbp+var_230]
+0x1AB6B9  mov     esi, 56h ; 'V'
+0x1AB6BE  call    sub_1BD310
+0x1AB6C3  vmovss  xmm1, [rbp+var_268]
+0x1AB6CB  vaddss  xmm1, xmm1, xmm0
+0x1AB6CF  vmovss  [rbp+var_268], xmm1
+0x1AB6D7  lea     rdi, [rbp+var_230]
+0x1AB6DE  mov     esi, 4Fh ; 'O'
+0x1AB6E3  call    sub_1BD310
+0x1AB6E8  vcvttss2si eax, xmm0
+0x1AB6EC  test    eax, eax
+0x1AB6EE  jnz     short loc_1AB715
+0x1AB6F0  lea     rdi, [rbp+var_230]
+0x1AB6F7  mov     esi, 57h ; 'W'
+0x1AB6FC  call    sub_1BD310
+0x1AB701  vmovss  xmm1, [rbp+var_268]
+0x1AB709  vaddss  xmm1, xmm1, xmm0
+0x1AB70D  vmovss  [rbp+var_268], xmm1
+0x1AB715  lea     rdi, [rbp+var_230]
+0x1AB71C  mov     esi, 50h ; 'P'
+0x1AB721  call    sub_1BD310
+0x1AB726  vcvttss2si eax, xmm0
+0x1AB72A  test    eax, eax
+0x1AB72C  jnz     short loc_1AB753
+0x1AB72E  lea     rdi, [rbp+var_230]
+0x1AB735  mov     esi, 58h ; 'X'
+0x1AB73A  call    sub_1BD310
+0x1AB73F  vmovss  xmm1, [rbp+var_268]
+0x1AB747  vaddss  xmm1, xmm1, xmm0
+0x1AB74B  vmovss  [rbp+var_268], xmm1
+0x1AB753  lea     rdi, [rbp+var_230]
+0x1AB75A  mov     esi, 51h ; 'Q'
+0x1AB75F  call    sub_1BD310
+0x1AB764  vcvttss2si eax, xmm0
+0x1AB768  test    eax, eax
+0x1AB76A  jnz     short loc_1AB791
+0x1AB76C  lea     rdi, [rbp+var_230]
+0x1AB773  mov     esi, 59h ; 'Y'
+0x1AB778  call    sub_1BD310
+0x1AB77D  vmovss  xmm1, [rbp+var_268]
+0x1AB785  vaddss  xmm1, xmm1, xmm0
+0x1AB789  vmovss  [rbp+var_268], xmm1
+0x1AB791  lea     rdi, [rbp+var_230]
+0x1AB798  mov     esi, 52h ; 'R'
+0x1AB79D  call    sub_1BD310
+0x1AB7A2  vcvttss2si eax, xmm0
+0x1AB7A6  test    eax, eax
+0x1AB7A8  jz      short loc_1AB7B4
+0x1AB7AA  vmovss  xmm0, [rbp+var_268]
+0x1AB7B2  jmp     short loc_1AB7D5
+0x1AB7B4  lea     rdi, [rbp+var_230]
+0x1AB7BB  mov     esi, 5Ah ; 'Z'
+0x1AB7C0  call    sub_1BD310
+0x1AB7C5  vmovss  xmm1, [rbp+var_268]
+0x1AB7CD  vaddss  xmm1, xmm1, xmm0
+0x1AB7D1  vmovaps xmm0, xmm1
+0x1AB7D5  vmulss  xmm0, xmm0, dword ptr [r12+6Ch]
+0x1AB7DC  lea     rdx, [rbp+var_240]
+0x1AB7E3  lea     rcx, [rbp+var_25C]
+0x1AB7EA  mov     edi, cs:dword_1704BD8
+0x1AB7F0  vmovss  [rbp+var_25C], xmm0
+0x1AB7F8  vmovss  xmm0, dword ptr [r12+84h]
+0x1AB802  mov     [rbp+var_264], 0
+0x1AB80C  vmulss  xmm0, xmm0, cs:dword_14DAE48
+0x1AB814  vmovss  [rbp+var_260], xmm0
+0x1AB81C  mov     rax, [r12+88h]
+0x1AB824  mov     [rbp+var_240], eax
+0x1AB82A  shr     rax, 20h
+0x1AB82E  mov     [rbp+var_23C], eax
+0x1AB834  mov     eax, [r12+90h]
+0x1AB83C  mov     [rbp+var_A0], 3
+0x1AB846  mov     [rbp+var_98], rdx
+0x1AB84D  mov     [rbp+var_90], 0Ch
+0x1AB858  mov     [rbp+var_88], 5
+0x1AB862  mov     [rbp+var_80], rcx
+0x1AB866  lea     rdx, [rbp+var_260]
+0x1AB86D  lea     rcx, [rbp+var_264]
+0x1AB874  mov     [rbp+var_78], 4
+0x1AB87C  mov     [rbp+var_70], 4
+0x1AB883  mov     [rbp+var_258], 1
+0x1AB88D  mov     [rbp+var_68], rdx
+0x1AB891  mov     [rbp+var_60], 4
+0x1AB899  mov     [rbp+var_58], 2
+0x1AB8A0  mov     [rbp+var_50], rcx
+0x1AB8A4  mov     [rbp+var_48], 4
+0x1AB8AC  lea     rcx, [rbp+var_A0]
+0x1AB8B3  mov     edx, 5
+0x1AB8B8  mov     [rbp+var_238], eax
+0x1AB8BE  mov     rax, [r14]
+0x1AB8C1  mov     rax, [rax]
+0x1AB8C4  mov     [rbp+var_250], rax
+0x1AB8CB  mov     eax, [r14+28h]
+0x1AB8CF  mov     [rbp+var_40], 1
+0x1AB8D6  mov     [rbp+var_248], eax
+0x1AB8DC  lea     rax, [rbp+var_258]
+0x1AB8E3  mov     [rbp+var_38], rax
+0x1AB8E7  mov     [rbp+var_30], 18h
+0x1AB8EF  mov     esi, [r12+0A0h]
+0x1AB8F7  call    sceAudio3dObjectSetAttributes
+0x1AB8FC  mov     rax, [r15]
+0x1AB8FF  cmp     rax, [rbp+var_28]
+0x1AB903  jnz     short loc_1AB917
+0x1AB905  xor     eax, eax
+0x1AB907  add     rsp, 250h
+0x1AB90E  pop     rbx
+0x1AB90F  pop     r12
+0x1AB911  pop     r14
+0x1AB913  pop     r15
+0x1AB915  pop     rbp
+0x1AB916  retn
+0x1AB917  call    __stack_chk_fail
+
+========================================
+sub_1B2010 0x1B2010 - 0x1B2128
+0x1B2010  mov     r8d, 1
+0x1B2016  jmp     short loc_1B2023
+0x1B2018  align 20h
+0x1B2020  inc     rdi
+0x1B2023  movsx   eax, byte ptr [rdi]
+0x1B2026  cmp     eax, 1Fh
+0x1B2029  jle     short loc_1B2040
+0x1B202B  movzx   eax, al
+0x1B202E  cmp     eax, 20h ; ' '
+0x1B2031  jz      short loc_1B2020
+0x1B2033  jmp     short loc_1B204A
+0x1B2035  align 20h
+0x1B2040  movzx   eax, al
+0x1B2043  cmp     eax, 9
+0x1B2046  jz      short loc_1B2020
+0x1B2048  jmp     short loc_1B2062
+0x1B204A  cmp     eax, 2Bh ; '+'
+0x1B204D  jz      short loc_1B205F
+0x1B204F  cmp     eax, 2Dh ; '-'
+0x1B2052  jnz     short loc_1B2062
+0x1B2054  inc     rdi
+0x1B2057  mov     r8d, 0FFFFFFFFh
+0x1B205D  jmp     short loc_1B2062
+0x1B205F  inc     rdi
+0x1B2062  movzx   edx, byte ptr [rdi]
+0x1B2065  cmp     edx, 24h ; '$'
+0x1B2068  jnz     short loc_1B20DB
+0x1B206A  mov     dl, [rdi+1]
+0x1B206D  xor     eax, eax
+0x1B206F  test    dl, dl
+0x1B2071  jz      loc_1B211C
+0x1B2077  add     rdi, 2
+0x1B207B  xor     eax, eax
+0x1B207D  nop     dword ptr [rax]
+0x1B2080  mov     esi, eax
+0x1B2082  movsx   eax, dl
+0x1B2085  mov     cl, al
+0x1B2087  shl     esi, 4
+0x1B208A  add     cl, 0D0h
+0x1B208D  movzx   ecx, cl
+0x1B2090  cmp     ecx, 9
+0x1B2093  ja      short loc_1B20A0
+0x1B2095  add     eax, 0FFFFFFD0h
+0x1B2098  jmp     short loc_1B20CE
+0x1B209A  align 20h
+0x1B20A0  mov     cl, dl
+0x1B20A2  add     cl, 9Fh
+0x1B20A5  movzx   ecx, cl
+0x1B20A8  cmp     ecx, 5
+0x1B20AB  ja      short loc_1B20C0
+0x1B20AD  add     eax, 0FFFFFFA9h
+0x1B20B0  jmp     short loc_1B20CE
+0x1B20B2  align 20h
+0x1B20C0  add     dl, 0BFh
+0x1B20C3  movzx   ecx, dl
+0x1B20C6  cmp     ecx, 5
+0x1B20C9  ja      short loc_1B2121
+0x1B20CB  add     eax, 0FFFFFFC9h
+0x1B20CE  mov     dl, [rdi]
+0x1B20D0  add     eax, esi
+0x1B20D2  inc     rdi
+0x1B20D5  test    dl, dl
+0x1B20D7  jnz     short loc_1B2080
+0x1B20D9  jmp     short loc_1B211C
+0x1B20DB  mov     sil, dl
+0x1B20DE  xor     eax, eax
+0x1B20E0  add     sil, 0D0h
+0x1B20E4  movzx   esi, sil
+0x1B20E8  cmp     esi, 9
+0x1B20EB  ja      short loc_1B211C
+0x1B20ED  inc     rdi
+0x1B20F0  xor     eax, eax
+0x1B20F2  nop     word ptr [rax+rax+00000000h]
+0x1B2100  movsx   ecx, dl
+0x1B2103  mov     dl, [rdi]
+0x1B2105  lea     eax, [rax+rax*4]
+0x1B2108  inc     rdi
+0x1B210B  lea     eax, [rcx+rax*2-30h]
+0x1B210F  mov     cl, dl
+0x1B2111  add     cl, 0D0h
+0x1B2114  movzx   ecx, cl
+0x1B2117  cmp     ecx, 0Ah
+0x1B211A  jb      short loc_1B2100
+0x1B211C  imul    eax, r8d
+0x1B2120  retn
+0x1B2121  mov     eax, esi
+0x1B2123  imul    eax, r8d
+0x1B2127  retn

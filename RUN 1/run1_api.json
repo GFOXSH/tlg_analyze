@@ -1,0 +1,2325 @@
+{
+  "imports": {
+    "sceNgs2RackCreate": [
+      "0x14BE898", 
+      "0x14BE8A8", 
+      "0x1700FA0", 
+      "0x1700FA8"
+    ], 
+    "sceNgs2RackCreateWithAllocator": [
+      "0x14BE8A8", 
+      "0x1700FA8"
+    ], 
+    "sceNgs2RackDestroy": [
+      "0x14BE8B8", 
+      "0x1700FB0"
+    ], 
+    "sceNgs2RackGetVoiceHandle": [
+      "0x14BE8C8", 
+      "0x1700FB8"
+    ], 
+    "sceNgs2RackQueryBufferSize": [
+      "0x14BE8D8", 
+      "0x1700FC0"
+    ], 
+    "sceNgs2SystemCreateWithAllocator": [
+      "0x14BE8E8", 
+      "0x1700FC8"
+    ], 
+    "sceNgs2SystemDestroy": [
+      "0x14BE8F8", 
+      "0x1700FD0"
+    ], 
+    "sceNgs2SystemRender": [
+      "0x14BE908", 
+      "0x1700FD8"
+    ], 
+    "sceNgs2VoiceControl": [
+      "0x14BE918", 
+      "0x1700FE0"
+    ], 
+    "sceNgs2VoiceGetState": [
+      "0x14BE928", 
+      "0x1700FE8"
+    ]
+  }, 
+  "references": [
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1A791B", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1A7981", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1A7A42", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1A7B12", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1A7BD2", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1A7C96", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1A8194", 
+      "function": "sub_1A8160", 
+      "function_start": "0x1A8160", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1A82E4", 
+      "function": "sub_1A82B0", 
+      "function_start": "0x1A82B0", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1A861B", 
+      "function": "sub_1A85B0", 
+      "function_start": "0x1A85B0", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1A87EF", 
+      "function": "sub_1A85B0", 
+      "function_start": "0x1A85B0", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1A8FEA", 
+      "function": "sub_1A8E90", 
+      "function_start": "0x1A8E90", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1A913A", 
+      "function": "sub_1A8E90", 
+      "function_start": "0x1A8E90", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1A927A", 
+      "function": "sub_1A8E90", 
+      "function_start": "0x1A8E90", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1A93BA", 
+      "function": "sub_1A8E90", 
+      "function_start": "0x1A8E90", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1A94FA", 
+      "function": "sub_1A8E90", 
+      "function_start": "0x1A8E90", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1A962A", 
+      "function": "sub_1A8E90", 
+      "function_start": "0x1A8E90", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1A9882", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1A99B3", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1A9E7B", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AA4FB", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AA790", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AAB6E", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AAE08", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AAF0C", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AB083", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AB2FF", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AB453", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1ABA4E", 
+      "function": "sub_1AB920", 
+      "function_start": "0x1AB920", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1ABAEF", 
+      "function": "sub_1AB920", 
+      "function_start": "0x1AB920", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1ABC39", 
+      "function": "sub_1ABB70", 
+      "function_start": "0x1ABB70", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1ABDBD", 
+      "function": "sub_1ABD70", 
+      "function_start": "0x1ABD70", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1ABF53", 
+      "function": "sub_1ABEF0", 
+      "function_start": "0x1ABEF0", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AC77F", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1ACA1B", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1ACB8C", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1ACCEC", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1ACE74", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1ACFE3", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AD14D", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AD2B8", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AD496", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AD64D", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AD7D4", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AD94B", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AD99C", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AD9E4", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1ADA29", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1ADD6C", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1ADEF2", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1ADF03", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AE06F", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AE240", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AE251", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AE347", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AE3B0", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AE3C1", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AE45B", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AE46C", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AE520", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AE53A", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AE62C", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AE646", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AEA03", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AEA14", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AEA65", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AEAFC", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AEB0D", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AEB5E", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AED80", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AEF11", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AF828", 
+      "function": "sub_1AEFD0", 
+      "function_start": "0x1AEFD0", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AF8FC", 
+      "function": "sub_1AEFD0", 
+      "function_start": "0x1AEFD0", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AFB08", 
+      "function": "sub_1AEFD0", 
+      "function_start": "0x1AEFD0", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AFC57", 
+      "function": "sub_1AEFD0", 
+      "function_start": "0x1AEFD0", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AFCEA", 
+      "function": "sub_1AEFD0", 
+      "function_start": "0x1AEFD0", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AFE09", 
+      "function": "sub_1AEFD0", 
+      "function_start": "0x1AEFD0", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1AFF12", 
+      "function": "sub_1AEFD0", 
+      "function_start": "0x1AEFD0", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1B015F", 
+      "function": "sub_1B0050", 
+      "function_start": "0x1B0050", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1B0374", 
+      "function": "sub_1B0300", 
+      "function_start": "0x1B0300", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1B03C4", 
+      "function": "sub_1B0300", 
+      "function_start": "0x1B0300", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1B03D2", 
+      "function": "sub_1B0300", 
+      "function_start": "0x1B0300", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1B0A3D", 
+      "function": "sub_1B08E0", 
+      "function_start": "0x1B08E0", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1B0AFD", 
+      "function": "sub_1B08E0", 
+      "function_start": "0x1B08E0", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1B0BD7", 
+      "function": "sub_1B08E0", 
+      "function_start": "0x1B08E0", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1B132A", 
+      "function": "sub_1B11E0", 
+      "function_start": "0x1B11E0", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x1B13DD", 
+      "function": "sub_1B11E0", 
+      "function_start": "0x1B11E0", 
+      "instruction": "call    sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "call", 
+      "target": "0x14BE8C8"
+    }, 
+    {
+      "api": "sceNgs2RackGetVoiceHandle", 
+      "callsite": "0x14BE8C8", 
+      "function": "sceNgs2RackGetVoiceHandle", 
+      "function_start": "0x14BE8C8", 
+      "instruction": "jmp     cs:__imp_sceNgs2RackGetVoiceHandle", 
+      "mnemonic": "jmp", 
+      "target": "0x1700FB8"
+    }, 
+    {
+      "api": "sceNgs2SystemRender", 
+      "callsite": "0x1B064C", 
+      "function": "sub_1B04F0", 
+      "function_start": "0x1B04F0", 
+      "instruction": "call    sceNgs2SystemRender", 
+      "mnemonic": "call", 
+      "target": "0x14BE908"
+    }, 
+    {
+      "api": "sceNgs2SystemRender", 
+      "callsite": "0x14BE908", 
+      "function": "sceNgs2SystemRender", 
+      "function_start": "0x14BE908", 
+      "instruction": "jmp     cs:__imp_sceNgs2SystemRender", 
+      "mnemonic": "jmp", 
+      "target": "0x1700FD8"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1A794C", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1A7970", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1A79B2", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1A79D6", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1A7A12", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1A7A72", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1A7A9E", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1A7AC1", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1A7B42", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1A7B6F", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1A7B92", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1A7C03", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1A7C30", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1A7C54", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1A7CC7", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1A7CF4", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1A7D18", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1A81D9", 
+      "function": "sub_1A8160", 
+      "function_start": "0x1A8160", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1A8314", 
+      "function": "sub_1A82B0", 
+      "function_start": "0x1A82B0", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1A900A", 
+      "function": "sub_1A8E90", 
+      "function_start": "0x1A8E90", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1A9156", 
+      "function": "sub_1A8E90", 
+      "function_start": "0x1A8E90", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1A9296", 
+      "function": "sub_1A8E90", 
+      "function_start": "0x1A8E90", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1A93D6", 
+      "function": "sub_1A8E90", 
+      "function_start": "0x1A8E90", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1A9516", 
+      "function": "sub_1A8E90", 
+      "function_start": "0x1A8E90", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1A964D", 
+      "function": "sub_1A8E90", 
+      "function_start": "0x1A8E90", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1A9ADC", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1A9F5B", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1A9FF4", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AA0A5", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AA545", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AA57B", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AA5B7", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AA5F3", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AA62F", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AA66B", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AA6A7", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AA6E3", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AA71F", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AA7CC", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AABA1", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AABDA", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AAC13", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AAC4C", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AAC85", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AACBE", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AACF7", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AAD26", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AAD74", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AAE95", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AAF4D", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AAFE9", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AB135", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AB33F", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AB489", 
+      "function": "sub_1A9690", 
+      "function_start": "0x1A9690", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1ABB20", 
+      "function": "sub_1AB920", 
+      "function_start": "0x1AB920", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1ABB4C", 
+      "function": "sub_1AB920", 
+      "function_start": "0x1AB920", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1ABC7B", 
+      "function": "sub_1ABB70", 
+      "function_start": "0x1ABB70", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1ABDF8", 
+      "function": "sub_1ABD70", 
+      "function_start": "0x1ABD70", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1ABEC9", 
+      "function": "sub_1ABD70", 
+      "function_start": "0x1ABD70", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AC1E4", 
+      "function": "sub_1ABEF0", 
+      "function_start": "0x1ABEF0", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AC4C7", 
+      "function": "sub_1ABEF0", 
+      "function_start": "0x1ABEF0", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AC7BE", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1ACA5B", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1ACBCC", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1ACD2C", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1ACEB4", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AD022", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AD18D", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AD2F8", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AD4D5", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AD68C", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AD814", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1ADA84", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1ADE41", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1ADE9F", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1ADF3F", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AE09D", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AE0CD", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AE0FD", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AE12D", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AE15D", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AE18D", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AE1BD", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AE1ED", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AE28C", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AE381", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AE3FC", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AE4AB", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AE576", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AE5E3", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AE685", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AE6DF", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AEA50", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AEAA0", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AEB49", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AEB99", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AEDA4", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AEF3B", 
+      "function": "sub_1ADC10", 
+      "function_start": "0x1ADC10", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AF86A", 
+      "function": "sub_1AEFD0", 
+      "function_start": "0x1AEFD0", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AFA04", 
+      "function": "sub_1AEFD0", 
+      "function_start": "0x1AEFD0", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AFA88", 
+      "function": "sub_1AEFD0", 
+      "function_start": "0x1AEFD0", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AFC14", 
+      "function": "sub_1AEFD0", 
+      "function_start": "0x1AEFD0", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1AFF71", 
+      "function": "sub_1AEFD0", 
+      "function_start": "0x1AEFD0", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1B0015", 
+      "function": "sub_1AEFD0", 
+      "function_start": "0x1AEFD0", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1B039A", 
+      "function": "sub_1B0300", 
+      "function_start": "0x1B0300", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1B0408", 
+      "function": "sub_1B0300", 
+      "function_start": "0x1B0300", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1B0A64", 
+      "function": "sub_1B08E0", 
+      "function_start": "0x1B08E0", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1B0B24", 
+      "function": "sub_1B08E0", 
+      "function_start": "0x1B08E0", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1B0C04", 
+      "function": "sub_1B08E0", 
+      "function_start": "0x1B08E0", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1B134B", 
+      "function": "sub_1B11E0", 
+      "function_start": "0x1B11E0", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x1B141D", 
+      "function": "sub_1B11E0", 
+      "function_start": "0x1B11E0", 
+      "instruction": "call    sceNgs2VoiceControl", 
+      "mnemonic": "call", 
+      "target": "0x14BE918"
+    }, 
+    {
+      "api": "sceNgs2VoiceControl", 
+      "callsite": "0x14BE918", 
+      "function": "sceNgs2VoiceControl", 
+      "function_start": "0x14BE918", 
+      "instruction": "jmp     cs:__imp_sceNgs2VoiceControl", 
+      "mnemonic": "jmp", 
+      "target": "0x1700FE0"
+    }, 
+    {
+      "api": "sceNgs2RackDestroy", 
+      "callsite": "0x1A7E8D", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2RackDestroy", 
+      "mnemonic": "call", 
+      "target": "0x14BE8B8"
+    }, 
+    {
+      "api": "sceNgs2RackDestroy", 
+      "callsite": "0x1A7EA0", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2RackDestroy", 
+      "mnemonic": "call", 
+      "target": "0x14BE8B8"
+    }, 
+    {
+      "api": "sceNgs2RackDestroy", 
+      "callsite": "0x1A7EB3", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2RackDestroy", 
+      "mnemonic": "call", 
+      "target": "0x14BE8B8"
+    }, 
+    {
+      "api": "sceNgs2RackDestroy", 
+      "callsite": "0x1A7EC6", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2RackDestroy", 
+      "mnemonic": "call", 
+      "target": "0x14BE8B8"
+    }, 
+    {
+      "api": "sceNgs2RackDestroy", 
+      "callsite": "0x1A83BB", 
+      "function": "sub_1A83A0", 
+      "function_start": "0x1A83A0", 
+      "instruction": "call    sceNgs2RackDestroy", 
+      "mnemonic": "call", 
+      "target": "0x14BE8B8"
+    }, 
+    {
+      "api": "sceNgs2RackDestroy", 
+      "callsite": "0x1A83CD", 
+      "function": "sub_1A83A0", 
+      "function_start": "0x1A83A0", 
+      "instruction": "call    sceNgs2RackDestroy", 
+      "mnemonic": "call", 
+      "target": "0x14BE8B8"
+    }, 
+    {
+      "api": "sceNgs2RackDestroy", 
+      "callsite": "0x1A83DF", 
+      "function": "sub_1A83A0", 
+      "function_start": "0x1A83A0", 
+      "instruction": "call    sceNgs2RackDestroy", 
+      "mnemonic": "call", 
+      "target": "0x14BE8B8"
+    }, 
+    {
+      "api": "sceNgs2RackDestroy", 
+      "callsite": "0x1A83F1", 
+      "function": "sub_1A83A0", 
+      "function_start": "0x1A83A0", 
+      "instruction": "call    sceNgs2RackDestroy", 
+      "mnemonic": "call", 
+      "target": "0x14BE8B8"
+    }, 
+    {
+      "api": "sceNgs2RackDestroy", 
+      "callsite": "0x1ADBC4", 
+      "function": "sub_1ADB70", 
+      "function_start": "0x1ADB70", 
+      "instruction": "call    sceNgs2RackDestroy", 
+      "mnemonic": "call", 
+      "target": "0x14BE8B8"
+    }, 
+    {
+      "api": "sceNgs2RackDestroy", 
+      "callsite": "0x14BE8B8", 
+      "function": "sceNgs2RackDestroy", 
+      "function_start": "0x14BE8B8", 
+      "instruction": "jmp     cs:__imp_sceNgs2RackDestroy", 
+      "mnemonic": "jmp", 
+      "target": "0x1700FB0"
+    }, 
+    {
+      "api": "sceNgs2RackCreate", 
+      "callsite": "0x1AC762", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackCreate", 
+      "mnemonic": "call", 
+      "target": "0x14BE898"
+    }, 
+    {
+      "api": "sceNgs2RackCreate", 
+      "callsite": "0x1AC9FE", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackCreate", 
+      "mnemonic": "call", 
+      "target": "0x14BE898"
+    }, 
+    {
+      "api": "sceNgs2RackCreate", 
+      "callsite": "0x1ACB6F", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackCreate", 
+      "mnemonic": "call", 
+      "target": "0x14BE898"
+    }, 
+    {
+      "api": "sceNgs2RackCreate", 
+      "callsite": "0x1ACCCF", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackCreate", 
+      "mnemonic": "call", 
+      "target": "0x14BE898"
+    }, 
+    {
+      "api": "sceNgs2RackCreate", 
+      "callsite": "0x1ACE57", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackCreate", 
+      "mnemonic": "call", 
+      "target": "0x14BE898"
+    }, 
+    {
+      "api": "sceNgs2RackCreate", 
+      "callsite": "0x1ACFC6", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackCreate", 
+      "mnemonic": "call", 
+      "target": "0x14BE898"
+    }, 
+    {
+      "api": "sceNgs2RackCreate", 
+      "callsite": "0x1AD130", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackCreate", 
+      "mnemonic": "call", 
+      "target": "0x14BE898"
+    }, 
+    {
+      "api": "sceNgs2RackCreate", 
+      "callsite": "0x1AD29B", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackCreate", 
+      "mnemonic": "call", 
+      "target": "0x14BE898"
+    }, 
+    {
+      "api": "sceNgs2RackCreate", 
+      "callsite": "0x1AD479", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackCreate", 
+      "mnemonic": "call", 
+      "target": "0x14BE898"
+    }, 
+    {
+      "api": "sceNgs2RackCreate", 
+      "callsite": "0x1AD630", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackCreate", 
+      "mnemonic": "call", 
+      "target": "0x14BE898"
+    }, 
+    {
+      "api": "sceNgs2RackCreate", 
+      "callsite": "0x1AD7B7", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackCreate", 
+      "mnemonic": "call", 
+      "target": "0x14BE898"
+    }, 
+    {
+      "api": "sceNgs2RackCreate", 
+      "callsite": "0x1A76F1", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2RackCreateWithAllocator", 
+      "mnemonic": "call", 
+      "target": "0x14BE8A8"
+    }, 
+    {
+      "api": "sceNgs2RackCreate", 
+      "callsite": "0x1A7773", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2RackCreateWithAllocator", 
+      "mnemonic": "call", 
+      "target": "0x14BE8A8"
+    }, 
+    {
+      "api": "sceNgs2RackCreate", 
+      "callsite": "0x1A7828", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2RackCreateWithAllocator", 
+      "mnemonic": "call", 
+      "target": "0x14BE8A8"
+    }, 
+    {
+      "api": "sceNgs2RackCreate", 
+      "callsite": "0x1A78E6", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2RackCreateWithAllocator", 
+      "mnemonic": "call", 
+      "target": "0x14BE8A8"
+    }, 
+    {
+      "api": "sceNgs2RackCreate", 
+      "callsite": "0x14BE898", 
+      "function": "sceNgs2RackCreate", 
+      "function_start": "0x14BE898", 
+      "instruction": "jmp     cs:__imp_sceNgs2RackCreate", 
+      "mnemonic": "jmp", 
+      "target": "0x1700FA0"
+    }, 
+    {
+      "api": "sceNgs2RackCreate", 
+      "callsite": "0x14BE8A8", 
+      "function": "sceNgs2RackCreateWithAllocator", 
+      "function_start": "0x14BE8A8", 
+      "instruction": "jmp     cs:__imp_sceNgs2RackCreateWithAllocator", 
+      "mnemonic": "jmp", 
+      "target": "0x1700FA8"
+    }, 
+    {
+      "api": "sceNgs2RackQueryBufferSize", 
+      "callsite": "0x1AC710", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackQueryBufferSize", 
+      "mnemonic": "call", 
+      "target": "0x14BE8D8"
+    }, 
+    {
+      "api": "sceNgs2RackQueryBufferSize", 
+      "callsite": "0x1AC9AC", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackQueryBufferSize", 
+      "mnemonic": "call", 
+      "target": "0x14BE8D8"
+    }, 
+    {
+      "api": "sceNgs2RackQueryBufferSize", 
+      "callsite": "0x1ACB1D", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackQueryBufferSize", 
+      "mnemonic": "call", 
+      "target": "0x14BE8D8"
+    }, 
+    {
+      "api": "sceNgs2RackQueryBufferSize", 
+      "callsite": "0x1ACC7D", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackQueryBufferSize", 
+      "mnemonic": "call", 
+      "target": "0x14BE8D8"
+    }, 
+    {
+      "api": "sceNgs2RackQueryBufferSize", 
+      "callsite": "0x1ACE05", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackQueryBufferSize", 
+      "mnemonic": "call", 
+      "target": "0x14BE8D8"
+    }, 
+    {
+      "api": "sceNgs2RackQueryBufferSize", 
+      "callsite": "0x1ACF74", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackQueryBufferSize", 
+      "mnemonic": "call", 
+      "target": "0x14BE8D8"
+    }, 
+    {
+      "api": "sceNgs2RackQueryBufferSize", 
+      "callsite": "0x1AD0DE", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackQueryBufferSize", 
+      "mnemonic": "call", 
+      "target": "0x14BE8D8"
+    }, 
+    {
+      "api": "sceNgs2RackQueryBufferSize", 
+      "callsite": "0x1AD249", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackQueryBufferSize", 
+      "mnemonic": "call", 
+      "target": "0x14BE8D8"
+    }, 
+    {
+      "api": "sceNgs2RackQueryBufferSize", 
+      "callsite": "0x1AD427", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackQueryBufferSize", 
+      "mnemonic": "call", 
+      "target": "0x14BE8D8"
+    }, 
+    {
+      "api": "sceNgs2RackQueryBufferSize", 
+      "callsite": "0x1AD5DE", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackQueryBufferSize", 
+      "mnemonic": "call", 
+      "target": "0x14BE8D8"
+    }, 
+    {
+      "api": "sceNgs2RackQueryBufferSize", 
+      "callsite": "0x1AD765", 
+      "function": "sub_1AC510", 
+      "function_start": "0x1AC510", 
+      "instruction": "call    sceNgs2RackQueryBufferSize", 
+      "mnemonic": "call", 
+      "target": "0x14BE8D8"
+    }, 
+    {
+      "api": "sceNgs2RackQueryBufferSize", 
+      "callsite": "0x14BE8D8", 
+      "function": "sceNgs2RackQueryBufferSize", 
+      "function_start": "0x14BE8D8", 
+      "instruction": "jmp     cs:__imp_sceNgs2RackQueryBufferSize", 
+      "mnemonic": "jmp", 
+      "target": "0x1700FC0"
+    }, 
+    {
+      "api": "sceNgs2SystemDestroy", 
+      "callsite": "0x1A7ED9", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2SystemDestroy", 
+      "mnemonic": "call", 
+      "target": "0x14BE8F8"
+    }, 
+    {
+      "api": "sceNgs2SystemDestroy", 
+      "callsite": "0x1A8403", 
+      "function": "sub_1A83A0", 
+      "function_start": "0x1A83A0", 
+      "instruction": "call    sceNgs2SystemDestroy", 
+      "mnemonic": "call", 
+      "target": "0x14BE8F8"
+    }, 
+    {
+      "api": "sceNgs2SystemDestroy", 
+      "callsite": "0x14BE8F8", 
+      "function": "sceNgs2SystemDestroy", 
+      "function_start": "0x14BE8F8", 
+      "instruction": "jmp     cs:__imp_sceNgs2SystemDestroy", 
+      "mnemonic": "jmp", 
+      "target": "0x1700FD0"
+    }, 
+    {
+      "api": "sceNgs2RackCreateWithAllocator", 
+      "callsite": "0x1A76F1", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2RackCreateWithAllocator", 
+      "mnemonic": "call", 
+      "target": "0x14BE8A8"
+    }, 
+    {
+      "api": "sceNgs2RackCreateWithAllocator", 
+      "callsite": "0x1A7773", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2RackCreateWithAllocator", 
+      "mnemonic": "call", 
+      "target": "0x14BE8A8"
+    }, 
+    {
+      "api": "sceNgs2RackCreateWithAllocator", 
+      "callsite": "0x1A7828", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2RackCreateWithAllocator", 
+      "mnemonic": "call", 
+      "target": "0x14BE8A8"
+    }, 
+    {
+      "api": "sceNgs2RackCreateWithAllocator", 
+      "callsite": "0x1A78E6", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2RackCreateWithAllocator", 
+      "mnemonic": "call", 
+      "target": "0x14BE8A8"
+    }, 
+    {
+      "api": "sceNgs2RackCreateWithAllocator", 
+      "callsite": "0x14BE8A8", 
+      "function": "sceNgs2RackCreateWithAllocator", 
+      "function_start": "0x14BE8A8", 
+      "instruction": "jmp     cs:__imp_sceNgs2RackCreateWithAllocator", 
+      "mnemonic": "jmp", 
+      "target": "0x1700FA8"
+    }, 
+    {
+      "api": "sceNgs2VoiceGetState", 
+      "callsite": "0x1A862D", 
+      "function": "sub_1A85B0", 
+      "function_start": "0x1A85B0", 
+      "instruction": "call    sceNgs2VoiceGetState", 
+      "mnemonic": "call", 
+      "target": "0x14BE928"
+    }, 
+    {
+      "api": "sceNgs2VoiceGetState", 
+      "callsite": "0x1A8800", 
+      "function": "sub_1A85B0", 
+      "function_start": "0x1A85B0", 
+      "instruction": "call    sceNgs2VoiceGetState", 
+      "mnemonic": "call", 
+      "target": "0x14BE928"
+    }, 
+    {
+      "api": "sceNgs2VoiceGetState", 
+      "callsite": "0x14BE928", 
+      "function": "sceNgs2VoiceGetState", 
+      "function_start": "0x14BE928", 
+      "instruction": "jmp     cs:__imp_sceNgs2VoiceGetState", 
+      "mnemonic": "jmp", 
+      "target": "0x1700FE8"
+    }, 
+    {
+      "api": "sceNgs2SystemCreateWithAllocator", 
+      "callsite": "0x1A7656", 
+      "function": "sub_1A69C0", 
+      "function_start": "0x1A69C0", 
+      "instruction": "call    sceNgs2SystemCreateWithAllocator", 
+      "mnemonic": "call", 
+      "target": "0x14BE8E8"
+    }, 
+    {
+      "api": "sceNgs2SystemCreateWithAllocator", 
+      "callsite": "0x14BE8E8", 
+      "function": "sceNgs2SystemCreateWithAllocator", 
+      "function_start": "0x14BE8E8", 
+      "instruction": "jmp     cs:__imp_sceNgs2SystemCreateWithAllocator", 
+      "mnemonic": "jmp", 
+      "target": "0x1700FC8"
+    }
+  ]
+}
