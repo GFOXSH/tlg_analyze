@@ -1,0 +1,149 @@
+{
+  "functions_scanned": 10516, 
+  "hits": {
+    "0x10000003": [
+      {
+        "ea": "0x1AAF33", 
+        "function": "sub_1A9690", 
+        "function_start": "0x1A9690", 
+        "instruction": "mov     dword ptr [rbp+var_150+4], 10000003h", 
+        "name": "SAMPLER_UNKNOWN_3", 
+        "operand": 1
+      }
+    ], 
+    "0x10000007": [
+      {
+        "ea": "0x1AAE46", 
+        "function": "sub_1A9690", 
+        "function_start": "0x1A9690", 
+        "instruction": "mov     dword ptr [rbp+var_150+4], 10000007h", 
+        "name": "SAMPLER_UNKNOWN_7", 
+        "operand": 1
+      }
+    ], 
+    "0x10000008": [
+      {
+        "ea": "0x1AA085", 
+        "function": "sub_1A9690", 
+        "function_start": "0x1A9690", 
+        "instruction": "mov     dword ptr [rbp+var_150+4], 10000008h", 
+        "name": "SAMPLER_USER_FX", 
+        "operand": 1
+      }
+    ], 
+    "0x110000009": [
+      {
+        "ea": "0x1A95F1", 
+        "function": "sub_1A8E90", 
+        "function_start": "0x1A8E90", 
+        "instruction": "mov     r13, 110000009h", 
+        "name": "64_SAMPLER_PEAK", 
+        "operand": 1
+      }
+    ], 
+    "0x120000005": [
+      {
+        "ea": "0x1ABEB7", 
+        "function": "sub_1ABD70", 
+        "function_start": "0x1ABD70", 
+        "instruction": "mov     rax, 120000005h", 
+        "name": "64_UNKNOWN_SUBMIXER", 
+        "operand": 1
+      }
+    ], 
+    "0x20000004": [
+      {
+        "ea": "0x1AD978", 
+        "function": "sub_1AC510", 
+        "function_start": "0x1AC510", 
+        "instruction": "mov     dword ptr [rbp+var_678+4], 20000004h", 
+        "name": "SUBMIXER_USER_FX", 
+        "operand": 1
+      }, 
+      {
+        "ea": "0x1AD9C2", 
+        "function": "sub_1AC510", 
+        "function_start": "0x1AC510", 
+        "instruction": "mov     dword ptr [rbp+var_678+4], 20000004h", 
+        "name": "SUBMIXER_USER_FX", 
+        "operand": 1
+      }, 
+      {
+        "ea": "0x1ADA0A", 
+        "function": "sub_1AC510", 
+        "function_start": "0x1AC510", 
+        "instruction": "mov     dword ptr [rbp+var_678+4], 20000004h", 
+        "name": "SUBMIXER_USER_FX", 
+        "operand": 1
+      }, 
+      {
+        "ea": "0x1ADA4F", 
+        "function": "sub_1AC510", 
+        "function_start": "0x1AC510", 
+        "instruction": "mov     dword ptr [rbp+var_678+4], 20000004h", 
+        "name": "SUBMIXER_USER_FX", 
+        "operand": 1
+      }
+    ], 
+    "0x30000003": [
+      {
+        "ea": "0x1ADE85", 
+        "function": "sub_1ADC10", 
+        "function_start": "0x1ADC10", 
+        "instruction": "mov     dword ptr [rbp+var_C0+4], 30000003h", 
+        "name": "MASTERING_LIMITER", 
+        "operand": 1
+      }
+    ], 
+    "0x30000004": [
+      {
+        "ea": "0x1ADE27", 
+        "function": "sub_1ADC10", 
+        "function_start": "0x1ADC10", 
+        "instruction": "mov     dword ptr [rbp+var_C0+4], 30000004h", 
+        "name": "MASTERING_GAIN", 
+        "operand": 1
+      }
+    ], 
+    "0x40001C00": [
+      {
+        "ea": "0x1AFD5C", 
+        "function": "sub_1AEFD0", 
+        "function_start": "0x1AEFD0", 
+        "instruction": "mov     dword ptr [rsp+2A8h+var_D8+4], 40001C00h", 
+        "name": "PS4_CHORUS", 
+        "operand": 1
+      }
+    ], 
+    "0x40001D00": [
+      {
+        "ea": "0x1AFE65", 
+        "function": "sub_1AEFD0", 
+        "function_start": "0x1AEFD0", 
+        "instruction": "mov     dword ptr [rsp+2A8h+var_D8+4], 40001D00h", 
+        "name": "PS4_DELAY_OR_PS5_USER_FX", 
+        "operand": 1
+      }
+    ], 
+    "0x40002000": [
+      {
+        "ea": "0x1AFFA4", 
+        "function": "sub_1AEFD0", 
+        "function_start": "0x1AEFD0", 
+        "instruction": "mov     dword ptr [rsp+2A8h+var_D8+4], 40002000h", 
+        "name": "UNKNOWN_CUSTOM_PARAM", 
+        "operand": 1
+      }
+    ], 
+    "0x40020000": [
+      {
+        "ea": "0x1AFF4C", 
+        "function": "sub_1AEFD0", 
+        "function_start": "0x1AEFD0", 
+        "instruction": "mov     dword ptr [rsp+2A8h+var_D8+4], 40020000h", 
+        "name": "CUSTOM_SETUP", 
+        "operand": 1
+      }
+    ]
+  }
+}
